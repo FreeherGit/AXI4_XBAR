@@ -1,0 +1,1375 @@
+
+ Xcrg Functional Coverage Report 
+
+ // To generate a more detailed report in html format, please run xcrg -dir <database> -report_format html -report_dir <dir>
+ // This is a text report also in CSV format. By exporting to Excel and using , as the delimiter, the data can be split into individual rows and columns
+ // This report contains 3 sections, Total Summary, CoverGroups Summary and CoverPoint Tables sections 
+ // In order to navigate to a CoverPoint's Table, the TableTag printed for the respective covergroup/instance can be grepped in this report
+ // For example, if covergroup name is g1 and coverpoint is cp1, the TableTag to go to the Group's CoverPoint Table summary is g1_cp1 
+ // For example, if covergroup name is g1, instance name is i1, coverpoint is cp1, the TableTag to go to the Instance's CoverPoint Table summary is g1_i1_cp1 
+
+
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: Total Summary ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+   Date             :, Mon Nov  9 19:12:14 2026 +06
+   User             :, fariha
+   Version          :, Vivado Simulator Coverage Report 2025.2
+   Command Line     :, /tools/2025.2/Vivado/bin/unwrapped/lnx64.o/xcrg -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_test_1 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_test_2 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_test_3 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_test_4 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_test_5 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_test_6 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_test_7 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_test_8 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_test_9 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_test_10 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_dense_test_1 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_dense_test_2 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_dense_test_3 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_dense_test_4 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_dense_test_5 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_dense_test_6 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_dense_test_7 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_dense_test_8 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_dense_test_9 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_dense_test_10 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_walk_test_1 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_walk_test_2 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_walk_test_3 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_walk_test_4 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_walk_test_5 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_walk_test_6 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_walk_test_7 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_walk_test_8 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_walk_test_9 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_walk_test_10 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_sweep_test_1 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_sweep_test_2 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_sweep_test_3 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_sweep_test_4 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_sweep_test_5 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_sweep_test_6 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_sweep_test_7 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_sweep_test_8 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_sweep_test_9 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_sweep_test_10 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_basic_rw_test_1 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_basic_rw_test_2 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_basic_rw_test_3 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_basic_rw_test_4 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_basic_rw_test_5 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_basic_rw_test_6 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_basic_rw_test_7 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_basic_rw_test_8 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_basic_rw_test_9 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_basic_rw_test_10 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_sizes_strobes_test_1 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_sizes_strobes_test_2 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_sizes_strobes_test_3 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_sizes_strobes_test_4 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_sizes_strobes_test_5 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_sizes_strobes_test_6 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_sizes_strobes_test_7 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_sizes_strobes_test_8 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_sizes_strobes_test_9 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_sizes_strobes_test_10 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_reset_por_test_1 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_reset_por_test_2 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_reset_por_test_3 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_reset_por_test_4 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_reset_por_test_5 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_reset_por_test_6 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_reset_por_test_7 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_reset_por_test_8 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_reset_por_test_9 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_reset_por_test_10 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_reset_test_1 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_reset_test_2 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_reset_test_3 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_reset_test_4 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_reset_test_5 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_reset_test_6 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_reset_test_7 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_reset_test_8 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_reset_test_9 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_reset_test_10 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_reset_idle_test_1 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_reset_idle_test_2 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_reset_idle_test_3 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_reset_idle_test_4 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_reset_idle_test_5 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_reset_idle_test_6 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_reset_idle_test_7 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_reset_idle_test_8 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_reset_idle_test_9 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_reset_idle_test_10 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_addr_decode_test_1 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_addr_decode_test_2 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_addr_decode_test_3 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_addr_decode_test_4 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_addr_decode_test_5 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_addr_decode_test_6 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_addr_decode_test_7 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_addr_decode_test_8 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_addr_decode_test_9 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_addr_decode_test_10 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_addr_edges_test_1 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_addr_edges_test_2 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_addr_edges_test_3 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_addr_edges_test_4 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_addr_edges_test_5 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_addr_edges_test_6 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_addr_edges_test_7 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_addr_edges_test_8 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_addr_edges_test_9 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_addr_edges_test_10 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_decerr_test_1 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_decerr_test_2 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_decerr_test_3 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_decerr_test_4 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_decerr_test_5 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_decerr_test_6 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_decerr_test_7 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_decerr_test_8 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_decerr_test_9 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_decerr_test_10 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_decerr_backlog_test_1 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_decerr_backlog_test_2 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_decerr_backlog_test_3 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_decerr_backlog_test_4 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_decerr_backlog_test_5 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_decerr_backlog_test_6 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_decerr_backlog_test_7 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_decerr_backlog_test_8 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_decerr_backlog_test_9 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_decerr_backlog_test_10 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_burst_test_1 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_burst_test_2 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_burst_test_3 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_burst_test_4 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_burst_test_5 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_burst_test_6 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_burst_test_7 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_burst_test_8 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_burst_test_9 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_burst_test_10 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_burst_corners_test_1 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_burst_corners_test_2 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_burst_corners_test_3 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_burst_corners_test_4 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_burst_corners_test_5 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_burst_corners_test_6 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_burst_corners_test_7 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_burst_corners_test_8 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_burst_corners_test_9 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_burst_corners_test_10 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_outstanding_test_1 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_outstanding_test_2 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_outstanding_test_3 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_outstanding_test_4 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_outstanding_test_5 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_outstanding_test_6 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_outstanding_test_7 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_outstanding_test_8 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_outstanding_test_9 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_outstanding_test_10 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_deep_outstanding_test_1 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_deep_outstanding_test_2 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_deep_outstanding_test_3 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_deep_outstanding_test_4 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_deep_outstanding_test_5 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_deep_outstanding_test_6 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_deep_outstanding_test_7 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_deep_outstanding_test_8 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_deep_outstanding_test_9 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_deep_outstanding_test_10 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_id_corners_test_1 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_id_corners_test_2 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_id_corners_test_3 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_id_corners_test_4 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_id_corners_test_5 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_id_corners_test_6 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_id_corners_test_7 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_id_corners_test_8 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_id_corners_test_9 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_id_corners_test_10 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_arbitration_test_1 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_arbitration_test_2 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_arbitration_test_3 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_arbitration_test_4 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_arbitration_test_5 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_arbitration_test_6 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_arbitration_test_7 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_arbitration_test_8 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_arbitration_test_9 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_arbitration_test_10 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_arb_rounds_test_1 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_arb_rounds_test_2 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_arb_rounds_test_3 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_arb_rounds_test_4 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_arb_rounds_test_5 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_arb_rounds_test_6 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_arb_rounds_test_7 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_arb_rounds_test_8 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_arb_rounds_test_9 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_arb_rounds_test_10 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_concurrent_test_1 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_concurrent_test_2 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_concurrent_test_3 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_concurrent_test_4 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_concurrent_test_5 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_concurrent_test_6 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_concurrent_test_7 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_concurrent_test_8 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_concurrent_test_9 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_concurrent_test_10 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_cross_traffic_test_1 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_cross_traffic_test_2 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_cross_traffic_test_3 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_cross_traffic_test_4 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_cross_traffic_test_5 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_cross_traffic_test_6 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_cross_traffic_test_7 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_cross_traffic_test_8 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_cross_traffic_test_9 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_cross_traffic_test_10 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_backpressure_test_1 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_backpressure_test_2 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_backpressure_test_3 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_backpressure_test_4 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_backpressure_test_5 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_backpressure_test_6 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_backpressure_test_7 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_backpressure_test_8 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_backpressure_test_9 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_backpressure_test_10 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_long_stall_test_1 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_long_stall_test_2 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_long_stall_test_3 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_long_stall_test_4 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_long_stall_test_5 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_long_stall_test_6 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_long_stall_test_7 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_long_stall_test_8 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_long_stall_test_9 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_long_stall_test_10 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_channel_indep_test_1 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_channel_indep_test_2 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_channel_indep_test_3 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_channel_indep_test_4 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_channel_indep_test_5 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_channel_indep_test_6 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_channel_indep_test_7 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_channel_indep_test_8 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_channel_indep_test_9 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_channel_indep_test_10 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_w_order_fill_test_1 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_w_order_fill_test_2 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_w_order_fill_test_3 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_w_order_fill_test_4 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_w_order_fill_test_5 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_w_order_fill_test_6 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_w_order_fill_test_7 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_w_order_fill_test_8 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_w_order_fill_test_9 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_w_order_fill_test_10 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_slverr_test_1 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_slverr_test_2 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_slverr_test_3 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_slverr_test_4 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_slverr_test_5 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_slverr_test_6 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_slverr_test_7 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_slverr_test_8 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_slverr_test_9 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_slverr_test_10 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_stress_test_1 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_stress_test_2 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_stress_test_3 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_stress_test_4 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_stress_test_5 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_stress_test_6 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_stress_test_7 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_stress_test_8 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_stress_test_9 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_stress_test_10 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_random_mix_test_1 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_random_mix_test_2 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_random_mix_test_3 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_random_mix_test_4 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_random_mix_test_5 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_random_mix_test_6 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_random_mix_test_7 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_random_mix_test_8 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_random_mix_test_9 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_random_mix_test_10 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_multi_outstanding_test_1 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_multi_outstanding_test_2 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_multi_outstanding_test_3 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_multi_outstanding_test_4 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_multi_outstanding_test_5 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_multi_outstanding_test_6 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_multi_outstanding_test_7 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_multi_outstanding_test_8 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_multi_outstanding_test_9 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_multi_outstanding_test_10 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_bad_id_test_1 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_bad_id_test_2 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_bad_id_test_3 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_bad_id_test_4 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_bad_id_test_5 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_bad_id_test_6 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_bad_id_test_7 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_bad_id_test_8 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_bad_id_test_9 -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_bad_id_test_10 -merge_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/cov_report/merged/func_db -merge_db_name merged_func -report_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/cov_report/merged/func -report_format all 
+   Number of Tests  :, 1
+
+   Coverage Score            :, 99.1422
+   Total Insts Score         :, 99.1422
+   Total no of Cover Groups  :, 4
+   Total no of Instances     :, 4
+
+
+     CgName,                                           Score,      NumInsts,   AvgInstScore,   Weight,     Goal,       Merge Insts,    Get Inst Cov,   Per Inst,   AutoBinMax,     Comment,    
+
+       axi_tb_pkg::axi_coverage::cg_txn                  ,100         ,1           ,100             ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+       axi_tb_pkg::axi_coverage::cg_cycle                ,100         ,1           ,100             ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+       axi_tb_pkg::axi_coverage::cg_port                 ,100         ,1           ,100             ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+       tb_top.m_if[0].m_if[1].s_if[0].s_if[1].u_wb_cov::cg_wb,96.5686     ,1           ,96.5686         ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+
+
+
+
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: CoverGroups Summary ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Cover Group Details : axi_tb_pkg::axi_coverage::cg_txn
+
+CgName,                                           Score,      NumInsts,   AvgInstScore,   Weight,     Goal,       Merge Insts,    Get Inst Cov,   Per Inst,   AutoBinMax,     Comment,    
+
+axi_tb_pkg::axi_coverage::cg_txn                  ,100         ,1           ,100             ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+
+      Instances of CoverGroup - axi_tb_pkg::axi_coverage::cg_txn
+
+             InstName,                                         Score,      Weight,     Goal,       AtLeast,    AutoBinMax, PrintMissing,   IsInst,     Comment,    
+             cov.cg_txn                                        ,100         ,1           ,100         ,1           ,64          ,0               ,1           ,            ,
+
+
+      Instance cov.cg_txn Cover Point Details 
+
+             Name,                                             TableTag,     Expected,   Uncovered,  Covered,    Percent,    Goal,       Weight,     AtLeast,    AutoBinMax, Comment,    
+             cp_master                                         ,cg_txn_cov.cg_txn_cp_master,2           ,0           ,2           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_kind                                           ,cg_txn_cov.cg_txn_cp_kind,2           ,0           ,2           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_tgt                                            ,cg_txn_cov.cg_txn_cp_tgt,3           ,0           ,3           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_burst                                          ,cg_txn_cov.cg_txn_cp_burst,3           ,0           ,3           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_len                                            ,cg_txn_cov.cg_txn_cp_len,5           ,0           ,5           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_size                                           ,cg_txn_cov.cg_txn_cp_size,4           ,0           ,4           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_resp                                           ,cg_txn_cov.cg_txn_cp_resp,3           ,0           ,3           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_outst                                          ,cg_txn_cov.cg_txn_cp_outst,4           ,0           ,4           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_id                                             ,cg_txn_cov.cg_txn_cp_id,16          ,0           ,16          ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_id_corner                                      ,cg_txn_cov.cg_txn_cp_id_corner,3           ,0           ,3           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_burst_len                                      ,cg_txn_cov.cg_txn_cp_burst_len,10          ,0           ,10          ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_align                                          ,cg_txn_cov.cg_txn_cp_align,2           ,0           ,2           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_4k_edge                                        ,cg_txn_cov.cg_txn_cp_4k_edge,2           ,0           ,2           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_addr_edge                                      ,cg_txn_cov.cg_txn_cp_addr_edge,6           ,0           ,6           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_wstrb                                          ,cg_txn_cov.cg_txn_cp_wstrb,3           ,0           ,3           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_resp_route                                     ,cg_txn_cov.cg_txn_cp_resp_route,10          ,0           ,10          ,100         ,100         ,1           ,1           ,64          ,            ,
+
+
+      Instance cov.cg_txn Cross Cover Point Details 
+
+             Name,                                             TableTag,     Expected,   Uncovered,  Covered,    Percent,    Goal,       Weight,     AtLeast,    Comment,    
+             x_route                                           ,cg_txn_cov.cg_txn_x_route,12          ,0           ,12          ,100         ,100         ,1           ,1           ,            ,
+             x_burst                                           ,cg_txn_cov.cg_txn_x_burst,6           ,0           ,6           ,100         ,100         ,1           ,1           ,            ,
+             x_kind_burst_size                                 ,cg_txn_cov.cg_txn_x_kind_burst_size,24          ,0           ,24          ,100         ,100         ,1           ,1           ,            ,
+             x_master_outst                                    ,cg_txn_cov.cg_txn_x_master_outst,8           ,0           ,8           ,100         ,100         ,1           ,1           ,            ,
+             x_id_corner                                       ,cg_txn_cov.cg_txn_x_id_corner,36          ,0           ,36          ,100         ,100         ,1           ,1           ,            ,
+
+
+
+
+
+
+
+
+Cover Group Details : axi_tb_pkg::axi_coverage::cg_cycle
+
+CgName,                                           Score,      NumInsts,   AvgInstScore,   Weight,     Goal,       Merge Insts,    Get Inst Cov,   Per Inst,   AutoBinMax,     Comment,    
+
+axi_tb_pkg::axi_coverage::cg_cycle                ,100         ,1           ,100             ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+
+      Instances of CoverGroup - axi_tb_pkg::axi_coverage::cg_cycle
+
+             InstName,                                         Score,      Weight,     Goal,       AtLeast,    AutoBinMax, PrintMissing,   IsInst,     Comment,    
+             cov.cg_cycle                                      ,100         ,1           ,100         ,1           ,64          ,0               ,1           ,            ,
+
+
+      Instance cov.cg_cycle Cover Point Details 
+
+             Name,                                             TableTag,     Expected,   Uncovered,  Covered,    Percent,    Goal,       Weight,     AtLeast,    AutoBinMax, Comment,    
+             cp_aw_contend                                     ,cg_cycle_cov.cg_cycle_cp_aw_contend,3           ,0           ,3           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_ar_contend                                     ,cg_cycle_cov.cg_cycle_cp_ar_contend,3           ,0           ,3           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_concurrent                                     ,cg_cycle_cov.cg_cycle_cp_concurrent,1           ,0           ,1           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_bp_aw                                          ,cg_cycle_cov.cg_cycle_cp_bp_aw,1           ,0           ,1           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_bp_w                                           ,cg_cycle_cov.cg_cycle_cp_bp_w,1           ,0           ,1           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_bp_ar                                          ,cg_cycle_cov.cg_cycle_cp_bp_ar,1           ,0           ,1           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_bp_b                                           ,cg_cycle_cov.cg_cycle_cp_bp_b,1           ,0           ,1           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_bp_r                                           ,cg_cycle_cov.cg_cycle_cp_bp_r,1           ,0           ,1           ,100         ,100         ,1           ,1           ,64          ,            ,
+
+
+
+
+
+
+
+
+Cover Group Details : axi_tb_pkg::axi_coverage::cg_port
+
+CgName,                                           Score,      NumInsts,   AvgInstScore,   Weight,     Goal,       Merge Insts,    Get Inst Cov,   Per Inst,   AutoBinMax,     Comment,    
+
+axi_tb_pkg::axi_coverage::cg_port                 ,100         ,1           ,100             ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+
+      Instances of CoverGroup - axi_tb_pkg::axi_coverage::cg_port
+
+             InstName,                                         Score,      Weight,     Goal,       AtLeast,    AutoBinMax, PrintMissing,   IsInst,     Comment,    
+             cov.cg_port                                       ,100         ,1           ,100         ,1           ,64          ,0               ,1           ,            ,
+
+
+      Instance cov.cg_port Cover Point Details 
+
+             Name,                                             TableTag,     Expected,   Uncovered,  Covered,    Percent,    Goal,       Weight,     AtLeast,    AutoBinMax, Comment,    
+             cp_bp_at_slave                                    ,cg_port_cov.cg_port_cp_bp_at_slave,6           ,0           ,6           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_bp_at_master                                   ,cg_port_cov.cg_port_cp_bp_at_master,4           ,0           ,4           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_xbar_not_ready                                 ,cg_port_cov.cg_port_cp_xbar_not_ready,6           ,0           ,6           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_long_stall                                     ,cg_port_cov.cg_port_cp_long_stall,5           ,0           ,5           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_chan_overlap                                   ,cg_port_cov.cg_port_cp_chan_overlap,4           ,0           ,4           ,100         ,100         ,1           ,1           ,64          ,            ,
+
+
+
+
+
+
+
+
+Cover Group Details : tb_top.m_if[0].m_if[1].s_if[0].s_if[1].u_wb_cov::cg_wb
+
+CgName,                                           Score,      NumInsts,   AvgInstScore,   Weight,     Goal,       Merge Insts,    Get Inst Cov,   Per Inst,   AutoBinMax,     Comment,    
+
+tb_top.m_if[0].m_if[1].s_if[0].s_if[1].u_wb_cov::cg_wb,96.5686     ,1           ,96.5686         ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+
+      Instances of CoverGroup - tb_top.m_if[0].m_if[1].s_if[0].s_if[1].u_wb_cov::cg_wb
+
+             InstName,                                         Score,      Weight,     Goal,       AtLeast,    AutoBinMax, PrintMissing,   IsInst,     Comment,    
+             cg_i                                              ,96.5686     ,1           ,100         ,1           ,64          ,0               ,1           ,            ,
+
+
+      Instance cg_i Cover Point Details 
+
+             Name,                                             TableTag,     Expected,   Uncovered,  Covered,    Percent,    Goal,       Weight,     AtLeast,    AutoBinMax, Comment,    
+             cp_arb_winner                                     ,cg_wb_cg_i_cp_arb_winner,12          ,0           ,12          ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_grant_lock                                     ,cg_wb_cg_i_cp_grant_lock,12          ,0           ,12          ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_blk_elsewhere                                  ,cg_wb_cg_i_cp_blk_elsewhere,12          ,0           ,12          ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_blk_taken                                      ,cg_wb_cg_i_cp_blk_taken,12          ,0           ,12          ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_blk_full                                       ,cg_wb_cg_i_cp_blk_full,12          ,0           ,12          ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_blk_drain                                      ,cg_wb_cg_i_cp_blk_drain,12          ,7           ,5           ,41.6667     ,100         ,1           ,1           ,64          ,            ,
+             cp_acc_same_id                                    ,cg_wb_cg_i_cp_acc_same_id,12          ,0           ,12          ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_acc_shared                                     ,cg_wb_cg_i_cp_acc_shared,12          ,0           ,12          ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_blk_wq_full                                    ,cg_wb_cg_i_cp_blk_wq_full,2           ,0           ,2           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_blk_tq_full                                    ,cg_wb_cg_i_cp_blk_tq_full,3           ,0           ,3           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_rsp_collide                                    ,cg_wb_cg_i_cp_rsp_collide,4           ,0           ,4           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_rsp_stall                                      ,cg_wb_cg_i_cp_rsp_stall,4           ,0           ,4           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_rsp_unknown_id                                 ,cg_wb_cg_i_cp_rsp_unknown_id,4           ,0           ,4           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_r_interleave                                   ,cg_wb_cg_i_cp_r_interleave,2           ,0           ,2           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_fifo_full                                      ,cg_wb_cg_i_cp_fifo_full,7           ,0           ,7           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_w_wait                                         ,cg_wb_cg_i_cp_w_wait,4           ,0           ,4           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_misc                                           ,cg_wb_cg_i_cp_misc,3           ,0           ,3           ,100         ,100         ,1           ,1           ,64          ,            ,
+
+
+
+
+
+
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: CoverPoint Tables::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+ Cover Point Table for Inst : cov.cg_txn, Variable :, cp_master
+ Table tag :, cg_txn_cov.cg_txn_cp_master
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   2           ,0           ,2           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      m0          ,13776       ,1           ,
+      m1          ,13635       ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cov.cg_txn, Variable :, cp_kind
+ Table tag :, cg_txn_cov.cg_txn_cp_kind
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   2           ,0           ,2           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      write       ,13914       ,1           ,
+      read        ,13497       ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cov.cg_txn, Variable :, cp_tgt
+ Table tag :, cg_txn_cov.cg_txn_cp_tgt
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   3           ,0           ,3           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      s0          ,11945       ,1           ,
+      s1          ,12019       ,1           ,
+      unmapped    ,3447        ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cov.cg_txn, Variable :, cp_burst
+ Table tag :, cg_txn_cov.cg_txn_cp_burst
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   3           ,0           ,3           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      fixed       ,2766        ,1           ,
+      incr        ,22978       ,1           ,
+      wrap        ,1667        ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cov.cg_txn, Variable :, cp_len
+ Table tag :, cg_txn_cov.cg_txn_cp_len
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   5           ,0           ,5           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      single      ,13301       ,1           ,
+      b2_8        ,9454        ,1           ,
+      b9_16       ,2303        ,1           ,
+      b17_255     ,2029        ,1           ,
+      b256        ,324         ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cov.cg_txn, Variable :, cp_size
+ Table tag :, cg_txn_cov.cg_txn_cp_size
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   4           ,0           ,4           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      sz1         ,2024        ,1           ,
+      sz2         ,1752        ,1           ,
+      sz4         ,1712        ,1           ,
+      sz8         ,21923       ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cov.cg_txn, Variable :, cp_resp
+ Table tag :, cg_txn_cov.cg_txn_cp_resp
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   3           ,0           ,3           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      okay        ,23704       ,1           ,
+      slverr      ,260         ,1           ,
+      decerr      ,3447        ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cov.cg_txn, Variable :, cp_outst
+ Table tag :, cg_txn_cov.cg_txn_cp_outst
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   4           ,0           ,4           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      none        ,19444       ,1           ,
+      one         ,2197        ,1           ,
+      two_three   ,3138        ,1           ,
+      four_plus   ,2632        ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cov.cg_txn, Variable :, cp_id
+ Table tag :, cg_txn_cov.cg_txn_cp_id
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   16          ,0           ,16          ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      id_0        ,997         ,1           ,
+      id_1        ,4589        ,1           ,
+      id_2        ,4540        ,1           ,
+      id_3        ,864         ,1           ,
+      id_4        ,707         ,1           ,
+      id_5        ,906         ,1           ,
+      id_6        ,624         ,1           ,
+      id_7        ,627         ,1           ,
+      id_8        ,663         ,1           ,
+      id_9        ,4517        ,1           ,
+      id_10       ,4532        ,1           ,
+      id_11       ,784         ,1           ,
+      id_12       ,686         ,1           ,
+      id_13       ,906         ,1           ,
+      id_14       ,547         ,1           ,
+      id_15       ,922         ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cov.cg_txn, Variable :, cp_id_corner
+ Table tag :, cg_txn_cov.cg_txn_cp_id_corner
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   3           ,0           ,3           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      id_0        ,997         ,1           ,
+      id_f        ,922         ,1           ,
+      id_other    ,25492       ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cov.cg_txn, Variable :, cp_burst_len
+ Table tag :, cg_txn_cov.cg_txn_cp_burst_len
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   10          ,0           ,10          ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      fixed_1     ,249         ,1           ,
+      fixed_2_16  ,2517        ,1           ,
+      incr_1      ,13052       ,1           ,
+      incr_2_16   ,7573        ,1           ,
+      incr_17_255 ,2029        ,1           ,
+      incr_256    ,324         ,1           ,
+      wrap_2      ,337         ,1           ,
+      wrap_4      ,494         ,1           ,
+      wrap_8      ,400         ,1           ,
+      wrap_16     ,436         ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cov.cg_txn, Variable :, cp_align
+ Table tag :, cg_txn_cov.cg_txn_cp_align
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   2           ,0           ,2           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      aligned     ,24781       ,1           ,
+      unaligned   ,2630        ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cov.cg_txn, Variable :, cp_4k_edge
+ Table tag :, cg_txn_cov.cg_txn_cp_4k_edge
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   2           ,0           ,2           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      ends_on_4k_edge,1200        ,1           ,
+      inside_page ,21778       ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cov.cg_txn, Variable :, cp_addr_edge
+ Table tag :, cg_txn_cov.cg_txn_cp_addr_edge
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   6           ,0           ,6           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      s0_bottom   ,2585        ,1           ,
+      s0_top      ,380         ,1           ,
+      s1_bottom   ,2589        ,1           ,
+      s1_top      ,380         ,1           ,
+      unmapped_bottom,239         ,1           ,
+      unmapped_top,80          ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cov.cg_txn, Variable :, cp_wstrb
+ Table tag :, cg_txn_cov.cg_txn_cp_wstrb
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   3           ,0           ,3           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      all_full    ,12534       ,1           ,
+      partial     ,300         ,1           ,
+      has_empty_beat,1080        ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cov.cg_txn, Variable :, cp_resp_route
+ Table tag :, cg_txn_cov.cg_txn_cp_resp_route
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   10          ,0           ,10          ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      m0_s0_okay  ,6069        ,1           ,
+      m0_s0_slverr,70          ,1           ,
+      m0_s1_okay  ,5847        ,1           ,
+      m0_s1_slverr,60          ,1           ,
+      m0_unmapped_decerr,1730        ,1           ,
+      m1_s0_okay  ,5746        ,1           ,
+      m1_s0_slverr,60          ,1           ,
+      m1_s1_okay  ,6042        ,1           ,
+      m1_s1_slverr,70          ,1           ,
+      m1_unmapped_decerr,1717        ,1           ,
+
+
+
+
+
+
+ Cross Cover Point Table for Inst : cov.cg_txn, Variable :, x_route
+ Table tag :, cg_txn_cov.cg_txn_x_route
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ Total,          12          ,0           ,12          ,100         ,
+ Automatic,      12          ,0           ,12          ,1           ,
+
+                 Auto Covered bins 
+
+      cp_master       ,cp_tgt          ,cp_kind         ,Hit Count,  AtLeast,    
+      m0              ,s0              ,write           ,3163        ,1           ,
+      m0              ,s0              ,read            ,2976        ,1           ,
+      m0              ,s1              ,write           ,2951        ,1           ,
+      m0              ,s1              ,read            ,2956        ,1           ,
+      m0              ,unmapped        ,write           ,906         ,1           ,
+      m0              ,unmapped        ,read            ,824         ,1           ,
+      m1              ,s0              ,write           ,2926        ,1           ,
+      m1              ,s0              ,read            ,2880        ,1           ,
+      m1              ,s1              ,write           ,3095        ,1           ,
+      m1              ,s1              ,read            ,3017        ,1           ,
+      m1              ,unmapped        ,write           ,873         ,1           ,
+      m1              ,unmapped        ,read            ,844         ,1           ,
+
+
+
+
+
+
+ Cross Cover Point Table for Inst : cov.cg_txn, Variable :, x_route
+ Table tag :, cg_txn_cov.cg_txn_x_route
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ Total,          12          ,0           ,12          ,100         ,
+ Automatic,      12          ,0           ,12          ,1           ,
+
+                 Auto Covered bins 
+
+      cp_master       ,cp_tgt          ,cp_kind         ,Hit Count,  AtLeast,    
+      m0              ,s0              ,write           ,3163        ,1           ,
+      m0              ,s0              ,read            ,2976        ,1           ,
+      m0              ,s1              ,write           ,2951        ,1           ,
+      m0              ,s1              ,read            ,2956        ,1           ,
+      m0              ,unmapped        ,write           ,906         ,1           ,
+      m0              ,unmapped        ,read            ,824         ,1           ,
+      m1              ,s0              ,write           ,2926        ,1           ,
+      m1              ,s0              ,read            ,2880        ,1           ,
+      m1              ,s1              ,write           ,3095        ,1           ,
+      m1              ,s1              ,read            ,3017        ,1           ,
+      m1              ,unmapped        ,write           ,873         ,1           ,
+      m1              ,unmapped        ,read            ,844         ,1           ,
+
+
+
+
+
+
+ Cross Cover Point Table for Inst : cov.cg_txn, Variable :, x_route
+ Table tag :, cg_txn_cov.cg_txn_x_route
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ Total,          12          ,0           ,12          ,100         ,
+ Automatic,      12          ,0           ,12          ,1           ,
+
+                 Auto Covered bins 
+
+      cp_master       ,cp_tgt          ,cp_kind         ,Hit Count,  AtLeast,    
+      m0              ,s0              ,write           ,3163        ,1           ,
+      m0              ,s0              ,read            ,2976        ,1           ,
+      m0              ,s1              ,write           ,2951        ,1           ,
+      m0              ,s1              ,read            ,2956        ,1           ,
+      m0              ,unmapped        ,write           ,906         ,1           ,
+      m0              ,unmapped        ,read            ,824         ,1           ,
+      m1              ,s0              ,write           ,2926        ,1           ,
+      m1              ,s0              ,read            ,2880        ,1           ,
+      m1              ,s1              ,write           ,3095        ,1           ,
+      m1              ,s1              ,read            ,3017        ,1           ,
+      m1              ,unmapped        ,write           ,873         ,1           ,
+      m1              ,unmapped        ,read            ,844         ,1           ,
+
+
+
+
+
+
+ Cross Cover Point Table for Inst : cov.cg_txn, Variable :, x_route
+ Table tag :, cg_txn_cov.cg_txn_x_route
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ Total,          12          ,0           ,12          ,100         ,
+ Automatic,      12          ,0           ,12          ,1           ,
+
+                 Auto Covered bins 
+
+      cp_master       ,cp_tgt          ,cp_kind         ,Hit Count,  AtLeast,    
+      m0              ,s0              ,write           ,3163        ,1           ,
+      m0              ,s0              ,read            ,2976        ,1           ,
+      m0              ,s1              ,write           ,2951        ,1           ,
+      m0              ,s1              ,read            ,2956        ,1           ,
+      m0              ,unmapped        ,write           ,906         ,1           ,
+      m0              ,unmapped        ,read            ,824         ,1           ,
+      m1              ,s0              ,write           ,2926        ,1           ,
+      m1              ,s0              ,read            ,2880        ,1           ,
+      m1              ,s1              ,write           ,3095        ,1           ,
+      m1              ,s1              ,read            ,3017        ,1           ,
+      m1              ,unmapped        ,write           ,873         ,1           ,
+      m1              ,unmapped        ,read            ,844         ,1           ,
+
+
+
+
+
+
+ Cross Cover Point Table for Inst : cov.cg_txn, Variable :, x_route
+ Table tag :, cg_txn_cov.cg_txn_x_route
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ Total,          12          ,0           ,12          ,100         ,
+ Automatic,      12          ,0           ,12          ,1           ,
+
+                 Auto Covered bins 
+
+      cp_master       ,cp_tgt          ,cp_kind         ,Hit Count,  AtLeast,    
+      m0              ,s0              ,write           ,3163        ,1           ,
+      m0              ,s0              ,read            ,2976        ,1           ,
+      m0              ,s1              ,write           ,2951        ,1           ,
+      m0              ,s1              ,read            ,2956        ,1           ,
+      m0              ,unmapped        ,write           ,906         ,1           ,
+      m0              ,unmapped        ,read            ,824         ,1           ,
+      m1              ,s0              ,write           ,2926        ,1           ,
+      m1              ,s0              ,read            ,2880        ,1           ,
+      m1              ,s1              ,write           ,3095        ,1           ,
+      m1              ,s1              ,read            ,3017        ,1           ,
+      m1              ,unmapped        ,write           ,873         ,1           ,
+      m1              ,unmapped        ,read            ,844         ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cov.cg_cycle, Variable :, cp_aw_contend
+ Table tag :, cg_cycle_cov.cg_cycle_cp_aw_contend
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   3           ,0           ,3           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      s0          ,3740        ,1           ,
+      s1          ,4025        ,1           ,
+      unmapped    ,2163        ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cov.cg_cycle, Variable :, cp_ar_contend
+ Table tag :, cg_cycle_cov.cg_cycle_cp_ar_contend
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   3           ,0           ,3           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      s0          ,2405        ,1           ,
+      s1          ,2050        ,1           ,
+      unmapped    ,2531        ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cov.cg_cycle, Variable :, cp_concurrent
+ Table tag :, cg_cycle_cov.cg_cycle_cp_concurrent
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   1           ,0           ,1           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      yes         ,16314       ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cov.cg_cycle, Variable :, cp_bp_aw
+ Table tag :, cg_cycle_cov.cg_cycle_cp_bp_aw
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   1           ,0           ,1           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      yes         ,1866        ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cov.cg_cycle, Variable :, cp_bp_w
+ Table tag :, cg_cycle_cov.cg_cycle_cp_bp_w
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   1           ,0           ,1           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      yes         ,37519       ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cov.cg_cycle, Variable :, cp_bp_ar
+ Table tag :, cg_cycle_cov.cg_cycle_cp_bp_ar
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   1           ,0           ,1           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      yes         ,2299        ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cov.cg_cycle, Variable :, cp_bp_b
+ Table tag :, cg_cycle_cov.cg_cycle_cp_bp_b
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   1           ,0           ,1           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      yes         ,4089        ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cov.cg_cycle, Variable :, cp_bp_r
+ Table tag :, cg_cycle_cov.cg_cycle_cp_bp_r
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   1           ,0           ,1           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      yes         ,42059       ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cov.cg_port, Variable :, cp_bp_at_slave
+ Table tag :, cg_port_cov.cg_port_cp_bp_at_slave
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   6           ,0           ,6           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      aw_s0       ,1112        ,1           ,
+      aw_s1       ,760         ,1           ,
+      w_s0        ,19727       ,1           ,
+      w_s1        ,18537       ,1           ,
+      ar_s0       ,1362        ,1           ,
+      ar_s1       ,941         ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cov.cg_port, Variable :, cp_bp_at_master
+ Table tag :, cg_port_cov.cg_port_cp_bp_at_master
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   4           ,0           ,4           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      b_m0        ,2168        ,1           ,
+      b_m1        ,1934        ,1           ,
+      r_m0        ,22865       ,1           ,
+      r_m1        ,21299       ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cov.cg_port, Variable :, cp_xbar_not_ready
+ Table tag :, cg_port_cov.cg_port_cp_xbar_not_ready
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   6           ,0           ,6           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      aw_m0       ,65086       ,1           ,
+      aw_m1       ,64852       ,1           ,
+      w_m0        ,76741       ,1           ,
+      w_m1        ,75581       ,1           ,
+      ar_m0       ,37094       ,1           ,
+      ar_m1       ,43059       ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cov.cg_port, Variable :, cp_long_stall
+ Table tag :, cg_port_cov.cg_port_cp_long_stall
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   5           ,0           ,5           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      aw          ,36          ,1           ,
+      w           ,92          ,1           ,
+      ar          ,37          ,1           ,
+      b           ,65          ,1           ,
+      r           ,100         ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cov.cg_port, Variable :, cp_chan_overlap
+ Table tag :, cg_port_cov.cg_port_cp_chan_overlap
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   4           ,0           ,4           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      aw_ar_m0    ,6624        ,1           ,
+      aw_ar_m1    ,6699        ,1           ,
+      w_r_s0      ,25305       ,1           ,
+      w_r_s1      ,24527       ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cg_i, Variable :, cp_arb_winner
+ Table tag :, cg_wb_cg_i_cp_arb_winner
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   12          ,0           ,12          ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      aw_s0_m0    ,110         ,1           ,
+      aw_s0_m1    ,181         ,1           ,
+      aw_s1_m0    ,76          ,1           ,
+      aw_s1_m1    ,142         ,1           ,
+      aw_dec_m0   ,42          ,1           ,
+      aw_dec_m1   ,76          ,1           ,
+      ar_s0_m0    ,67          ,1           ,
+      ar_s0_m1    ,105         ,1           ,
+      ar_s1_m0    ,93          ,1           ,
+      ar_s1_m1    ,157         ,1           ,
+      ar_dec_m0   ,43          ,1           ,
+      ar_dec_m1   ,73          ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cg_i, Variable :, cp_grant_lock
+ Table tag :, cg_wb_cg_i_cp_grant_lock
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   12          ,0           ,12          ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      aw_s0_m0    ,660         ,1           ,
+      aw_s0_m1    ,452         ,1           ,
+      aw_s1_m0    ,318         ,1           ,
+      aw_s1_m1    ,442         ,1           ,
+      aw_dec_m0   ,520         ,1           ,
+      aw_dec_m1   ,540         ,1           ,
+      ar_s0_m0    ,879         ,1           ,
+      ar_s0_m1    ,483         ,1           ,
+      ar_s1_m0    ,288         ,1           ,
+      ar_s1_m1    ,653         ,1           ,
+      ar_dec_m0   ,540         ,1           ,
+      ar_dec_m1   ,550         ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cg_i, Variable :, cp_blk_elsewhere
+ Table tag :, cg_wb_cg_i_cp_blk_elsewhere
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   12          ,0           ,12          ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      aw_s0_m0    ,15137       ,1           ,
+      aw_s0_m1    ,12928       ,1           ,
+      aw_s1_m0    ,9483        ,1           ,
+      aw_s1_m1    ,12986       ,1           ,
+      aw_dec_m0   ,16226       ,1           ,
+      aw_dec_m1   ,15793       ,1           ,
+      ar_s0_m0    ,10999       ,1           ,
+      ar_s0_m1    ,8726        ,1           ,
+      ar_s1_m0    ,6954        ,1           ,
+      ar_s1_m1    ,7961        ,1           ,
+      ar_dec_m0   ,8095        ,1           ,
+      ar_dec_m1   ,10946       ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cg_i, Variable :, cp_blk_taken
+ Table tag :, cg_wb_cg_i_cp_blk_taken
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   12          ,0           ,12          ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      aw_s0_m0    ,6678        ,1           ,
+      aw_s0_m1    ,5550        ,1           ,
+      aw_s1_m0    ,10587       ,1           ,
+      aw_s1_m1    ,10489       ,1           ,
+      aw_dec_m0   ,4669        ,1           ,
+      aw_dec_m1   ,4124        ,1           ,
+      ar_s0_m0    ,4171        ,1           ,
+      ar_s0_m1    ,7307        ,1           ,
+      ar_s1_m0    ,2368        ,1           ,
+      ar_s1_m1    ,3438        ,1           ,
+      ar_dec_m0   ,903         ,1           ,
+      ar_dec_m1   ,1738        ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cg_i, Variable :, cp_blk_full
+ Table tag :, cg_wb_cg_i_cp_blk_full
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   12          ,0           ,12          ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      aw_s0_m0    ,770         ,1           ,
+      aw_s0_m1    ,770         ,1           ,
+      aw_s1_m0    ,770         ,1           ,
+      aw_s1_m1    ,770         ,1           ,
+      aw_dec_m0   ,530         ,1           ,
+      aw_dec_m1   ,530         ,1           ,
+      ar_s0_m0    ,770         ,1           ,
+      ar_s0_m1    ,770         ,1           ,
+      ar_s1_m0    ,770         ,1           ,
+      ar_s1_m1    ,770         ,1           ,
+      ar_dec_m0   ,540         ,1           ,
+      ar_dec_m1   ,550         ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cg_i, Variable :, cp_blk_drain
+ Table tag :, cg_wb_cg_i_cp_blk_drain
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   12          ,7           ,5           ,41.6667     ,
+
+                      Uncovered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      aw_s0_m0    ,0           ,1           ,
+      aw_s0_m1    ,0           ,1           ,
+      aw_s1_m1    ,0           ,1           ,
+      aw_dec_m1   ,0           ,1           ,
+      ar_s0_m0    ,0           ,1           ,
+      ar_s1_m0    ,0           ,1           ,
+      ar_dec_m0   ,0           ,1           ,
+
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      aw_s1_m0    ,9           ,1           ,
+      aw_dec_m0   ,480         ,1           ,
+      ar_s0_m1    ,88          ,1           ,
+      ar_s1_m1    ,316         ,1           ,
+      ar_dec_m1   ,43          ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cg_i, Variable :, cp_acc_same_id
+ Table tag :, cg_wb_cg_i_cp_acc_same_id
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   12          ,0           ,12          ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      aw_s0_m0    ,136         ,1           ,
+      aw_s0_m1    ,120         ,1           ,
+      aw_s1_m0    ,138         ,1           ,
+      aw_s1_m1    ,139         ,1           ,
+      aw_dec_m0   ,105         ,1           ,
+      aw_dec_m1   ,99          ,1           ,
+      ar_s0_m0    ,191         ,1           ,
+      ar_s0_m1    ,116         ,1           ,
+      ar_s1_m0    ,130         ,1           ,
+      ar_s1_m1    ,189         ,1           ,
+      ar_dec_m0   ,101         ,1           ,
+      ar_dec_m1   ,103         ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cg_i, Variable :, cp_acc_shared
+ Table tag :, cg_wb_cg_i_cp_acc_shared
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   12          ,0           ,12          ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      aw_s0_m0    ,511         ,1           ,
+      aw_s0_m1    ,457         ,1           ,
+      aw_s1_m0    ,482         ,1           ,
+      aw_s1_m1    ,452         ,1           ,
+      aw_dec_m0   ,296         ,1           ,
+      aw_dec_m1   ,268         ,1           ,
+      ar_s0_m0    ,342         ,1           ,
+      ar_s0_m1    ,296         ,1           ,
+      ar_s1_m0    ,407         ,1           ,
+      ar_s1_m1    ,312         ,1           ,
+      ar_dec_m0   ,186         ,1           ,
+      ar_dec_m1   ,143         ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cg_i, Variable :, cp_blk_wq_full
+ Table tag :, cg_wb_cg_i_cp_blk_wq_full
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   2           ,0           ,2           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      aw_m0       ,350         ,1           ,
+      aw_m1       ,350         ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cg_i, Variable :, cp_blk_tq_full
+ Table tag :, cg_wb_cg_i_cp_blk_tq_full
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   3           ,0           ,3           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      aw_s0       ,350         ,1           ,
+      aw_s1       ,771         ,1           ,
+      aw_dec      ,300         ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cg_i, Variable :, cp_rsp_collide
+ Table tag :, cg_wb_cg_i_cp_rsp_collide
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   4           ,0           ,4           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      b_m0        ,60          ,1           ,
+      b_m1        ,80          ,1           ,
+      r_m0        ,26831       ,1           ,
+      r_m1        ,22246       ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cg_i, Variable :, cp_rsp_stall
+ Table tag :, cg_wb_cg_i_cp_rsp_stall
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   4           ,0           ,4           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      b_m0        ,2168        ,1           ,
+      b_m1        ,1934        ,1           ,
+      r_m0        ,22865       ,1           ,
+      r_m1        ,21299       ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cg_i, Variable :, cp_rsp_unknown_id
+ Table tag :, cg_wb_cg_i_cp_rsp_unknown_id
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   4           ,0           ,4           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      b_s0        ,10          ,1           ,
+      b_s1        ,10          ,1           ,
+      r_s0        ,10          ,1           ,
+      r_s1        ,10          ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cg_i, Variable :, cp_r_interleave
+ Table tag :, cg_wb_cg_i_cp_r_interleave
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   2           ,0           ,2           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      m0          ,22521       ,1           ,
+      m1          ,18428       ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cg_i, Variable :, cp_fifo_full
+ Table tag :, cg_wb_cg_i_cp_fifo_full
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   7           ,0           ,7           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      wq_m0       ,4911        ,1           ,
+      wq_m1       ,4864        ,1           ,
+      tq_s0       ,435         ,1           ,
+      tq_s1       ,939         ,1           ,
+      tq_dec      ,300         ,1           ,
+      dec_aw      ,2430        ,1           ,
+      dec_ar      ,2220        ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cg_i, Variable :, cp_w_wait
+ Table tag :, cg_wb_cg_i_cp_w_wait
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   4           ,0           ,4           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      no_aw_m0    ,11206       ,1           ,
+      no_aw_m1    ,11917       ,1           ,
+      order_m0    ,46463       ,1           ,
+      order_m1    ,44472       ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : cg_i, Variable :, cp_misc
+ Table tag :, cg_wb_cg_i_cp_misc
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   3           ,0           ,3           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      dec_b_backlog,2560        ,1           ,
+      rst_busy    ,10          ,1           ,
+      rst_idle    ,10          ,1           ,
+
+
+
+
+
+

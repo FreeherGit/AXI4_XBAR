@@ -1,0 +1,72 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Nov  9 18:53:18 2026
+# Process ID         : 3679378
+# Current directory  : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim
+# Command line       : xsim -log /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_reset_idle_test_10.log -mode tcl -source {xsim.dir/tb_snap/xsim_script.tcl}
+# Log file           : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_reset_idle_test_10.log
+# Journal file       : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/xsim.jou
+# Running On         : vlsi-vivado
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
+# CPU Frequency      : 4000.105 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 41875 MB
+# Swap memory        : 27648 MB
+# Total Virtual      : 69524 MB
+# Available Virtual  : 41760 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_snap/xsim_script.tcl
+# xsim {tb_snap} -testplusarg TESTNAME=axi_reset_idle_test -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_reset_idle_test_10 -autoloadwcfg -runall -sv_seed 10
+Time resolution is 1 ps
+run -all
+==================================================================
+ TEST : axi_reset_idle_test
+==================================================================
+
+------------------------------------------------------------------
+ Reset while idle, then every master to S0, S1 and UNMAPPED
+------------------------------------------------------------------
+[195000]      reset released, checking every path
+[305000] PASS : M0->S0 INCR 2x8B addr=0d400000 (after idle reset) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=1 RID=1 expected 1 | 2 beats read == written
+[405000] PASS : M0->S1 INCR 2x8B addr=1d400000 (after idle reset) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=1 RID=1 expected 1 | 2 beats read == written
+[495000] PASS : M0->UNMAPPED INCR 2x8B addr=d0400000 (after idle reset) : BRESP=DECERR RRESP=DECERR expected DECERR | BID=1 RID=1 expected 1 | error response, nothing stored
+[605000] PASS : M1->S0 INCR 2x8B addr=0d401000 (after idle reset) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=9 RID=9 expected 9 | 2 beats read == written
+[705000] PASS : M1->S1 INCR 2x8B addr=1d401000 (after idle reset) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=9 RID=9 expected 9 | 2 beats read == written
+[795000] PASS : M1->UNMAPPED INCR 2x8B addr=d0401000 (after idle reset) : BRESP=DECERR RRESP=DECERR expected DECERR | BID=9 RID=9 expected 9 | error response, nothing stored
+
+------------------------------------------------------------------
+ SCOREBOARD SUMMARY
+   M0 transactions seen      : 6
+   M1 transactions seen      : 6
+   S0 transactions seen      : 4
+   S1 transactions seen      : 4
+   writes routed + matched   : 4
+   reads  routed + matched   : 4
+   DECERR writes / reads     : 2 / 2
+   SLVERR responses          : 0
+   read bytes checked (ref)  : 64
+   ERRORS                    : 0
+------------------------------------------------------------------
+ FUNCTIONAL COVERAGE of this test (black-box, from the pins)
+   transaction :  43.77 %
+   cycle       :  12.50 %
+   per-port    :  10.00 %
+   bins hit    : 59 of 198   (full table: +COV_DETAIL, all tests merged: make cov_merge)
+------------------------------------------------------------------
+ TEST CHECKS : 6 passed, 0 failed
+ WHAT THIS TEST PROVED:
+   1. a reset while idle leaves the crossbar ready: every master reaches S0, S1 and gets DECERR for unmapped
+==================================================================
+ TEST axi_reset_idle_test : PASSED
+==================================================================
+ WHITE-BOX COVERAGE of this test (inside the RTL): 3 of 129 bins hit, 4.90 %   (+COV_DETAIL for the table)
+$finish called at time : 945 ns : File "/home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv" Line 170
+exit
+INFO: xsimkernel Simulation Memory Usage: 290924 KB (Peak: 339484 KB), Simulation CPU Usage: 1230 ms
+INFO: [Common 17-206] Exiting xsim at Mon Nov  9 18:53:21 2026...

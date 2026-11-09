@@ -1,0 +1,79 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Nov  9 19:05:42 2026
+# Process ID         : 3721500
+# Current directory  : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim
+# Command line       : xsim -log /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_long_stall_test_8.log -mode tcl -source {xsim.dir/tb_snap/xsim_script.tcl}
+# Log file           : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_long_stall_test_8.log
+# Journal file       : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/xsim.jou
+# Running On         : vlsi-vivado
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
+# CPU Frequency      : 3999.989 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 41875 MB
+# Swap memory        : 27648 MB
+# Total Virtual      : 69524 MB
+# Available Virtual  : 45451 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_snap/xsim_script.tcl
+# xsim {tb_snap} -testplusarg TESTNAME=axi_long_stall_test -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_long_stall_test_8 -autoloadwcfg -runall -sv_seed 8
+Time resolution is 1 ps
+run -all
+==================================================================
+ TEST : axi_long_stall_test
+==================================================================
+
+------------------------------------------------------------------
+ READY at a SLAVE port held low for 14 clocks
+------------------------------------------------------------------
+[465000] PASS : S0 AWREADY low 14 clocks, 4 WRITEs waiting : 4 txns, responses == model (OKAY 4, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[805000] PASS : S0 WREADY low 14 clocks, 4 WRITEs waiting : 4 txns, responses == model (OKAY 4, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[1135000] PASS : S0 ARREADY low 14 clocks, 4 READs waiting : 4 txns, responses == model (OKAY 4, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[1485000] PASS : S1 AWREADY low 14 clocks, 4 WRITEs waiting : 4 txns, responses == model (OKAY 4, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[1825000] PASS : S1 WREADY low 14 clocks, 4 WRITEs waiting : 4 txns, responses == model (OKAY 4, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[2155000] PASS : S1 ARREADY low 14 clocks, 4 READs waiting : 4 txns, responses == model (OKAY 4, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+
+------------------------------------------------------------------
+ READY at a MASTER port held low for 14 clocks
+------------------------------------------------------------------
+[2325000] PASS : M0 BREADY low 14 clocks, WRITEs to S0 and S1 waiting : 2 txns, responses == model (OKAY 2, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[2555000] PASS : M0 RREADY low 14 clocks, READs to S0 and S1 waiting : 2 txns, responses == model (OKAY 2, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[2735000] PASS : M1 BREADY low 14 clocks, WRITEs to S0 and S1 waiting : 2 txns, responses == model (OKAY 2, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[2975000] PASS : M1 RREADY low 14 clocks, READs to S0 and S1 waiting : 2 txns, responses == model (OKAY 2, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+
+------------------------------------------------------------------
+ SCOREBOARD SUMMARY
+   M0 transactions seen      : 16
+   M1 transactions seen      : 16
+   S0 transactions seen      : 16
+   S1 transactions seen      : 16
+   writes routed + matched   : 20
+   reads  routed + matched   : 12
+   DECERR writes / reads     : 0 / 0
+   SLVERR responses          : 0
+   read bytes checked (ref)  : 384
+   ERRORS                    : 0
+------------------------------------------------------------------
+ FUNCTIONAL COVERAGE of this test (black-box, from the pins)
+   transaction :  40.50 %
+   cycle       :  79.17 %
+   per-port    :  80.00 %
+   bins hit    : 78 of 198   (full table: +COV_DETAIL, all tests merged: make cov_merge)
+------------------------------------------------------------------
+ TEST CHECKS : 10 passed, 0 failed
+ WHAT THIS TEST PROVED:
+   1. a READY held low for 14 clocks on any channel of any port only delays the traffic; nothing is lost or misrouted
+==================================================================
+ TEST axi_long_stall_test : PASSED
+==================================================================
+ WHITE-BOX COVERAGE of this test (inside the RTL): 34 of 129 bins hit, 33.33 %   (+COV_DETAIL for the table)
+$finish called at time : 3125 ns : File "/home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv" Line 170
+exit
+INFO: xsimkernel Simulation Memory Usage: 290924 KB (Peak: 339484 KB), Simulation CPU Usage: 1260 ms
+INFO: [Common 17-206] Exiting xsim at Mon Nov  9 19:05:46 2026...

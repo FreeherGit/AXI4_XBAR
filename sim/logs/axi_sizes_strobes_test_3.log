@@ -1,0 +1,90 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Nov  9 18:50:13 2026
+# Process ID         : 3669030
+# Current directory  : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim
+# Command line       : xsim -log /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_sizes_strobes_test_3.log -mode tcl -source {xsim.dir/tb_snap/xsim_script.tcl}
+# Log file           : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_sizes_strobes_test_3.log
+# Journal file       : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/xsim.jou
+# Running On         : vlsi-vivado
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
+# CPU Frequency      : 4010.994 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 41875 MB
+# Swap memory        : 27648 MB
+# Total Virtual      : 69524 MB
+# Available Virtual  : 41737 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_snap/xsim_script.tcl
+# xsim {tb_snap} -testplusarg TESTNAME=axi_sizes_strobes_test -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_sizes_strobes_test_3 -autoloadwcfg -runall -sv_seed 3
+Time resolution is 1 ps
+run -all
+==================================================================
+ TEST : axi_sizes_strobes_test
+==================================================================
+
+------------------------------------------------------------------
+ PART A : 4-beat INCR, sizes 1/2/4/8 bytes, every path
+------------------------------------------------------------------
+[255000] PASS : M0->S0 INCR 4x1B addr=0d300003  : BRESP=OKAY RRESP=OKAY expected OKAY | BID=0 RID=0 expected 0 | 4 beats read == written
+[395000] PASS : M0->S0 INCR 4x2B addr=0d300100  : BRESP=OKAY RRESP=OKAY expected OKAY | BID=1 RID=1 expected 1 | 4 beats read == written
+[535000] PASS : M0->S0 INCR 4x4B addr=0d300200  : BRESP=OKAY RRESP=OKAY expected OKAY | BID=2 RID=2 expected 2 | 4 beats read == written
+[675000] PASS : M0->S0 INCR 4x8B addr=0d300300  : BRESP=OKAY RRESP=OKAY expected OKAY | BID=3 RID=3 expected 3 | 4 beats read == written
+[815000] PASS : M0->S1 INCR 4x1B addr=1d301003  : BRESP=OKAY RRESP=OKAY expected OKAY | BID=0 RID=0 expected 0 | 4 beats read == written
+[955000] PASS : M0->S1 INCR 4x2B addr=1d301100  : BRESP=OKAY RRESP=OKAY expected OKAY | BID=1 RID=1 expected 1 | 4 beats read == written
+[1095000] PASS : M0->S1 INCR 4x4B addr=1d301200  : BRESP=OKAY RRESP=OKAY expected OKAY | BID=2 RID=2 expected 2 | 4 beats read == written
+[1235000] PASS : M0->S1 INCR 4x8B addr=1d301300  : BRESP=OKAY RRESP=OKAY expected OKAY | BID=3 RID=3 expected 3 | 4 beats read == written
+[1375000] PASS : M1->S0 INCR 4x1B addr=0d302003  : BRESP=OKAY RRESP=OKAY expected OKAY | BID=8 RID=8 expected 8 | 4 beats read == written
+[1515000] PASS : M1->S0 INCR 4x2B addr=0d302100  : BRESP=OKAY RRESP=OKAY expected OKAY | BID=9 RID=9 expected 9 | 4 beats read == written
+[1655000] PASS : M1->S0 INCR 4x4B addr=0d302200  : BRESP=OKAY RRESP=OKAY expected OKAY | BID=a RID=a expected a | 4 beats read == written
+[1795000] PASS : M1->S0 INCR 4x8B addr=0d302300  : BRESP=OKAY RRESP=OKAY expected OKAY | BID=b RID=b expected b | 4 beats read == written
+[1935000] PASS : M1->S1 INCR 4x1B addr=1d303003  : BRESP=OKAY RRESP=OKAY expected OKAY | BID=8 RID=8 expected 8 | 4 beats read == written
+[2075000] PASS : M1->S1 INCR 4x2B addr=1d303100  : BRESP=OKAY RRESP=OKAY expected OKAY | BID=9 RID=9 expected 9 | 4 beats read == written
+[2215000] PASS : M1->S1 INCR 4x4B addr=1d303200  : BRESP=OKAY RRESP=OKAY expected OKAY | BID=a RID=a expected a | 4 beats read == written
+[2355000] PASS : M1->S1 INCR 4x8B addr=1d303300  : BRESP=OKAY RRESP=OKAY expected OKAY | BID=b RID=b expected b | 4 beats read == written
+
+------------------------------------------------------------------
+ PART B : strobes 5A / 00 / F0 / FF on every path
+------------------------------------------------------------------
+[2495000] PASS : M0->S0 strobes 5A/00/F0/FF addr=0d310000 : BRESP=OKAY RRESP=OKAY expected OKAY | BID=5 RID=5 expected 5 | 4 beats read == written
+[2635000] PASS : M0->S1 strobes 5A/00/F0/FF addr=1d311000 : BRESP=OKAY RRESP=OKAY expected OKAY | BID=5 RID=5 expected 5 | 4 beats read == written
+[2775000] PASS : M1->S0 strobes 5A/00/F0/FF addr=0d312000 : BRESP=OKAY RRESP=OKAY expected OKAY | BID=d RID=d expected d | 4 beats read == written
+[2915000] PASS : M1->S1 strobes 5A/00/F0/FF addr=1d313000 : BRESP=OKAY RRESP=OKAY expected OKAY | BID=d RID=d expected d | 4 beats read == written
+
+------------------------------------------------------------------
+ SCOREBOARD SUMMARY
+   M0 transactions seen      : 20
+   M1 transactions seen      : 20
+   S0 transactions seen      : 20
+   S1 transactions seen      : 20
+   writes routed + matched   : 20
+   reads  routed + matched   : 20
+   DECERR writes / reads     : 0 / 0
+   SLVERR responses          : 0
+   read bytes checked (ref)  : 368
+   ERRORS                    : 0
+------------------------------------------------------------------
+ FUNCTIONAL COVERAGE of this test (black-box, from the pins)
+   transaction :  48.37 %
+   cycle       :   0.00 %
+   per-port    :   6.67 %
+   bins hit    : 67 of 198   (full table: +COV_DETAIL, all tests merged: make cov_merge)
+------------------------------------------------------------------
+ TEST CHECKS : 20 passed, 0 failed
+ WHAT THIS TEST PROVED:
+   1. 1, 2, 4 and 8-byte beats are routed and stored correctly on every path
+   2. bytes with WSTRB = 0 are left untouched (also a beat with no strobe at all)
+==================================================================
+ TEST axi_sizes_strobes_test : PASSED
+==================================================================
+ WHITE-BOX COVERAGE of this test (inside the RTL): 2 of 129 bins hit, 2.94 %   (+COV_DETAIL for the table)
+$finish called at time : 3065 ns : File "/home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv" Line 170
+exit
+INFO: xsimkernel Simulation Memory Usage: 290924 KB (Peak: 339484 KB), Simulation CPU Usage: 1270 ms
+INFO: [Common 17-206] Exiting xsim at Mon Nov  9 18:50:17 2026...

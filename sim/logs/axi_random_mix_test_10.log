@@ -1,0 +1,72 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Nov  9 19:10:30 2026
+# Process ID         : 3736438
+# Current directory  : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim
+# Command line       : xsim -log /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_random_mix_test_10.log -mode tcl -source {xsim.dir/tb_snap/xsim_script.tcl}
+# Log file           : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_random_mix_test_10.log
+# Journal file       : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/xsim.jou
+# Running On         : vlsi-vivado
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
+# CPU Frequency      : 4000.071 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 41875 MB
+# Swap memory        : 27648 MB
+# Total Virtual      : 69524 MB
+# Available Virtual  : 45499 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_snap/xsim_script.tcl
+# xsim {tb_snap} -testplusarg TESTNAME=axi_random_mix_test -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_random_mix_test_10 -autoloadwcfg -runall -sv_seed 10
+Time resolution is 1 ps
+run -all
+==================================================================
+ TEST : axi_random_mix_test
+==================================================================
+
+------------------------------------------------------------------
+ Random mix: sparse strobes, 30 % backpressure, latency 0-10, shared IDs
+------------------------------------------------------------------
+[115000] [GEN mix_m0] knobs: num_txns=60 only_kind=any only_region=any only_burst=any max_len=63 IDs=0..f no_unmapped=0 blocking=0
+[115000] [GEN mix_m0] ... (remaining 60 transactions not printed)
+[115000] [GEN mix_m1] knobs: num_txns=60 only_kind=any only_region=any only_burst=any max_len=63 IDs=0..f no_unmapped=0 blocking=0
+[115000] [GEN mix_m1] ... (remaining 60 transactions not printed)
+[14285000] [GEN mix_m1] summary: 60 txns | WRITE=30 READ=30 | S0=23 S1=21 UNMAPPED=16 | FIXED=25 INCR=22 WRAP=13 | knob violations=0 -> KNOBS RESPECTED
+[14975000] [GEN mix_m0] summary: 60 txns | WRITE=32 READ=28 | S0=20 S1=22 UNMAPPED=18 | FIXED=26 INCR=25 WRAP=9 | knob violations=0 -> KNOBS RESPECTED
+[14975000] PASS : 120 random transactions : 120 txns, responses == model (OKAY 86, SLVERR 0, DECERR 34), IDs echoed, 0 wrong
+
+------------------------------------------------------------------
+ SCOREBOARD SUMMARY
+   M0 transactions seen      : 60
+   M1 transactions seen      : 60
+   S0 transactions seen      : 43
+   S1 transactions seen      : 43
+   writes routed + matched   : 44
+   reads  routed + matched   : 42
+   DECERR writes / reads     : 18 / 16
+   SLVERR responses          : 0
+   read bytes checked (ref)  : 2743
+   ERRORS                    : 0
+------------------------------------------------------------------
+ FUNCTIONAL COVERAGE of this test (black-box, from the pins)
+   transaction :  88.60 %
+   cycle       : 100.00 %
+   per-port    :  80.00 %
+   bins hit    : 170 of 198   (full table: +COV_DETAIL, all tests merged: make cov_merge)
+------------------------------------------------------------------
+ TEST CHECKS : 1 passed, 0 failed
+ WHAT THIS TEST PROVED:
+   1. under backpressure, latency, sparse strobes and shared IDs, all random traffic is routed, stored and answered correctly
+==================================================================
+ TEST axi_random_mix_test : PASSED
+==================================================================
+ WHITE-BOX COVERAGE of this test (inside the RTL): 53 of 129 bins hit, 40.69 %   (+COV_DETAIL for the table)
+$finish called at time : 15125 ns : File "/home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv" Line 170
+exit
+INFO: xsimkernel Simulation Memory Usage: 290924 KB (Peak: 339484 KB), Simulation CPU Usage: 1790 ms
+INFO: [Common 17-206] Exiting xsim at Mon Nov  9 19:10:34 2026...

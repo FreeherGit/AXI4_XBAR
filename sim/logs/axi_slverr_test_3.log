@@ -1,0 +1,152 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Nov  9 19:07:45 2026
+# Process ID         : 3728249
+# Current directory  : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim
+# Command line       : xsim -log /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_slverr_test_3.log -mode tcl -source {xsim.dir/tb_snap/xsim_script.tcl}
+# Log file           : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_slverr_test_3.log
+# Journal file       : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/xsim.jou
+# Running On         : vlsi-vivado
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
+# CPU Frequency      : 4002.894 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 41875 MB
+# Swap memory        : 27648 MB
+# Total Virtual      : 69524 MB
+# Available Virtual  : 45515 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_snap/xsim_script.tcl
+# xsim {tb_snap} -testplusarg TESTNAME=axi_slverr_test -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_slverr_test_3 -autoloadwcfg -runall -sv_seed 3
+Time resolution is 1 ps
+run -all
+==================================================================
+ TEST : axi_slverr_test
+==================================================================
+
+------------------------------------------------------------------
+ STEP 1 : Both masters access inside/outside SLVERR windows
+------------------------------------------------------------------
+
+------------------------------------------------------------------
+ M0 : inside/outside SLVERR window checking
+------------------------------------------------------------------
+[235000] PASS : M0 00008000 : BRESP : got SLVERR == expected SLVERR
+[235000] PASS : M0 00008000 : all 4 RRESP = SLVERR
+[235000] PASS : M0 00008000 : BID : got 0x1 == expected 0x1
+[235000] PASS : M0 00008000 : RID : got 0x2 == expected 0x2
+[355000] PASS : M0 00009000 : BRESP : got OKAY == expected OKAY
+[355000] PASS : M0 00009000 : all 4 RRESP = OKAY
+[355000] PASS : M0 00009000 : BID : got 0x1 == expected 0x1
+[355000] PASS : M0 00009000 : RID : got 0x2 == expected 0x2
+[355000] PASS : M0 00009000 : outside the window, read back : 4 beats read back == data written
+[475000] PASS : M0 10008000 : BRESP : got SLVERR == expected SLVERR
+[475000] PASS : M0 10008000 : all 4 RRESP = SLVERR
+[475000] PASS : M0 10008000 : BID : got 0x1 == expected 0x1
+[475000] PASS : M0 10008000 : RID : got 0x2 == expected 0x2
+[595000] PASS : M0 10009000 : BRESP : got OKAY == expected OKAY
+[595000] PASS : M0 10009000 : all 4 RRESP = OKAY
+[595000] PASS : M0 10009000 : BID : got 0x1 == expected 0x1
+[595000] PASS : M0 10009000 : RID : got 0x2 == expected 0x2
+[595000] PASS : M0 10009000 : outside the window, read back : 4 beats read back == data written
+
+------------------------------------------------------------------
+ M1 : inside/outside SLVERR window checking
+------------------------------------------------------------------
+[715000] PASS : M1 00008010 : BRESP : got SLVERR == expected SLVERR
+[715000] PASS : M1 00008010 : all 4 RRESP = SLVERR
+[715000] PASS : M1 00008010 : BID : got 0x9 == expected 0x9
+[715000] PASS : M1 00008010 : RID : got 0xa == expected 0xa
+[835000] PASS : M1 00009010 : BRESP : got OKAY == expected OKAY
+[835000] PASS : M1 00009010 : all 4 RRESP = OKAY
+[835000] PASS : M1 00009010 : BID : got 0x9 == expected 0x9
+[835000] PASS : M1 00009010 : RID : got 0xa == expected 0xa
+[835000] PASS : M1 00009010 : outside the window, read back : 4 beats read back == data written
+[955000] PASS : M1 10008010 : BRESP : got SLVERR == expected SLVERR
+[955000] PASS : M1 10008010 : all 4 RRESP = SLVERR
+[955000] PASS : M1 10008010 : BID : got 0x9 == expected 0x9
+[955000] PASS : M1 10008010 : RID : got 0xa == expected 0xa
+[1075000] PASS : M1 10009010 : BRESP : got OKAY == expected OKAY
+[1075000] PASS : M1 10009010 : all 4 RRESP = OKAY
+[1075000] PASS : M1 10009010 : BID : got 0x9 == expected 0x9
+[1075000] PASS : M1 10009010 : RID : got 0xa == expected 0xa
+[1075000] PASS : M1 10009010 : outside the window, read back : 4 beats read back == data written
+
+------------------------------------------------------------------
+ STEP 2 : 8-beat read inside each SLVERR window
+------------------------------------------------------------------
+[1175000] PASS : M0 8-beat read: SLVERR on every R beat
+[1175000] PASS : M0 8-beat read: R beats received : got 8 == expected 8
+[1175000] PASS : M0 8-beat read: RID : got 0x4 == expected 0x4
+[1275000] PASS : M1 8-beat read: SLVERR on every R beat
+[1275000] PASS : M1 8-beat read: R beats received : got 8 == expected 8
+[1275000] PASS : M1 8-beat read: RID : got 0xc == expected 0xc
+
+------------------------------------------------------------------
+ STEP 3 : INCR and WRAP bursts inside every SLVERR window
+------------------------------------------------------------------
+
+------------------------------------------------------------------
+ M0 -> S0 : SLVERR burst testing
+------------------------------------------------------------------
+[1375000] PASS : M0->S0 INCR 2x8B addr=00008000 (2-beat INCR inside SLVERR window) : BRESP=SLVERR RRESP=SLVERR expected SLVERR | BID=6 RID=6 expected 6 | error response, nothing stored
+[1515000] PASS : M0->S0 WRAP 4x4B addr=00008080 (4-beat WRAP inside SLVERR window) : BRESP=SLVERR RRESP=SLVERR expected SLVERR | BID=7 RID=7 expected 7 | error response, nothing stored
+
+------------------------------------------------------------------
+ M0 -> S1 : SLVERR burst testing
+------------------------------------------------------------------
+[1615000] PASS : M0->S1 INCR 2x8B addr=10008000 (2-beat INCR inside SLVERR window) : BRESP=SLVERR RRESP=SLVERR expected SLVERR | BID=6 RID=6 expected 6 | error response, nothing stored
+[1755000] PASS : M0->S1 WRAP 4x4B addr=10008080 (4-beat WRAP inside SLVERR window) : BRESP=SLVERR RRESP=SLVERR expected SLVERR | BID=7 RID=7 expected 7 | error response, nothing stored
+
+------------------------------------------------------------------
+ M1 -> S0 : SLVERR burst testing
+------------------------------------------------------------------
+[1855000] PASS : M1->S0 INCR 2x8B addr=00008040 (2-beat INCR inside SLVERR window) : BRESP=SLVERR RRESP=SLVERR expected SLVERR | BID=e RID=e expected e | error response, nothing stored
+[1995000] PASS : M1->S0 WRAP 4x4B addr=000080c0 (4-beat WRAP inside SLVERR window) : BRESP=SLVERR RRESP=SLVERR expected SLVERR | BID=f RID=f expected f | error response, nothing stored
+
+------------------------------------------------------------------
+ M1 -> S1 : SLVERR burst testing
+------------------------------------------------------------------
+[2095000] PASS : M1->S1 INCR 2x8B addr=10008040 (2-beat INCR inside SLVERR window) : BRESP=SLVERR RRESP=SLVERR expected SLVERR | BID=e RID=e expected e | error response, nothing stored
+[2235000] PASS : M1->S1 WRAP 4x4B addr=100080c0 (4-beat WRAP inside SLVERR window) : BRESP=SLVERR RRESP=SLVERR expected SLVERR | BID=f RID=f expected f | error response, nothing stored
+
+------------------------------------------------------------------
+ SCOREBOARD SUMMARY
+   M0 transactions seen      : 17
+   M1 transactions seen      : 17
+   S0 transactions seen      : 17
+   S1 transactions seen      : 17
+   writes routed + matched   : 16
+   reads  routed + matched   : 18
+   DECERR writes / reads     : 0 / 0
+   SLVERR responses          : 26
+   read bytes checked (ref)  : 128
+   ERRORS                    : 0
+------------------------------------------------------------------
+ FUNCTIONAL COVERAGE of this test (black-box, from the pins)
+   transaction :  52.18 %
+   cycle       :   0.00 %
+   per-port    :   6.67 %
+   bins hit    : 71 of 198   (full table: +COV_DETAIL, all tests merged: make cov_merge)
+------------------------------------------------------------------
+ TEST CHECKS : 50 passed, 0 failed
+ WHAT THIS TEST PROVED:
+   1. a slave's SLVERR goes back unchanged to the master that asked
+   2. SLVERR is on the B response of a failing write and every R beat of a failing read
+   3. addresses outside the error window return OKAY with correct read-back data
+   4. 8-beat reads receive SLVERR on all beats with the correct RID
+   5. SLVERR is correctly propagated for both INCR and WRAP bursts
+   6. both masters can access both slaves and receive the correct SLVERR responses
+==================================================================
+ TEST axi_slverr_test : PASSED
+==================================================================
+ WHITE-BOX COVERAGE of this test (inside the RTL): 2 of 129 bins hit, 2.94 %   (+COV_DETAIL for the table)
+$finish called at time : 2385 ns : File "/home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv" Line 170
+exit
+INFO: xsimkernel Simulation Memory Usage: 290924 KB (Peak: 339484 KB), Simulation CPU Usage: 1240 ms
+INFO: [Common 17-206] Exiting xsim at Mon Nov  9 19:07:48 2026...

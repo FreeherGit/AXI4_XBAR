@@ -1,0 +1,74 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Nov  9 18:46:13 2026
+# Process ID         : 3656010
+# Current directory  : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim
+# Command line       : xsim -log /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_smoke_test_7.log -mode tcl -source {xsim.dir/tb_snap/xsim_script.tcl}
+# Log file           : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_smoke_test_7.log
+# Journal file       : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/xsim.jou
+# Running On         : vlsi-vivado
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
+# CPU Frequency      : 3994.255 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 41875 MB
+# Swap memory        : 27648 MB
+# Total Virtual      : 69524 MB
+# Available Virtual  : 41689 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_snap/xsim_script.tcl
+# xsim {tb_snap} -testplusarg TESTNAME=axi_smoke_test -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_test_7 -autoloadwcfg -runall -sv_seed 7
+Time resolution is 1 ps
+run -all
+==================================================================
+ TEST : axi_smoke_test
+==================================================================
+
+------------------------------------------------------------------
+ Random traffic from M0 and M1 at the same time (30 transactions each)
+------------------------------------------------------------------
+[115000] [GEN smoke_m0] knobs: num_txns=30 only_kind=any only_region=any only_burst=any max_len=31 IDs=0..7 no_unmapped=0 blocking=0
+[115000] [GEN smoke_m0] ... (remaining 30 transactions not printed)
+[115000] [GEN smoke_m1] knobs: num_txns=30 only_kind=any only_region=any only_burst=any max_len=31 IDs=8..f no_unmapped=0 blocking=0
+[115000] [GEN smoke_m1] ... (remaining 30 transactions not printed)
+[3045000] [GEN smoke_m1] summary: 30 txns | WRITE=20 READ=10 | S0=9 S1=12 UNMAPPED=9 | FIXED=10 INCR=14 WRAP=6 | knob violations=0 -> KNOBS RESPECTED
+[3425000] [GEN smoke_m0] summary: 30 txns | WRITE=18 READ=12 | S0=12 S1=7 UNMAPPED=11 | FIXED=14 INCR=12 WRAP=4 | knob violations=0 -> KNOBS RESPECTED
+[3475000] PASS : M0 random transactions finished : got 30 == expected 30
+[3475000] PASS : M1 random transactions finished : got 30 == expected 30
+[3475000] PASS : scoreboard errors (route, data, response) : got 0 == expected 0
+
+------------------------------------------------------------------
+ SCOREBOARD SUMMARY
+   M0 transactions seen      : 30
+   M1 transactions seen      : 30
+   S0 transactions seen      : 21
+   S1 transactions seen      : 19
+   writes routed + matched   : 25
+   reads  routed + matched   : 15
+   DECERR writes / reads     : 13 / 7
+   SLVERR responses          : 0
+   read bytes checked (ref)  : 338
+   ERRORS                    : 0
+------------------------------------------------------------------
+ FUNCTIONAL COVERAGE of this test (black-box, from the pins)
+   transaction :  80.79 %
+   cycle       :  33.33 %
+   per-port    :  40.00 %
+   bins hit    : 136 of 198   (full table: +COV_DETAIL, all tests merged: make cov_merge)
+------------------------------------------------------------------
+ TEST CHECKS : 3 passed, 0 failed
+ WHAT THIS TEST PROVED:
+   1. random reads and writes from both masters at once are routed and answered correctly
+==================================================================
+ TEST axi_smoke_test : PASSED
+==================================================================
+ WHITE-BOX COVERAGE of this test (inside the RTL): 28 of 129 bins hit, 24.51 %   (+COV_DETAIL for the table)
+$finish called at time : 3625 ns : File "/home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv" Line 170
+exit
+INFO: xsimkernel Simulation Memory Usage: 290924 KB (Peak: 339484 KB), Simulation CPU Usage: 1440 ms
+INFO: [Common 17-206] Exiting xsim at Mon Nov  9 18:46:17 2026...

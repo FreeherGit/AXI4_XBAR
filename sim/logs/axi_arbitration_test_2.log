@@ -1,0 +1,83 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Nov  9 19:00:58 2026
+# Process ID         : 3705468
+# Current directory  : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim
+# Command line       : xsim -log /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_arbitration_test_2.log -mode tcl -source {xsim.dir/tb_snap/xsim_script.tcl}
+# Log file           : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_arbitration_test_2.log
+# Journal file       : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/xsim.jou
+# Running On         : vlsi-vivado
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
+# CPU Frequency      : 3999.987 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 41875 MB
+# Swap memory        : 27648 MB
+# Total Virtual      : 69524 MB
+# Available Virtual  : 41711 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_snap/xsim_script.tcl
+# xsim {tb_snap} -testplusarg TESTNAME=axi_arbitration_test -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_arbitration_test_2 -autoloadwcfg -runall -sv_seed 2
+Time resolution is 1 ps
+run -all
+==================================================================
+ TEST : axi_arbitration_test
+==================================================================
+
+------------------------------------------------------------------
+ STEP 1 : M0 and M1 both send 8 writes to S0 at the same time
+------------------------------------------------------------------
+[785000]      WRITE grant order at S0 (0 = M0, 1 = M1): 1010101010101010
+[785000] PASS : WRITEs to S0: both masters were granted while the other still had requests (no starvation)
+
+------------------------------------------------------------------
+ STEP 2 : M0 and M1 both send 8 reads to S1 at the same time
+------------------------------------------------------------------
+[1455000]      READ grant order at S1 (0 = M0, 1 = M1): 1010101010101010
+[1455000] PASS : READs to S1: both masters were granted while the other still had requests (no starvation)
+
+------------------------------------------------------------------
+ STEP 3 : round-robin tie at S1
+------------------------------------------------------------------
+[1605000]      M0 was served alone first; tie grant times: M0 1565000, M1 1555000
+[1605000] PASS : M0 was served last, so M1 wins the tie
+[1785000]      M1 was served alone first; tie grant times: M0 1735000, M1 1745000
+[1785000] PASS : M1 was served last, so M0 wins the tie
+
+------------------------------------------------------------------
+ SCOREBOARD SUMMARY
+   M0 transactions seen      : 19
+   M1 transactions seen      : 19
+   S0 transactions seen      : 16
+   S1 transactions seen      : 22
+   writes routed + matched   : 22
+   reads  routed + matched   : 16
+   DECERR writes / reads     : 0 / 0
+   SLVERR responses          : 0
+   read bytes checked (ref)  : 512
+   ERRORS                    : 0
+------------------------------------------------------------------
+ FUNCTIONAL COVERAGE of this test (black-box, from the pins)
+   transaction :  50.66 %
+   cycle       :  12.50 %
+   per-port    :  20.00 %
+   bins hit    : 75 of 198   (full table: +COV_DETAIL, all tests merged: make cov_merge)
+------------------------------------------------------------------
+ TEST CHECKS : 4 passed, 0 failed
+ WHAT THIS TEST PROVED:
+   1. when both masters use the same slave, both are served (no deadlock, no starvation)
+   2. grants are mixed between the masters, for writes (S0) and reads (S1)
+   3. on a same-clock tie the master served last loses (round robin, not fixed priority)
+==================================================================
+ TEST axi_arbitration_test : PASSED
+==================================================================
+ WHITE-BOX COVERAGE of this test (inside the RTL): 17 of 129 bins hit, 12.61 %   (+COV_DETAIL for the table)
+$finish called at time : 1965 ns : File "/home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv" Line 170
+exit
+INFO: xsimkernel Simulation Memory Usage: 290924 KB (Peak: 339484 KB), Simulation CPU Usage: 1300 ms
+INFO: [Common 17-206] Exiting xsim at Mon Nov  9 19:01:02 2026...

@@ -1,0 +1,67 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Nov  9 18:51:18 2026
+# Process ID         : 3672591
+# Current directory  : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim
+# Command line       : xsim -log /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_reset_por_test_6.log -mode tcl -source {xsim.dir/tb_snap/xsim_script.tcl}
+# Log file           : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_reset_por_test_6.log
+# Journal file       : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/xsim.jou
+# Running On         : vlsi-vivado
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
+# CPU Frequency      : 4000.067 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 41875 MB
+# Swap memory        : 27648 MB
+# Total Virtual      : 69524 MB
+# Available Virtual  : 41584 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_snap/xsim_script.tcl
+# xsim {tb_snap} -testplusarg TESTNAME=axi_reset_por_test -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_reset_por_test_6 -autoloadwcfg -runall -sv_seed 6
+Time resolution is 1 ps
+run -all
+==================================================================
+ TEST : axi_reset_por_test
+==================================================================
+
+------------------------------------------------------------------
+ State right after power-on reset
+------------------------------------------------------------------
+[165000]      sampled: M0 bvalid=0 rvalid=0 | M1 bvalid=0 rvalid=0 | S0 awvalid=0 wvalid=0 arvalid=0 | S1 awvalid=0 wvalid=0 arvalid=0 | 
+[165000] PASS : after reset every crossbar VALID (BVALID RVALID AWVALID WVALID ARVALID) is 0 for 5 clocks
+
+------------------------------------------------------------------
+ SCOREBOARD SUMMARY
+   M0 transactions seen      : 0
+   M1 transactions seen      : 0
+   S0 transactions seen      : 0
+   S1 transactions seen      : 0
+   writes routed + matched   : 0
+   reads  routed + matched   : 0
+   DECERR writes / reads     : 0 / 0
+   SLVERR responses          : 0
+   read bytes checked (ref)  : 0
+   ERRORS                    : 0
+------------------------------------------------------------------
+ FUNCTIONAL COVERAGE of this test (black-box, from the pins)
+   transaction :   0.00 %
+   cycle       :   0.00 %
+   per-port    :   0.00 %
+   bins hit    : 0 of 198   (full table: +COV_DETAIL, all tests merged: make cov_merge)
+------------------------------------------------------------------
+ TEST CHECKS : 1 passed, 0 failed
+ WHAT THIS TEST PROVED:
+   1. all VALID outputs of the crossbar are 0 after reset (known idle state)
+==================================================================
+ TEST axi_reset_por_test : PASSED
+==================================================================
+ WHITE-BOX COVERAGE of this test (inside the RTL): 0 of 129 bins hit, 0.00 %   (+COV_DETAIL for the table)
+$finish called at time : 315 ns : File "/home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv" Line 170
+exit
+INFO: xsimkernel Simulation Memory Usage: 290924 KB (Peak: 339484 KB), Simulation CPU Usage: 1230 ms
+INFO: [Common 17-206] Exiting xsim at Mon Nov  9 18:51:21 2026...

@@ -1,0 +1,1 @@
+xsim {tb_snap} -testplusarg TESTNAME=axi_bad_id_test -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_bad_id_test_10 -autoloadwcfg -runall -sv_seed 10

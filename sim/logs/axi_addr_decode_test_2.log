@@ -1,0 +1,124 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Nov  9 18:53:28 2026
+# Process ID         : 3680000
+# Current directory  : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim
+# Command line       : xsim -log /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_addr_decode_test_2.log -mode tcl -source {xsim.dir/tb_snap/xsim_script.tcl}
+# Log file           : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_addr_decode_test_2.log
+# Journal file       : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/xsim.jou
+# Running On         : vlsi-vivado
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
+# CPU Frequency      : 3999.888 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 41875 MB
+# Swap memory        : 27648 MB
+# Total Virtual      : 69524 MB
+# Available Virtual  : 41698 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_snap/xsim_script.tcl
+# xsim {tb_snap} -testplusarg TESTNAME=axi_addr_decode_test -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_addr_decode_test_2 -autoloadwcfg -runall -sv_seed 2
+Time resolution is 1 ps
+run -all
+==================================================================
+ TEST : axi_addr_decode_test
+==================================================================
+
+------------------------------------------------------------------
+ MASTER M0 : one write + one read per address
+------------------------------------------------------------------
+[225000]      M0 addr 00000000 (expected S0) : S0 got 1 write, S1 got 0 write | BRESP=OKAY RRESP=OKAY
+[225000] PASS : M0 addr 00000000 (expected S0) : writes seen at S0 : got 1 == expected 1
+[225000] PASS : M0 addr 00000000 (expected S0) : writes seen at S1 : got 0 == expected 0
+[225000] PASS : M0 addr 00000000 (expected S0) : read back : 1 beats read back == data written
+[345000]      M0 addr 0ffffff8 (expected S0) : S0 got 1 write, S1 got 0 write | BRESP=OKAY RRESP=OKAY
+[345000] PASS : M0 addr 0ffffff8 (expected S0) : writes seen at S0 : got 1 == expected 1
+[345000] PASS : M0 addr 0ffffff8 (expected S0) : writes seen at S1 : got 0 == expected 0
+[345000] PASS : M0 addr 0ffffff8 (expected S0) : read back : 1 beats read back == data written
+[465000]      M0 addr 10000000 (expected S1) : S0 got 0 write, S1 got 1 write | BRESP=OKAY RRESP=OKAY
+[465000] PASS : M0 addr 10000000 (expected S1) : writes seen at S0 : got 0 == expected 0
+[465000] PASS : M0 addr 10000000 (expected S1) : writes seen at S1 : got 1 == expected 1
+[465000] PASS : M0 addr 10000000 (expected S1) : read back : 1 beats read back == data written
+[585000]      M0 addr 1ffffff8 (expected S1) : S0 got 0 write, S1 got 1 write | BRESP=OKAY RRESP=OKAY
+[585000] PASS : M0 addr 1ffffff8 (expected S1) : writes seen at S0 : got 0 == expected 0
+[585000] PASS : M0 addr 1ffffff8 (expected S1) : writes seen at S1 : got 1 == expected 1
+[585000] PASS : M0 addr 1ffffff8 (expected S1) : read back : 1 beats read back == data written
+[675000]      M0 addr 20000000 (expected UNMAPPED) : S0 got 0 write, S1 got 0 write | BRESP=DECERR RRESP=DECERR
+[675000] PASS : M0 addr 20000000 (expected UNMAPPED) : writes seen at S0 : got 0 == expected 0
+[675000] PASS : M0 addr 20000000 (expected UNMAPPED) : writes seen at S1 : got 0 == expected 0
+[675000] PASS : M0 addr 20000000 (expected UNMAPPED) : BRESP : got DECERR == expected DECERR
+[675000] PASS : M0 addr 20000000 (expected UNMAPPED) : RRESP : got DECERR == expected DECERR
+[765000]      M0 addr fffffff8 (expected UNMAPPED) : S0 got 0 write, S1 got 0 write | BRESP=DECERR RRESP=DECERR
+[765000] PASS : M0 addr fffffff8 (expected UNMAPPED) : writes seen at S0 : got 0 == expected 0
+[765000] PASS : M0 addr fffffff8 (expected UNMAPPED) : writes seen at S1 : got 0 == expected 0
+[765000] PASS : M0 addr fffffff8 (expected UNMAPPED) : BRESP : got DECERR == expected DECERR
+[765000] PASS : M0 addr fffffff8 (expected UNMAPPED) : RRESP : got DECERR == expected DECERR
+
+------------------------------------------------------------------
+ MASTER M1 : one write + one read per address
+------------------------------------------------------------------
+[885000]      M1 addr 00000000 (expected S0) : S0 got 1 write, S1 got 0 write | BRESP=OKAY RRESP=OKAY
+[885000] PASS : M1 addr 00000000 (expected S0) : writes seen at S0 : got 1 == expected 1
+[885000] PASS : M1 addr 00000000 (expected S0) : writes seen at S1 : got 0 == expected 0
+[885000] PASS : M1 addr 00000000 (expected S0) : read back : 1 beats read back == data written
+[1005000]      M1 addr 0ffffff8 (expected S0) : S0 got 1 write, S1 got 0 write | BRESP=OKAY RRESP=OKAY
+[1005000] PASS : M1 addr 0ffffff8 (expected S0) : writes seen at S0 : got 1 == expected 1
+[1005000] PASS : M1 addr 0ffffff8 (expected S0) : writes seen at S1 : got 0 == expected 0
+[1005000] PASS : M1 addr 0ffffff8 (expected S0) : read back : 1 beats read back == data written
+[1125000]      M1 addr 10000000 (expected S1) : S0 got 0 write, S1 got 1 write | BRESP=OKAY RRESP=OKAY
+[1125000] PASS : M1 addr 10000000 (expected S1) : writes seen at S0 : got 0 == expected 0
+[1125000] PASS : M1 addr 10000000 (expected S1) : writes seen at S1 : got 1 == expected 1
+[1125000] PASS : M1 addr 10000000 (expected S1) : read back : 1 beats read back == data written
+[1245000]      M1 addr 1ffffff8 (expected S1) : S0 got 0 write, S1 got 1 write | BRESP=OKAY RRESP=OKAY
+[1245000] PASS : M1 addr 1ffffff8 (expected S1) : writes seen at S0 : got 0 == expected 0
+[1245000] PASS : M1 addr 1ffffff8 (expected S1) : writes seen at S1 : got 1 == expected 1
+[1245000] PASS : M1 addr 1ffffff8 (expected S1) : read back : 1 beats read back == data written
+[1335000]      M1 addr 20000000 (expected UNMAPPED) : S0 got 0 write, S1 got 0 write | BRESP=DECERR RRESP=DECERR
+[1335000] PASS : M1 addr 20000000 (expected UNMAPPED) : writes seen at S0 : got 0 == expected 0
+[1335000] PASS : M1 addr 20000000 (expected UNMAPPED) : writes seen at S1 : got 0 == expected 0
+[1335000] PASS : M1 addr 20000000 (expected UNMAPPED) : BRESP : got DECERR == expected DECERR
+[1335000] PASS : M1 addr 20000000 (expected UNMAPPED) : RRESP : got DECERR == expected DECERR
+[1425000]      M1 addr fffffff8 (expected UNMAPPED) : S0 got 0 write, S1 got 0 write | BRESP=DECERR RRESP=DECERR
+[1425000] PASS : M1 addr fffffff8 (expected UNMAPPED) : writes seen at S0 : got 0 == expected 0
+[1425000] PASS : M1 addr fffffff8 (expected UNMAPPED) : writes seen at S1 : got 0 == expected 0
+[1425000] PASS : M1 addr fffffff8 (expected UNMAPPED) : BRESP : got DECERR == expected DECERR
+[1425000] PASS : M1 addr fffffff8 (expected UNMAPPED) : RRESP : got DECERR == expected DECERR
+
+------------------------------------------------------------------
+ SCOREBOARD SUMMARY
+   M0 transactions seen      : 12
+   M1 transactions seen      : 12
+   S0 transactions seen      : 8
+   S1 transactions seen      : 8
+   writes routed + matched   : 8
+   reads  routed + matched   : 8
+   DECERR writes / reads     : 4 / 4
+   SLVERR responses          : 0
+   read bytes checked (ref)  : 64
+   ERRORS                    : 0
+------------------------------------------------------------------
+ FUNCTIONAL COVERAGE of this test (black-box, from the pins)
+   transaction :  51.51 %
+   cycle       :  12.50 %
+   per-port    :  13.33 %
+   bins hit    : 69 of 198   (full table: +COV_DETAIL, all tests merged: make cov_merge)
+------------------------------------------------------------------
+ TEST CHECKS : 40 passed, 0 failed
+ WHAT THIS TEST PROVED:
+   1. S0 addresses (first and last word) go only to S0
+   2. S1 addresses (first and last word) go only to S1
+   3. unmapped addresses reach no slave and get DECERR
+   4. M0 and M1 decode addresses the same way
+==================================================================
+ TEST axi_addr_decode_test : PASSED
+==================================================================
+ WHITE-BOX COVERAGE of this test (inside the RTL): 2 of 129 bins hit, 2.94 %   (+COV_DETAIL for the table)
+$finish called at time : 1575 ns : File "/home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv" Line 170
+exit
+INFO: xsimkernel Simulation Memory Usage: 290924 KB (Peak: 339484 KB), Simulation CPU Usage: 1240 ms
+INFO: [Common 17-206] Exiting xsim at Mon Nov  9 18:53:31 2026...

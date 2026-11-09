@@ -1,0 +1,109 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Nov  9 18:58:19 2026
+# Process ID         : 3696472
+# Current directory  : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim
+# Command line       : xsim -log /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_burst_corners_test_10.log -mode tcl -source {xsim.dir/tb_snap/xsim_script.tcl}
+# Log file           : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_burst_corners_test_10.log
+# Journal file       : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/xsim.jou
+# Running On         : vlsi-vivado
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
+# CPU Frequency      : 3998.919 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 41875 MB
+# Swap memory        : 27648 MB
+# Total Virtual      : 69524 MB
+# Available Virtual  : 41655 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_snap/xsim_script.tcl
+# xsim {tb_snap} -testplusarg TESTNAME=axi_burst_corners_test -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_burst_corners_test_10 -autoloadwcfg -runall -sv_seed 10
+Time resolution is 1 ps
+run -all
+==================================================================
+ TEST : axi_burst_corners_test
+==================================================================
+
+------------------------------------------------------------------
+ M0 -> S0 : burst corners
+------------------------------------------------------------------
+[5295000] PASS : M0->S0 INCR 256x8B addr=0d500000 (INCR 256 x 8B) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=0 RID=0 expected 0 | 256 beats read == written
+[5395000] PASS : M0->S0 WRAP 2x8B addr=0d501008 (WRAP 2, mid-block) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=1 RID=1 expected 1 | 2 beats read == written
+[5535000] PASS : M0->S0 WRAP 4x8B addr=0d502010 (WRAP 4, mid-block) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=2 RID=2 expected 2 | 4 beats read == written
+[5755000] PASS : M0->S0 WRAP 8x8B addr=0d503020 (WRAP 8, mid-block) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=3 RID=3 expected 3 | 8 beats read == written
+[6135000] PASS : M0->S0 WRAP 16x8B addr=0d504040 (WRAP 16, mid-block) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=4 RID=4 expected 4 | 16 beats read == written
+[6225000] PASS : M0->S0 FIXED 1x8B addr=0d505008 (FIXED 1 beat) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=5 RID=5 expected 5 | 1 beats read == written
+[6615000] PASS : M0->S0 FIXED 16x4B addr=0d506004 (FIXED 16 x 4B, last beat wins) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=6 RID=6 expected 6 | 16 beats read == written
+[7315000] PASS : M0->S0 INCR 32x8B addr=0d507f00 (INCR 32 x 8B ends on 4 KB edge) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=7 RID=7 expected 7 | 32 beats read == written
+
+------------------------------------------------------------------
+ M0 -> S1 : burst corners
+------------------------------------------------------------------
+[12495000] PASS : M0->S1 INCR 256x8B addr=1d510000 (INCR 256 x 8B) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=0 RID=0 expected 0 | 256 beats read == written
+[12595000] PASS : M0->S1 WRAP 2x8B addr=1d511008 (WRAP 2, mid-block) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=1 RID=1 expected 1 | 2 beats read == written
+[12735000] PASS : M0->S1 WRAP 4x8B addr=1d512010 (WRAP 4, mid-block) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=2 RID=2 expected 2 | 4 beats read == written
+[12955000] PASS : M0->S1 WRAP 8x8B addr=1d513020 (WRAP 8, mid-block) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=3 RID=3 expected 3 | 8 beats read == written
+[13335000] PASS : M0->S1 WRAP 16x8B addr=1d514040 (WRAP 16, mid-block) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=4 RID=4 expected 4 | 16 beats read == written
+[13425000] PASS : M0->S1 FIXED 1x8B addr=1d515008 (FIXED 1 beat) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=5 RID=5 expected 5 | 1 beats read == written
+[13815000] PASS : M0->S1 FIXED 16x4B addr=1d516004 (FIXED 16 x 4B, last beat wins) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=6 RID=6 expected 6 | 16 beats read == written
+[14515000] PASS : M0->S1 INCR 32x8B addr=1d517f00 (INCR 32 x 8B ends on 4 KB edge) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=7 RID=7 expected 7 | 32 beats read == written
+
+------------------------------------------------------------------
+ M1 -> S0 : burst corners
+------------------------------------------------------------------
+[19695000] PASS : M1->S0 INCR 256x8B addr=0d520000 (INCR 256 x 8B) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=8 RID=8 expected 8 | 256 beats read == written
+[19795000] PASS : M1->S0 WRAP 2x8B addr=0d521008 (WRAP 2, mid-block) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=9 RID=9 expected 9 | 2 beats read == written
+[19935000] PASS : M1->S0 WRAP 4x8B addr=0d522010 (WRAP 4, mid-block) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=a RID=a expected a | 4 beats read == written
+[20155000] PASS : M1->S0 WRAP 8x8B addr=0d523020 (WRAP 8, mid-block) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=b RID=b expected b | 8 beats read == written
+[20535000] PASS : M1->S0 WRAP 16x8B addr=0d524040 (WRAP 16, mid-block) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=c RID=c expected c | 16 beats read == written
+[20625000] PASS : M1->S0 FIXED 1x8B addr=0d525008 (FIXED 1 beat) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=d RID=d expected d | 1 beats read == written
+[21015000] PASS : M1->S0 FIXED 16x4B addr=0d526004 (FIXED 16 x 4B, last beat wins) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=e RID=e expected e | 16 beats read == written
+[21715000] PASS : M1->S0 INCR 32x8B addr=0d527f00 (INCR 32 x 8B ends on 4 KB edge) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=f RID=f expected f | 32 beats read == written
+
+------------------------------------------------------------------
+ M1 -> S1 : burst corners
+------------------------------------------------------------------
+[26895000] PASS : M1->S1 INCR 256x8B addr=1d530000 (INCR 256 x 8B) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=8 RID=8 expected 8 | 256 beats read == written
+[26995000] PASS : M1->S1 WRAP 2x8B addr=1d531008 (WRAP 2, mid-block) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=9 RID=9 expected 9 | 2 beats read == written
+[27135000] PASS : M1->S1 WRAP 4x8B addr=1d532010 (WRAP 4, mid-block) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=a RID=a expected a | 4 beats read == written
+[27355000] PASS : M1->S1 WRAP 8x8B addr=1d533020 (WRAP 8, mid-block) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=b RID=b expected b | 8 beats read == written
+[27735000] PASS : M1->S1 WRAP 16x8B addr=1d534040 (WRAP 16, mid-block) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=c RID=c expected c | 16 beats read == written
+[27825000] PASS : M1->S1 FIXED 1x8B addr=1d535008 (FIXED 1 beat) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=d RID=d expected d | 1 beats read == written
+[28215000] PASS : M1->S1 FIXED 16x4B addr=1d536004 (FIXED 16 x 4B, last beat wins) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=e RID=e expected e | 16 beats read == written
+[28915000] PASS : M1->S1 INCR 32x8B addr=1d537f00 (INCR 32 x 8B ends on 4 KB edge) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=f RID=f expected f | 32 beats read == written
+
+------------------------------------------------------------------
+ SCOREBOARD SUMMARY
+   M0 transactions seen      : 32
+   M1 transactions seen      : 32
+   S0 transactions seen      : 32
+   S1 transactions seen      : 32
+   writes routed + matched   : 32
+   reads  routed + matched   : 32
+   DECERR writes / reads     : 0 / 0
+   SLVERR responses          : 0
+   read bytes checked (ref)  : 10464
+   ERRORS                    : 0
+------------------------------------------------------------------
+ FUNCTIONAL COVERAGE of this test (black-box, from the pins)
+   transaction :  64.18 %
+   cycle       :  12.50 %
+   per-port    :  13.33 %
+   bins hit    : 95 of 198   (full table: +COV_DETAIL, all tests merged: make cov_merge)
+------------------------------------------------------------------
+ TEST CHECKS : 32 passed, 0 failed
+ WHAT THIS TEST PROVED:
+   1. the longest INCR, every WRAP length with 8-byte beats, FIXED 1/16 and an INCR ending on a 4 KB edge work on every path
+==================================================================
+ TEST axi_burst_corners_test : PASSED
+==================================================================
+ WHITE-BOX COVERAGE of this test (inside the RTL): 2 of 129 bins hit, 2.94 %   (+COV_DETAIL for the table)
+$finish called at time : 29065 ns : File "/home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv" Line 170
+exit
+INFO: xsimkernel Simulation Memory Usage: 307316 KB (Peak: 339484 KB), Simulation CPU Usage: 1560 ms
+INFO: [Common 17-206] Exiting xsim at Mon Nov  9 18:58:22 2026...

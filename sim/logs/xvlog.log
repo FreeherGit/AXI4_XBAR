@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/rtl/axi4_xbar.sv" into library work
+INFO: [VRFC 10-311] analyzing module xbar_fifo
+INFO: [VRFC 10-311] analyzing module xbar_req_ctrl
+INFO: [VRFC 10-311] analyzing module xbar_rsp_sel
+INFO: [VRFC 10-311] analyzing module axi4_xbar
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module axi_xbar_wb_cov
+INFO: [VRFC 10-311] analyzing module tb_top

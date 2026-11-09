@@ -1,0 +1,106 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Nov  9 19:00:49 2026
+# Process ID         : 3704845
+# Current directory  : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim
+# Command line       : xsim -log /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_id_corners_test_10.log -mode tcl -source {xsim.dir/tb_snap/xsim_script.tcl}
+# Log file           : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_id_corners_test_10.log
+# Journal file       : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/xsim.jou
+# Running On         : vlsi-vivado
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
+# CPU Frequency      : 3999.967 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 41875 MB
+# Swap memory        : 27648 MB
+# Total Virtual      : 69524 MB
+# Available Virtual  : 41597 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_snap/xsim_script.tcl
+# xsim {tb_snap} -testplusarg TESTNAME=axi_id_corners_test -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_id_corners_test_10 -autoloadwcfg -runall -sv_seed 10
+Time resolution is 1 ps
+run -all
+==================================================================
+ TEST : axi_id_corners_test
+==================================================================
+
+------------------------------------------------------------------
+ PART A : each master alone, ID 0 and ID F, to every target
+------------------------------------------------------------------
+[255000] PASS : M0->S0 INCR 4x8B addr=0dd00000 (corner ID 0) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=0 RID=0 expected 0 | 4 beats read == written
+[395000] PASS : M0->S1 INCR 4x8B addr=1dd00000 (corner ID 0) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=0 RID=0 expected 0 | 4 beats read == written
+[525000] PASS : M0->UNMAPPED INCR 4x8B addr=d0d00000 (corner ID 0) : BRESP=DECERR RRESP=DECERR expected DECERR | BID=0 RID=0 expected 0 | error response, nothing stored
+[675000] PASS : M0->S0 INCR 4x8B addr=0dd00100 (corner ID f) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=f RID=f expected f | 4 beats read == written
+[815000] PASS : M0->S1 INCR 4x8B addr=1dd00100 (corner ID f) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=f RID=f expected f | 4 beats read == written
+[945000] PASS : M0->UNMAPPED INCR 4x8B addr=d0d00100 (corner ID f) : BRESP=DECERR RRESP=DECERR expected DECERR | BID=f RID=f expected f | error response, nothing stored
+[1095000] PASS : M1->S0 INCR 4x8B addr=0dd01000 (corner ID 0) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=0 RID=0 expected 0 | 4 beats read == written
+[1235000] PASS : M1->S1 INCR 4x8B addr=1dd01000 (corner ID 0) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=0 RID=0 expected 0 | 4 beats read == written
+[1365000] PASS : M1->UNMAPPED INCR 4x8B addr=d0d01000 (corner ID 0) : BRESP=DECERR RRESP=DECERR expected DECERR | BID=0 RID=0 expected 0 | error response, nothing stored
+[1515000] PASS : M1->S0 INCR 4x8B addr=0dd01100 (corner ID f) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=f RID=f expected f | 4 beats read == written
+[1655000] PASS : M1->S1 INCR 4x8B addr=1dd01100 (corner ID f) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=f RID=f expected f | 4 beats read == written
+[1785000] PASS : M1->UNMAPPED INCR 4x8B addr=d0d01100 (corner ID f) : BRESP=DECERR RRESP=DECERR expected DECERR | BID=f RID=f expected f | error response, nothing stored
+
+------------------------------------------------------------------
+ PART B : both masters, same corner ID, same target, same clock
+------------------------------------------------------------------
+[2055000] PASS : ID 0 M0->S0 (M1 used the same ID at once) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=0 RID=0 expected 0 | 4 beats read == written
+[2055000] PASS : ID 0 M1->S0 (M0 used the same ID at once) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=0 RID=0 expected 0 | 4 beats read == written
+[2335000] PASS : ID 0 M0->S1 (M1 used the same ID at once) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=0 RID=0 expected 0 | 4 beats read == written
+[2335000] PASS : ID 0 M1->S1 (M0 used the same ID at once) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=0 RID=0 expected 0 | 4 beats read == written
+[2595000] PASS : ID 0 M0->UNMAPPED (M1 used the same ID at once) : BRESP=DECERR RRESP=DECERR expected DECERR | BID=0 RID=0 expected 0 | error response, nothing stored
+[2595000] PASS : ID 0 M1->UNMAPPED (M0 used the same ID at once) : BRESP=DECERR RRESP=DECERR expected DECERR | BID=0 RID=0 expected 0 | error response, nothing stored
+[2875000] PASS : ID f M0->S0 (M1 used the same ID at once) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=f RID=f expected f | 4 beats read == written
+[2875000] PASS : ID f M1->S0 (M0 used the same ID at once) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=f RID=f expected f | 4 beats read == written
+[3155000] PASS : ID f M0->S1 (M1 used the same ID at once) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=f RID=f expected f | 4 beats read == written
+[3155000] PASS : ID f M1->S1 (M0 used the same ID at once) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=f RID=f expected f | 4 beats read == written
+[3415000] PASS : ID f M0->UNMAPPED (M1 used the same ID at once) : BRESP=DECERR RRESP=DECERR expected DECERR | BID=f RID=f expected f | error response, nothing stored
+[3415000] PASS : ID f M1->UNMAPPED (M0 used the same ID at once) : BRESP=DECERR RRESP=DECERR expected DECERR | BID=f RID=f expected f | error response, nothing stored
+
+------------------------------------------------------------------
+ PART C : both masters, same corner ID, different slaves, same clock
+------------------------------------------------------------------
+[3575000] PASS : ID 0 M0->S0 (M1 used the same ID at once) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=0 RID=0 expected 0 | 4 beats read == written
+[3575000] PASS : ID 0 M1->S1 (M0 used the same ID at once) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=0 RID=0 expected 0 | 4 beats read == written
+[3735000] PASS : ID 0 M0->S1 (M1 used the same ID at once) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=0 RID=0 expected 0 | 4 beats read == written
+[3735000] PASS : ID 0 M1->S0 (M0 used the same ID at once) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=0 RID=0 expected 0 | 4 beats read == written
+[3895000] PASS : ID f M0->S0 (M1 used the same ID at once) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=f RID=f expected f | 4 beats read == written
+[3895000] PASS : ID f M1->S1 (M0 used the same ID at once) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=f RID=f expected f | 4 beats read == written
+[4055000] PASS : ID f M0->S1 (M1 used the same ID at once) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=f RID=f expected f | 4 beats read == written
+[4055000] PASS : ID f M1->S0 (M0 used the same ID at once) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=f RID=f expected f | 4 beats read == written
+
+------------------------------------------------------------------
+ SCOREBOARD SUMMARY
+   M0 transactions seen      : 32
+   M1 transactions seen      : 32
+   S0 transactions seen      : 24
+   S1 transactions seen      : 24
+   writes routed + matched   : 24
+   reads  routed + matched   : 24
+   DECERR writes / reads     : 8 / 8
+   SLVERR responses          : 0
+   read bytes checked (ref)  : 768
+   ERRORS                    : 0
+------------------------------------------------------------------
+ FUNCTIONAL COVERAGE of this test (black-box, from the pins)
+   transaction :  46.94 %
+   cycle       :  50.00 %
+   per-port    :  20.00 %
+   bins hit    : 81 of 198   (full table: +COV_DETAIL, all tests merged: make cov_merge)
+------------------------------------------------------------------
+ TEST CHECKS : 32 passed, 0 failed
+ WHAT THIS TEST PROVED:
+   1. IDs 0 and F work from both masters to S0, S1 and UNMAPPED
+   2. when both masters use the same corner ID at once, every BID / RID and every byte returns to the right master
+==================================================================
+ TEST axi_id_corners_test : PASSED
+==================================================================
+ WHITE-BOX COVERAGE of this test (inside the RTL): 14 of 129 bins hit, 8.82 %   (+COV_DETAIL for the table)
+$finish called at time : 4205 ns : File "/home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv" Line 170
+exit
+INFO: xsimkernel Simulation Memory Usage: 290924 KB (Peak: 339484 KB), Simulation CPU Usage: 1270 ms
+INFO: [Common 17-206] Exiting xsim at Mon Nov  9 19:00:52 2026...

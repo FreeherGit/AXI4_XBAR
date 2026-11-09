@@ -1,0 +1,74 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Nov  9 19:09:18 2026
+# Process ID         : 3732931
+# Current directory  : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim
+# Command line       : xsim -log /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_stress_test_8.log -mode tcl -source {xsim.dir/tb_snap/xsim_script.tcl}
+# Log file           : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_stress_test_8.log
+# Journal file       : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/xsim.jou
+# Running On         : vlsi-vivado
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
+# CPU Frequency      : 4000.281 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 41875 MB
+# Swap memory        : 27648 MB
+# Total Virtual      : 69524 MB
+# Available Virtual  : 45492 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_snap/xsim_script.tcl
+# xsim {tb_snap} -testplusarg TESTNAME=axi_stress_test -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_stress_test_8 -autoloadwcfg -runall -sv_seed 8
+Time resolution is 1 ps
+run -all
+==================================================================
+ TEST : axi_stress_test
+==================================================================
+
+------------------------------------------------------------------
+ Random stress: 150 transactions per master
+------------------------------------------------------------------
+[115000] [GEN stress_m0] knobs: num_txns=150 only_kind=any only_region=any only_burst=any max_len=255 IDs=0..f no_unmapped=0 blocking=0
+[115000] [GEN stress_m0] ... (remaining 150 transactions not printed)
+[115000] [GEN stress_m1] knobs: num_txns=150 only_kind=any only_region=any only_burst=any max_len=255 IDs=0..f no_unmapped=0 blocking=0
+[115000] [GEN stress_m1] ... (remaining 150 transactions not printed)
+[121285000] [GEN stress_m1] summary: 150 txns | WRITE=78 READ=72 | S0=58 S1=54 UNMAPPED=38 | FIXED=57 INCR=63 WRAP=30 | knob violations=0 -> KNOBS RESPECTED
+[122685000] [GEN stress_m0] summary: 150 txns | WRITE=84 READ=66 | S0=43 S1=58 UNMAPPED=49 | FIXED=67 INCR=56 WRAP=27 | knob violations=0 -> KNOBS RESPECTED
+[122685000] PASS : M0 transactions completed : got 150 == expected 150
+[122685000] PASS : M1 transactions completed : got 150 == expected 150
+
+------------------------------------------------------------------
+ SCOREBOARD SUMMARY
+   M0 transactions seen      : 150
+   M1 transactions seen      : 150
+   S0 transactions seen      : 101
+   S1 transactions seen      : 112
+   writes routed + matched   : 119
+   reads  routed + matched   : 94
+   DECERR writes / reads     : 43 / 44
+   SLVERR responses          : 0
+   read bytes checked (ref)  : 23508
+   ERRORS                    : 0
+------------------------------------------------------------------
+ FUNCTIONAL COVERAGE of this test (black-box, from the pins)
+   transaction :  90.48 %
+   cycle       : 100.00 %
+   per-port    :  80.00 %
+   bins hit    : 177 of 198   (full table: +COV_DETAIL, all tests merged: make cov_merge)
+------------------------------------------------------------------
+ TEST CHECKS : 2 passed, 0 failed
+ WHAT THIS TEST PROVED:
+   1. a long random mix of all features runs without deadlock
+   2. every random transaction was routed, answered and checked correctly (see scoreboard summary)
+==================================================================
+ TEST axi_stress_test : PASSED
+==================================================================
+ WHITE-BOX COVERAGE of this test (inside the RTL): 73 of 129 bins hit, 54.97 %   (+COV_DETAIL for the table)
+$finish called at time : 122835 ns : File "/home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv" Line 170
+exit
+INFO: xsimkernel Simulation Memory Usage: 307316 KB (Peak: 339484 KB), Simulation CPU Usage: 4090 ms
+INFO: [Common 17-206] Exiting xsim at Mon Nov  9 19:09:24 2026...

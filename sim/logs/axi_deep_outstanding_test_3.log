@@ -1,0 +1,81 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Nov  9 18:59:23 2026
+# Process ID         : 3700033
+# Current directory  : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim
+# Command line       : xsim -log /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_deep_outstanding_test_3.log -mode tcl -source {xsim.dir/tb_snap/xsim_script.tcl}
+# Log file           : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_deep_outstanding_test_3.log
+# Journal file       : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/xsim.jou
+# Running On         : vlsi-vivado
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
+# CPU Frequency      : 4000.005 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 41875 MB
+# Swap memory        : 27648 MB
+# Total Virtual      : 69524 MB
+# Available Virtual  : 41591 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_snap/xsim_script.tcl
+# xsim {tb_snap} -testplusarg TESTNAME=axi_deep_outstanding_test -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_deep_outstanding_test_3 -autoloadwcfg -runall -sv_seed 3
+Time resolution is 1 ps
+run -all
+==================================================================
+ TEST : axi_deep_outstanding_test
+==================================================================
+
+------------------------------------------------------------------
+ M0: 10 x ID 2 -> S0  ||  M1: 10 x ID A -> S1  (WRITEs, latency 40)
+------------------------------------------------------------------
+[4275000] PASS : 10 + 10 same-ID WRITEs : 20 txns, responses == model (OKAY 20, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+
+------------------------------------------------------------------
+ M0: 10 x ID 2 -> S1  ||  M1: 10 x ID A -> S0  (WRITEs, latency 40)
+------------------------------------------------------------------
+[8435000] PASS : 10 + 10 same-ID WRITEs : 20 txns, responses == model (OKAY 20, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+
+------------------------------------------------------------------
+ M0: 10 x ID 2 -> S0  ||  M1: 10 x ID A -> S1  (READs, latency 40)
+------------------------------------------------------------------
+[12675000] PASS : 10 + 10 same-ID READs : 20 txns, responses == model (OKAY 20, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+
+------------------------------------------------------------------
+ M0: 10 x ID 2 -> S1  ||  M1: 10 x ID A -> S0  (READs, latency 40)
+------------------------------------------------------------------
+[16915000] PASS : 10 + 10 same-ID READs : 20 txns, responses == model (OKAY 20, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+
+------------------------------------------------------------------
+ SCOREBOARD SUMMARY
+   M0 transactions seen      : 40
+   M1 transactions seen      : 40
+   S0 transactions seen      : 40
+   S1 transactions seen      : 40
+   writes routed + matched   : 40
+   reads  routed + matched   : 40
+   DECERR writes / reads     : 0 / 0
+   SLVERR responses          : 0
+   read bytes checked (ref)  : 640
+   ERRORS                    : 0
+------------------------------------------------------------------
+ FUNCTIONAL COVERAGE of this test (black-box, from the pins)
+   transaction :  44.67 %
+   cycle       :  25.00 %
+   per-port    :  26.67 %
+   bins hit    : 62 of 198   (full table: +COV_DETAIL, all tests merged: make cov_merge)
+------------------------------------------------------------------
+ TEST CHECKS : 4 passed, 0 failed
+ WHAT THIS TEST PROVED:
+   1. with 10 same-ID transactions in flight the crossbar keeps at most 8 per (slave, ID), holds the rest, and returns every response with the right ID
+==================================================================
+ TEST axi_deep_outstanding_test : PASSED
+==================================================================
+ WHITE-BOX COVERAGE of this test (inside the RTL): 18 of 129 bins hit, 10.78 %   (+COV_DETAIL for the table)
+$finish called at time : 17065 ns : File "/home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv" Line 170
+exit
+INFO: xsimkernel Simulation Memory Usage: 290924 KB (Peak: 339484 KB), Simulation CPU Usage: 1340 ms
+INFO: [Common 17-206] Exiting xsim at Mon Nov  9 18:59:27 2026...

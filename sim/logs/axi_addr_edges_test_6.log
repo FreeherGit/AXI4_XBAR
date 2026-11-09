@@ -1,0 +1,86 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Nov  9 18:54:36 2026
+# Process ID         : 3684016
+# Current directory  : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim
+# Command line       : xsim -log /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_addr_edges_test_6.log -mode tcl -source {xsim.dir/tb_snap/xsim_script.tcl}
+# Log file           : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_addr_edges_test_6.log
+# Journal file       : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/xsim.jou
+# Running On         : vlsi-vivado
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
+# CPU Frequency      : 4000.032 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 41875 MB
+# Swap memory        : 27648 MB
+# Total Virtual      : 69524 MB
+# Available Virtual  : 41699 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_snap/xsim_script.tcl
+# xsim {tb_snap} -testplusarg TESTNAME=axi_addr_edges_test -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_addr_edges_test_6 -autoloadwcfg -runall -sv_seed 6
+Time resolution is 1 ps
+run -all
+==================================================================
+ TEST : axi_addr_edges_test
+==================================================================
+
+------------------------------------------------------------------
+ M0 : first and last addresses of S0, S1 and the unmapped area
+------------------------------------------------------------------
+[205000] PASS : M0->S0 INCR 1x8B addr=00000000 (S0 first 8 bytes) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=0 RID=0 expected 0 | 1 beats read == written
+[305000] PASS : M0->S0 INCR 1x8B addr=0ffffff8 (S0 last 8 bytes) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=1 RID=1 expected 1 | 1 beats read == written
+[455000] PASS : M0->S0 INCR 4x8B addr=0fffffe0 (S0 4 beats to 4 KB edge) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=2 RID=2 expected 2 | 4 beats read == written
+[545000] PASS : M0->S1 INCR 1x8B addr=10000000 (S1 first 8 bytes) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=3 RID=3 expected 3 | 1 beats read == written
+[645000] PASS : M0->S1 INCR 1x8B addr=1ffffff8 (S1 last 8 bytes) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=4 RID=4 expected 4 | 1 beats read == written
+[795000] PASS : M0->S1 INCR 4x8B addr=1fffffe0 (S1 4 beats to 4 KB edge) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=5 RID=5 expected 5 | 4 beats read == written
+[865000] PASS : M0->UNMAPPED INCR 1x8B addr=20000000 (first unmapped -> DECERR) : BRESP=DECERR RRESP=DECERR expected DECERR | BID=6 RID=6 expected 6 | error response, nothing stored
+[935000] PASS : M0->UNMAPPED INCR 1x8B addr=fffffff8 (last address -> DECERR) : BRESP=DECERR RRESP=DECERR expected DECERR | BID=7 RID=7 expected 7 | error response, nothing stored
+
+------------------------------------------------------------------
+ M1 : first and last addresses of S0, S1 and the unmapped area
+------------------------------------------------------------------
+[1025000] PASS : M1->S0 INCR 1x8B addr=00000000 (S0 first 8 bytes) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=8 RID=8 expected 8 | 1 beats read == written
+[1125000] PASS : M1->S0 INCR 1x8B addr=0ffffff8 (S0 last 8 bytes) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=9 RID=9 expected 9 | 1 beats read == written
+[1275000] PASS : M1->S0 INCR 4x8B addr=0fffffe0 (S0 4 beats to 4 KB edge) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=a RID=a expected a | 4 beats read == written
+[1365000] PASS : M1->S1 INCR 1x8B addr=10000000 (S1 first 8 bytes) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=b RID=b expected b | 1 beats read == written
+[1465000] PASS : M1->S1 INCR 1x8B addr=1ffffff8 (S1 last 8 bytes) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=c RID=c expected c | 1 beats read == written
+[1615000] PASS : M1->S1 INCR 4x8B addr=1fffffe0 (S1 4 beats to 4 KB edge) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=d RID=d expected d | 4 beats read == written
+[1685000] PASS : M1->UNMAPPED INCR 1x8B addr=20000000 (first unmapped -> DECERR) : BRESP=DECERR RRESP=DECERR expected DECERR | BID=e RID=e expected e | error response, nothing stored
+[1755000] PASS : M1->UNMAPPED INCR 1x8B addr=fffffff8 (last address -> DECERR) : BRESP=DECERR RRESP=DECERR expected DECERR | BID=f RID=f expected f | error response, nothing stored
+
+------------------------------------------------------------------
+ SCOREBOARD SUMMARY
+   M0 transactions seen      : 16
+   M1 transactions seen      : 16
+   S0 transactions seen      : 12
+   S1 transactions seen      : 12
+   writes routed + matched   : 12
+   reads  routed + matched   : 12
+   DECERR writes / reads     : 4 / 4
+   SLVERR responses          : 0
+   read bytes checked (ref)  : 192
+   ERRORS                    : 0
+------------------------------------------------------------------
+ FUNCTIONAL COVERAGE of this test (black-box, from the pins)
+   transaction :  60.21 %
+   cycle       :  12.50 %
+   per-port    :  13.33 %
+   bins hit    : 87 of 198   (full table: +COV_DETAIL, all tests merged: make cov_merge)
+------------------------------------------------------------------
+ TEST CHECKS : 16 passed, 0 failed
+ WHAT THIS TEST PROVED:
+   1. the first and last bytes of S0 and S1 go to the right slave, for both masters
+   2. 0x2000_0000 and 0xFFFF_FFF8 get DECERR, for both masters
+==================================================================
+ TEST axi_addr_edges_test : PASSED
+==================================================================
+ WHITE-BOX COVERAGE of this test (inside the RTL): 2 of 129 bins hit, 2.94 %   (+COV_DETAIL for the table)
+$finish called at time : 1905 ns : File "/home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv" Line 170
+exit
+INFO: xsimkernel Simulation Memory Usage: 290924 KB (Peak: 339484 KB), Simulation CPU Usage: 1250 ms
+INFO: [Common 17-206] Exiting xsim at Mon Nov  9 18:54:40 2026...

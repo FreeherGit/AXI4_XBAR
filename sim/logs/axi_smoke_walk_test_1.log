@@ -1,0 +1,180 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Nov  9 18:47:27 2026
+# Process ID         : 3660050
+# Current directory  : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim
+# Command line       : xsim -log /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_smoke_walk_test_1.log -mode tcl -source {xsim.dir/tb_snap/xsim_script.tcl}
+# Log file           : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_smoke_walk_test_1.log
+# Journal file       : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/xsim.jou
+# Running On         : vlsi-vivado
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
+# CPU Frequency      : 3999.968 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 41875 MB
+# Swap memory        : 27648 MB
+# Total Virtual      : 69524 MB
+# Available Virtual  : 41646 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_snap/xsim_script.tcl
+# xsim {tb_snap} -testplusarg TESTNAME=axi_smoke_walk_test -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_smoke_walk_test_1 -autoloadwcfg -runall -sv_seed 1
+Time resolution is 1 ps
+run -all
+==================================================================
+ TEST : axi_smoke_walk_test
+==================================================================
+
+------------------------------------------------------------------
+ S0 : walking-1 and walking-0 on address bits 3..27
+------------------------------------------------------------------
+[5335000] PASS : WALK S0: AW handshakes seen at S0 : got 52 == expected 52
+[5335000] PASS : WALK S0: AR handshakes seen at S0 : got 52 == expected 52
+[5335000] PASS : WALK S0 #0 (first word): addr sent 00000000, AW at slave 00000000, AR at slave 00000000 | M0 wrote 66160e695cce8058, M1 read 66160e695cce8058 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #1 (last word): addr sent 0ffffff8, AW at slave 0ffffff8, AR at slave 0ffffff8 | M1 wrote 56be9bb64d984409, M0 read 56be9bb64d984409 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #2 (walking-1, bit 3): addr sent 00000008, AW at slave 00000008, AR at slave 00000008 | M0 wrote 338d1c0e6a20e7a4, M1 read 338d1c0e6a20e7a4 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #3 (walking-0, bit 3): addr sent 0ffffff0, AW at slave 0ffffff0, AR at slave 0ffffff0 | M1 wrote 812560186a7a2f51, M0 read 812560186a7a2f51 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #4 (walking-1, bit 4): addr sent 00000010, AW at slave 00000010, AR at slave 00000010 | M0 wrote 6b4647bc6d247085, M1 read 6b4647bc6d247085 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #5 (walking-0, bit 4): addr sent 0fffffe8, AW at slave 0fffffe8, AR at slave 0fffffe8 | M1 wrote 55c0770d55e4c023, M0 read 55c0770d55e4c023 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #6 (walking-1, bit 5): addr sent 00000020, AW at slave 00000020, AR at slave 00000020 | M0 wrote 42e4e7931563ab76, M1 read 42e4e7931563ab76 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #7 (walking-0, bit 5): addr sent 0fffffd8, AW at slave 0fffffd8, AR at slave 0fffffd8 | M1 wrote 98c9a7b6086fb2d8, M0 read 98c9a7b6086fb2d8 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #8 (walking-1, bit 6): addr sent 00000040, AW at slave 00000040, AR at slave 00000040 | M0 wrote 2e2d532c7ca11a52, M1 read 2e2d532c7ca11a52 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #9 (walking-0, bit 6): addr sent 0fffffb8, AW at slave 0fffffb8, AR at slave 0fffffb8 | M1 wrote b69d06055c18c988, M0 read b69d06055c18c988 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #10 (walking-1, bit 7): addr sent 00000080, AW at slave 00000080, AR at slave 00000080 | M0 wrote 333e20579150efcc, M1 read 333e20579150efcc | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #11 (walking-0, bit 7): addr sent 0fffff78, AW at slave 0fffff78, AR at slave 0fffff78 | M1 wrote 8f56e9e0096dfda2, M0 read 8f56e9e0096dfda2 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #12 (walking-1, bit 8): addr sent 00000100, AW at slave 00000100, AR at slave 00000100 | M0 wrote a0a7d9ac9a54b32f, M1 read a0a7d9ac9a54b32f | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #13 (walking-0, bit 8): addr sent 0ffffef8, AW at slave 0ffffef8, AR at slave 0ffffef8 | M1 wrote 2a15d74e5968bbe8, M0 read 2a15d74e5968bbe8 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #14 (walking-1, bit 9): addr sent 00000200, AW at slave 00000200, AR at slave 00000200 | M0 wrote 446a8a7d4f19caa6, M1 read 446a8a7d4f19caa6 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #15 (walking-0, bit 9): addr sent 0ffffdf8, AW at slave 0ffffdf8, AR at slave 0ffffdf8 | M1 wrote 1dd346657808f9bb, M0 read 1dd346657808f9bb | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #16 (walking-1, bit 10): addr sent 00000400, AW at slave 00000400, AR at slave 00000400 | M0 wrote 6ced110bb04f12b1, M1 read 6ced110bb04f12b1 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #17 (walking-0, bit 10): addr sent 0ffffbf8, AW at slave 0ffffbf8, AR at slave 0ffffbf8 | M1 wrote 64f60ac7093d0552, M0 read 64f60ac7093d0552 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #18 (walking-1, bit 11): addr sent 00000800, AW at slave 00000800, AR at slave 00000800 | M0 wrote 95451d780c40cf42, M1 read 95451d780c40cf42 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #19 (walking-0, bit 11): addr sent 0ffff7f8, AW at slave 0ffff7f8, AR at slave 0ffff7f8 | M1 wrote 1e8222ca53af23b0, M0 read 1e8222ca53af23b0 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #20 (walking-1, bit 12): addr sent 00001000, AW at slave 00001000, AR at slave 00001000 | M0 wrote aac2f20db8f0be83, M1 read aac2f20db8f0be83 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #21 (walking-0, bit 12): addr sent 0fffeff8, AW at slave 0fffeff8, AR at slave 0fffeff8 | M1 wrote 7e7215bd0b1f6a61, M0 read 7e7215bd0b1f6a61 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #22 (walking-1, bit 13): addr sent 00002000, AW at slave 00002000, AR at slave 00002000 | M0 wrote b762d44042442107, M1 read b762d44042442107 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #23 (walking-0, bit 13): addr sent 0fffdff8, AW at slave 0fffdff8, AR at slave 0fffdff8 | M1 wrote 42823ea10eadf524, M0 read 42823ea10eadf524 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #24 (walking-1, bit 14): addr sent 00004000, AW at slave 00004000, AR at slave 00004000 | M0 wrote 04c65fa87999ec0c, M1 read 04c65fa87999ec0c | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #25 (walking-0, bit 14): addr sent 0fffbff8, AW at slave 0fffbff8, AR at slave 0fffbff8 | M1 wrote 937454cd0f48d501, M0 read 937454cd0f48d501 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #26 (walking-1, bit 15): addr sent 00008000, AW at slave 00008000, AR at slave 00008000 | M0 wrote 0d0e40d92369d3b3, M1 read 0d0e40d92369d3b3 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #27 (walking-0, bit 15): addr sent 0fff7ff8, AW at slave 0fff7ff8, AR at slave 0fff7ff8 | M1 wrote 9c5715db6eeda6a5, M0 read 9c5715db6eeda6a5 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #28 (walking-1, bit 16): addr sent 00010000, AW at slave 00010000, AR at slave 00010000 | M0 wrote 3fc0e98e7cf3b839, M1 read 3fc0e98e7cf3b839 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #29 (walking-0, bit 16): addr sent 0ffefff8, AW at slave 0ffefff8, AR at slave 0ffefff8 | M1 wrote aeae90348fc02975, M0 read aeae90348fc02975 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #30 (walking-1, bit 17): addr sent 00020000, AW at slave 00020000, AR at slave 00020000 | M0 wrote aba2486db600ef7e, M1 read aba2486db600ef7e | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #31 (walking-0, bit 17): addr sent 0ffdfff8, AW at slave 0ffdfff8, AR at slave 0ffdfff8 | M1 wrote bb6271e2694ff660, M0 read bb6271e2694ff660 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #32 (walking-1, bit 18): addr sent 00040000, AW at slave 00040000, AR at slave 00040000 | M0 wrote 71636160b8f6131e, M1 read 71636160b8f6131e | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #33 (walking-0, bit 18): addr sent 0ffbfff8, AW at slave 0ffbfff8, AR at slave 0ffbfff8 | M1 wrote 5ab357c0485d196a, M0 read 5ab357c0485d196a | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #34 (walking-1, bit 19): addr sent 00080000, AW at slave 00080000, AR at slave 00080000 | M0 wrote 13a96ade8672afea, M1 read 13a96ade8672afea | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #35 (walking-0, bit 19): addr sent 0ff7fff8, AW at slave 0ff7fff8, AR at slave 0ff7fff8 | M1 wrote 5c068448702a8ed7, M0 read 5c068448702a8ed7 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #36 (walking-1, bit 20): addr sent 00100000, AW at slave 00100000, AR at slave 00100000 | M0 wrote 627934329544dfa6, M1 read 627934329544dfa6 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #37 (walking-0, bit 20): addr sent 0feffff8, AW at slave 0feffff8, AR at slave 0feffff8 | M1 wrote 52a3c309abc291d5, M0 read 52a3c309abc291d5 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #38 (walking-1, bit 21): addr sent 00200000, AW at slave 00200000, AR at slave 00200000 | M0 wrote 67e8a2af1cf39bc4, M1 read 67e8a2af1cf39bc4 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #39 (walking-0, bit 21): addr sent 0fdffff8, AW at slave 0fdffff8, AR at slave 0fdffff8 | M1 wrote 13ab348421ce1092, M0 read 13ab348421ce1092 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #40 (walking-1, bit 22): addr sent 00400000, AW at slave 00400000, AR at slave 00400000 | M0 wrote b09ed04982af09a9, M1 read b09ed04982af09a9 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #41 (walking-0, bit 22): addr sent 0fbffff8, AW at slave 0fbffff8, AR at slave 0fbffff8 | M1 wrote 526ce0db460936f2, M0 read 526ce0db460936f2 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #42 (walking-1, bit 23): addr sent 00800000, AW at slave 00800000, AR at slave 00800000 | M0 wrote 551bea845c072744, M1 read 551bea845c072744 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #43 (walking-0, bit 23): addr sent 0f7ffff8, AW at slave 0f7ffff8, AR at slave 0f7ffff8 | M1 wrote 1b25217659edba46, M0 read 1b25217659edba46 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #44 (walking-1, bit 24): addr sent 01000000, AW at slave 01000000, AR at slave 01000000 | M0 wrote 772c48bb6b7f81cd, M1 read 772c48bb6b7f81cd | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #45 (walking-0, bit 24): addr sent 0efffff8, AW at slave 0efffff8, AR at slave 0efffff8 | M1 wrote 511a03012db0199c, M0 read 511a03012db0199c | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #46 (walking-1, bit 25): addr sent 02000000, AW at slave 02000000, AR at slave 02000000 | M0 wrote 3c9984ce424d9247, M1 read 3c9984ce424d9247 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #47 (walking-0, bit 25): addr sent 0dfffff8, AW at slave 0dfffff8, AR at slave 0dfffff8 | M1 wrote 6a499e6bac06f577, M0 read 6a499e6bac06f577 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #48 (walking-1, bit 26): addr sent 04000000, AW at slave 04000000, AR at slave 04000000 | M0 wrote 2c9730b2b0e57a1d, M1 read 2c9730b2b0e57a1d | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #49 (walking-0, bit 26): addr sent 0bfffff8, AW at slave 0bfffff8, AR at slave 0bfffff8 | M1 wrote 589e2629acf0477e, M0 read 589e2629acf0477e | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #50 (walking-1, bit 27): addr sent 08000000, AW at slave 08000000, AR at slave 08000000 | M0 wrote 0983a0467a1517e0, M1 read 0983a0467a1517e0 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0 #51 (walking-0, bit 27): addr sent 07fffff8, AW at slave 07fffff8, AR at slave 07fffff8 | M1 wrote 3673e7c403d36d11, M0 read 3673e7c403d36d11 | BRESP=OKAY RRESP=OKAY
+[5335000] PASS : WALK S0: words with address, data and response all correct : got 52 == expected 52
+
+------------------------------------------------------------------
+ S1 : walking-1 and walking-0 on address bits 3..27
+------------------------------------------------------------------
+[10555000] PASS : WALK S1: AW handshakes seen at S1 : got 52 == expected 52
+[10555000] PASS : WALK S1: AR handshakes seen at S1 : got 52 == expected 52
+[10555000] PASS : WALK S1 #0 (first word): addr sent 10000000, AW at slave 10000000, AR at slave 10000000 | M0 wrote 695045006adb0292, M1 read 695045006adb0292 | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #1 (last word): addr sent 1ffffff8, AW at slave 1ffffff8, AR at slave 1ffffff8 | M1 wrote 5e96dcc79ac845c9, M0 read 5e96dcc79ac845c9 | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #2 (walking-1, bit 3): addr sent 10000008, AW at slave 10000008, AR at slave 10000008 | M0 wrote 4971df5a5f1b2ecf, M1 read 4971df5a5f1b2ecf | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #3 (walking-0, bit 3): addr sent 1ffffff0, AW at slave 1ffffff0, AR at slave 1ffffff0 | M1 wrote 643a252342c6b9de, M0 read 643a252342c6b9de | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #4 (walking-1, bit 4): addr sent 10000010, AW at slave 10000010, AR at slave 10000010 | M0 wrote 435553f2ae4e2e35, M1 read 435553f2ae4e2e35 | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #5 (walking-0, bit 4): addr sent 1fffffe8, AW at slave 1fffffe8, AR at slave 1fffffe8 | M1 wrote 861c0dd10325e78b, M0 read 861c0dd10325e78b | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #6 (walking-1, bit 5): addr sent 10000020, AW at slave 10000020, AR at slave 10000020 | M0 wrote b46a3c0636947da9, M1 read b46a3c0636947da9 | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #7 (walking-0, bit 5): addr sent 1fffffd8, AW at slave 1fffffd8, AR at slave 1fffffd8 | M1 wrote 379023913374f321, M0 read 379023913374f321 | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #8 (walking-1, bit 6): addr sent 10000040, AW at slave 10000040, AR at slave 10000040 | M0 wrote 6e24a13b148f8dbc, M1 read 6e24a13b148f8dbc | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #9 (walking-0, bit 6): addr sent 1fffffb8, AW at slave 1fffffb8, AR at slave 1fffffb8 | M1 wrote 2199945cb8ff7c4a, M0 read 2199945cb8ff7c4a | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #10 (walking-1, bit 7): addr sent 10000080, AW at slave 10000080, AR at slave 10000080 | M0 wrote b6292219638b78a8, M1 read b6292219638b78a8 | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #11 (walking-0, bit 7): addr sent 1fffff78, AW at slave 1fffff78, AR at slave 1fffff78 | M1 wrote 6f289e634281b10d, M0 read 6f289e634281b10d | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #12 (walking-1, bit 8): addr sent 10000100, AW at slave 10000100, AR at slave 10000100 | M0 wrote 52b4170b59080d03, M1 read 52b4170b59080d03 | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #13 (walking-0, bit 8): addr sent 1ffffef8, AW at slave 1ffffef8, AR at slave 1ffffef8 | M1 wrote 1535c8185db30a34, M0 read 1535c8185db30a34 | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #14 (walking-1, bit 9): addr sent 10000200, AW at slave 10000200, AR at slave 10000200 | M0 wrote 6e3dd51b03f79bc1, M1 read 6e3dd51b03f79bc1 | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #15 (walking-0, bit 9): addr sent 1ffffdf8, AW at slave 1ffffdf8, AR at slave 1ffffdf8 | M1 wrote 4bf0df4f60654f68, M0 read 4bf0df4f60654f68 | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #16 (walking-1, bit 10): addr sent 10000400, AW at slave 10000400, AR at slave 10000400 | M0 wrote 4fe87b112bfba171, M1 read 4fe87b112bfba171 | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #17 (walking-0, bit 10): addr sent 1ffffbf8, AW at slave 1ffffbf8, AR at slave 1ffffbf8 | M1 wrote b04dca794a460a86, M0 read b04dca794a460a86 | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #18 (walking-1, bit 11): addr sent 10000800, AW at slave 10000800, AR at slave 10000800 | M0 wrote 5c496bea7dc63bb4, M1 read 5c496bea7dc63bb4 | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #19 (walking-0, bit 11): addr sent 1ffff7f8, AW at slave 1ffff7f8, AR at slave 1ffff7f8 | M1 wrote a68f76719f8441fd, M0 read a68f76719f8441fd | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #20 (walking-1, bit 12): addr sent 10001000, AW at slave 10001000, AR at slave 10001000 | M0 wrote a455b2250d332795, M1 read a455b2250d332795 | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #21 (walking-0, bit 12): addr sent 1fffeff8, AW at slave 1fffeff8, AR at slave 1fffeff8 | M1 wrote 43d9f4224aca883f, M0 read 43d9f4224aca883f | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #22 (walking-1, bit 13): addr sent 10002000, AW at slave 10002000, AR at slave 10002000 | M0 wrote 510d1bb738afb361, M1 read 510d1bb738afb361 | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #23 (walking-0, bit 13): addr sent 1fffdff8, AW at slave 1fffdff8, AR at slave 1fffdff8 | M1 wrote 1bd7a3f602de4a6e, M0 read 1bd7a3f602de4a6e | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #24 (walking-1, bit 14): addr sent 10004000, AW at slave 10004000, AR at slave 10004000 | M0 wrote 54875758739c57ec, M1 read 54875758739c57ec | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #25 (walking-0, bit 14): addr sent 1fffbff8, AW at slave 1fffbff8, AR at slave 1fffbff8 | M1 wrote 5765a1c608b0178f, M0 read 5765a1c608b0178f | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #26 (walking-1, bit 15): addr sent 10008000, AW at slave 10008000, AR at slave 10008000 | M0 wrote 4b01f9b3619dcb54, M1 read 4b01f9b3619dcb54 | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #27 (walking-0, bit 15): addr sent 1fff7ff8, AW at slave 1fff7ff8, AR at slave 1fff7ff8 | M1 wrote 53b211428b989ad1, M0 read 53b211428b989ad1 | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #28 (walking-1, bit 16): addr sent 10010000, AW at slave 10010000, AR at slave 10010000 | M0 wrote b54fdc97516b0e44, M1 read b54fdc97516b0e44 | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #29 (walking-0, bit 16): addr sent 1ffefff8, AW at slave 1ffefff8, AR at slave 1ffefff8 | M1 wrote 40e877686bc4d90f, M0 read 40e877686bc4d90f | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #30 (walking-1, bit 17): addr sent 10020000, AW at slave 10020000, AR at slave 10020000 | M0 wrote 925385ac5d8445a0, M1 read 925385ac5d8445a0 | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #31 (walking-0, bit 17): addr sent 1ffdfff8, AW at slave 1ffdfff8, AR at slave 1ffdfff8 | M1 wrote 7e185ebb9a45abe5, M0 read 7e185ebb9a45abe5 | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #32 (walking-1, bit 18): addr sent 10040000, AW at slave 10040000, AR at slave 10040000 | M0 wrote 5b9ca45baab9236c, M1 read 5b9ca45baab9236c | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #33 (walking-0, bit 18): addr sent 1ffbfff8, AW at slave 1ffbfff8, AR at slave 1ffbfff8 | M1 wrote 75e25040707c778a, M0 read 75e25040707c778a | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #34 (walking-1, bit 19): addr sent 10080000, AW at slave 10080000, AR at slave 10080000 | M0 wrote 209b73ac77284310, M1 read 209b73ac77284310 | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #35 (walking-0, bit 19): addr sent 1ff7fff8, AW at slave 1ff7fff8, AR at slave 1ff7fff8 | M1 wrote 1117eb3690279442, M0 read 1117eb3690279442 | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #36 (walking-1, bit 20): addr sent 10100000, AW at slave 10100000, AR at slave 10100000 | M0 wrote 08402e46a73f442f, M1 read 08402e46a73f442f | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #37 (walking-0, bit 20): addr sent 1feffff8, AW at slave 1feffff8, AR at slave 1feffff8 | M1 wrote 1867c28819f39877, M0 read 1867c28819f39877 | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #38 (walking-1, bit 21): addr sent 10200000, AW at slave 10200000, AR at slave 10200000 | M0 wrote 3fa706b7028a3d00, M1 read 3fa706b7028a3d00 | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #39 (walking-0, bit 21): addr sent 1fdffff8, AW at slave 1fdffff8, AR at slave 1fdffff8 | M1 wrote 599a9f2f8bbc5536, M0 read 599a9f2f8bbc5536 | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #40 (walking-1, bit 22): addr sent 10400000, AW at slave 10400000, AR at slave 10400000 | M0 wrote 5c24dc2fa60658a2, M1 read 5c24dc2fa60658a2 | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #41 (walking-0, bit 22): addr sent 1fbffff8, AW at slave 1fbffff8, AR at slave 1fbffff8 | M1 wrote 67e1316548908a54, M0 read 67e1316548908a54 | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #42 (walking-1, bit 23): addr sent 10800000, AW at slave 10800000, AR at slave 10800000 | M0 wrote 0de78a0703827e8f, M1 read 0de78a0703827e8f | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #43 (walking-0, bit 23): addr sent 1f7ffff8, AW at slave 1f7ffff8, AR at slave 1f7ffff8 | M1 wrote 5678145c7e1b7982, M0 read 5678145c7e1b7982 | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #44 (walking-1, bit 24): addr sent 11000000, AW at slave 11000000, AR at slave 11000000 | M0 wrote 59fa92eb524f13a3, M1 read 59fa92eb524f13a3 | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #45 (walking-0, bit 24): addr sent 1efffff8, AW at slave 1efffff8, AR at slave 1efffff8 | M1 wrote 58160c6d02a789f4, M0 read 58160c6d02a789f4 | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #46 (walking-1, bit 25): addr sent 12000000, AW at slave 12000000, AR at slave 12000000 | M0 wrote aa6520119ae131ab, M1 read aa6520119ae131ab | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #47 (walking-0, bit 25): addr sent 1dfffff8, AW at slave 1dfffff8, AR at slave 1dfffff8 | M1 wrote 2d0caa0541026369, M0 read 2d0caa0541026369 | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #48 (walking-1, bit 26): addr sent 14000000, AW at slave 14000000, AR at slave 14000000 | M0 wrote 47eddbb0bd9ba983, M1 read 47eddbb0bd9ba983 | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #49 (walking-0, bit 26): addr sent 1bfffff8, AW at slave 1bfffff8, AR at slave 1bfffff8 | M1 wrote 08f03f19142f8288, M0 read 08f03f19142f8288 | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #50 (walking-1, bit 27): addr sent 18000000, AW at slave 18000000, AR at slave 18000000 | M0 wrote 468be89c42d967fb, M1 read 468be89c42d967fb | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1 #51 (walking-0, bit 27): addr sent 17fffff8, AW at slave 17fffff8, AR at slave 17fffff8 | M1 wrote 5abb6b251be86d7f, M0 read 5abb6b251be86d7f | BRESP=OKAY RRESP=OKAY
+[10555000] PASS : WALK S1: words with address, data and response all correct : got 52 == expected 52
+
+------------------------------------------------------------------
+ SCOREBOARD SUMMARY
+   M0 transactions seen      : 104
+   M1 transactions seen      : 104
+   S0 transactions seen      : 104
+   S1 transactions seen      : 104
+   writes routed + matched   : 104
+   reads  routed + matched   : 104
+   DECERR writes / reads     : 0 / 0
+   SLVERR responses          : 0
+   read bytes checked (ref)  : 832
+   ERRORS                    : 0
+------------------------------------------------------------------
+ FUNCTIONAL COVERAGE of this test (black-box, from the pins)
+   transaction :  43.68 %
+   cycle       :  12.50 %
+   per-port    :  13.33 %
+   bins hit    : 55 of 198   (full table: +COV_DETAIL, all tests merged: make cov_merge)
+------------------------------------------------------------------
+ TEST CHECKS : 110 passed, 0 failed
+ WHAT THIS TEST PROVED:
+   1. every address bit 3..27 reaches S0 and S1 unchanged as 0 and as 1, and no two addresses alias
+   2. data written by one master is read back unchanged by the other master
+==================================================================
+ TEST axi_smoke_walk_test : PASSED
+==================================================================
+ WHITE-BOX COVERAGE of this test (inside the RTL): 2 of 129 bins hit, 2.94 %   (+COV_DETAIL for the table)
+$finish called at time : 10705 ns : File "/home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv" Line 170
+exit
+INFO: xsimkernel Simulation Memory Usage: 290924 KB (Peak: 339484 KB), Simulation CPU Usage: 1340 ms
+INFO: [Common 17-206] Exiting xsim at Mon Nov  9 18:47:31 2026...

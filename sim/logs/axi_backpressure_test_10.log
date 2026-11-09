@@ -1,0 +1,81 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Nov  9 19:05:02 2026
+# Process ID         : 3719401
+# Current directory  : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim
+# Command line       : xsim -log /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_backpressure_test_10.log -mode tcl -source {xsim.dir/tb_snap/xsim_script.tcl}
+# Log file           : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_backpressure_test_10.log
+# Journal file       : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/xsim.jou
+# Running On         : vlsi-vivado
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
+# CPU Frequency      : 3999.763 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 41875 MB
+# Swap memory        : 27648 MB
+# Total Virtual      : 69524 MB
+# Available Virtual  : 45505 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_snap/xsim_script.tcl
+# xsim {tb_snap} -testplusarg TESTNAME=axi_backpressure_test -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_backpressure_test_10 -autoloadwcfg -runall -sv_seed 10
+Time resolution is 1 ps
+run -all
+==================================================================
+ TEST : axi_backpressure_test
+==================================================================
+
+------------------------------------------------------------------
+ STEP 1 : write + read-back (16 beats) on every path, with backpressure
+------------------------------------------------------------------
+[1275000] PASS : M0->S0 INCR 16x8B addr=00030000 (50% backpressure) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=1 RID=1 expected 1 | 16 beats read == written
+[2275000] PASS : M0->S1 INCR 16x8B addr=10030000 (50% backpressure) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=1 RID=1 expected 1 | 16 beats read == written
+[3445000] PASS : M1->S0 INCR 16x8B addr=00031000 (50% backpressure) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=9 RID=9 expected 9 | 16 beats read == written
+[4275000] PASS : M1->S1 INCR 16x8B addr=10031000 (50% backpressure) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=9 RID=9 expected 9 | 16 beats read == written
+
+------------------------------------------------------------------
+ STEP 2 : random traffic from both masters (60 each)
+------------------------------------------------------------------
+[4275000] [GEN bp_m0] knobs: num_txns=60 only_kind=any only_region=any only_burst=any max_len=31 IDs=0..f no_unmapped=0 blocking=0
+[4275000] [GEN bp_m0] ... (remaining 60 transactions not printed)
+[4275000] [GEN bp_m1] knobs: num_txns=60 only_kind=any only_region=any only_burst=any max_len=31 IDs=0..f no_unmapped=0 blocking=0
+[4275000] [GEN bp_m1] ... (remaining 60 transactions not printed)
+[15215000] [GEN bp_m0] summary: 60 txns | WRITE=37 READ=23 | S0=20 S1=20 UNMAPPED=20 | FIXED=28 INCR=15 WRAP=17 | knob violations=0 -> KNOBS RESPECTED
+[16735000] [GEN bp_m1] summary: 60 txns | WRITE=32 READ=28 | S0=20 S1=22 UNMAPPED=18 | FIXED=26 INCR=25 WRAP=9 | knob violations=0 -> KNOBS RESPECTED
+[16735000] PASS : scoreboard errors during the random traffic : got 0 == expected 0
+
+------------------------------------------------------------------
+ SCOREBOARD SUMMARY
+   M0 transactions seen      : 64
+   M1 transactions seen      : 64
+   S0 transactions seen      : 44
+   S1 transactions seen      : 46
+   writes routed + matched   : 49
+   reads  routed + matched   : 41
+   DECERR writes / reads     : 24 / 14
+   SLVERR responses          : 0
+   read bytes checked (ref)  : 1801
+   ERRORS                    : 0
+------------------------------------------------------------------
+ FUNCTIONAL COVERAGE of this test (black-box, from the pins)
+   transaction :  85.22 %
+   cycle       :  91.67 %
+   per-port    :  92.00 %
+   bins hit    : 167 of 198   (full table: +COV_DETAIL, all tests merged: make cov_merge)
+------------------------------------------------------------------
+ TEST CHECKS : 5 passed, 0 failed
+ WHAT THIS TEST PROVED:
+   1. READY low on any channel only delays a transfer, it is never lost or duplicated
+   2. data and responses stay correct under heavy backpressure on all 4 paths
+==================================================================
+ TEST axi_backpressure_test : PASSED
+==================================================================
+ WHITE-BOX COVERAGE of this test (inside the RTL): 42 of 129 bins hit, 36.27 %   (+COV_DETAIL for the table)
+$finish called at time : 16885 ns : File "/home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv" Line 170
+exit
+INFO: xsimkernel Simulation Memory Usage: 290924 KB (Peak: 339484 KB), Simulation CPU Usage: 1820 ms
+INFO: [Common 17-206] Exiting xsim at Mon Nov  9 19:05:06 2026...

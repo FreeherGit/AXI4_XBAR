@@ -1,0 +1,2917 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet">
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Xcrg Code Coverage Report - File</title>	
+<link type="text/css" rel="stylesheet" href="cssCodeCov/file.css">
+
+<!--script type="text/javascript" src=".js/.stickyheader.js"></script-->  
+
+</head>
+
+
+<body>
+
+<div class='header'>
+<a  class='logo'>  </a>
+<div class='header-right'>
+<a href='dashboard.html'>Dashboard</a>
+<a href='files.html'>Files</a>
+<a href='modules.html'>Modules</a>
+</div>
+</div>
+<br clear=all>
+
+<div class=fader>
+
+<div class = fileHTMLlayout>
+
+<div class='fileSummary'>
+<font size='2' face='verdana' padding-left:'2px'><b> File Summary of /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv </b></font>
+<br clear=all>
+<br clear=all>
+<font face='arial' color=black style='font-size: 12px'>
+<table class='fileSummaryTable'>
+<tr>
+<td class='fileSummaryTable' bgcolor='#BCC7CC' width='50px'> File ID </td>
+<td class='fileSummaryTable' bgcolor='#BCC7CC' width='60px'> Modules Count </td>
+<td class='fileSummaryTable' bgcolor='#BCC7CC' width='100px'> Total Instances Count </td>
+<td class='fileSummaryTable' bgcolor='#BCC7CC' width='80px'> Total Lines</td>
+<td class='fileSummaryTable' bgcolor='#BCC7CC' width='80px'> Total Statements</td>
+<td class='fileSummaryTable' bgcolor='#BCC7CC' width='80px'> Statement Coverage Score</td>
+<td class='fileSummaryTable' bgcolor='#BCC7CC' width='70px'> Show Statement Coverage </td>
+<td class='fileSummaryTable' bgcolor='#BCC7CC' width='80px'> Branch Coverage Score</td>
+<td class='fileSummaryTable' bgcolor='#BCC7CC' width='70px'> Show Branch Coverage </td>
+<td class='fileSummaryTable' bgcolor='#BCC7CC' width='80px'> Condition Coverage Score</td>
+<td class='fileSummaryTable' bgcolor='#BCC7CC' width='70px'> Show Condition Coverage </td>
+<td class='fileSummaryTable' bgcolor='#BCC7CC' width='80px'> Toggle Coverage Score</td>
+<td class='fileSummaryTable' bgcolor='#BCC7CC' width='70px'> Show Toggle Coverage </td>
+</tr>
+<tr>
+<td class='fileSummaryTable'>1</td>
+<td class='fileSummaryTable'>1</td>
+<td class='fileSummaryTable'>310</td>
+<td class='fileSummaryTable'>14</td>
+<td class='fileSummaryTable'>17</td>
+<td class='fileSummaryTable'>88.2353</td>
+<td class='fileSummaryTable' bgcolor='#FFFFFF' align='center'>
+<label class = 'fileLineCovContainer'>
+<input type='checkbox' id='checkbox_file_linecov' onclick="checkdisplay('checkbox_file_linecov', 'file_linecov');
+openFileContent('button_file_linecov');">
+<span class='fileLineCovCheckmark'> </span> </label>
+</td>
+<td class='fileSummaryTable'>50</td>
+<td class='fileSummaryTable' bgcolor='#FFFFFF' align='center'>
+<label class = 'fileBranchCovContainer'>
+<input type='checkbox' id='checkbox_file_branchcov' onclick="checkdisplay('checkbox_file_branchcov', 'file_branchcov');
+openFileContent('button_file_branchcov');">
+<span class='fileBranchCovCheckmark'> </span> </label>
+</td>
+<td class='fileSummaryTable'>50</td>
+<td class='fileSummaryTable' bgcolor='#FFFFFF' align='center'>
+<label class = 'fileCondCovContainer'>
+<input type='checkbox' id='checkbox_file_condcov' onclick="checkdisplay('checkbox_file_condcov', 'file_condcov');
+openFileContent('button_file_condcov');">
+<span class='fileCondCovCheckmark'> </span> </label>
+</td>
+<td class='fileSummaryTable'>98.64</td>
+<td class='fileSummaryTable' bgcolor='#FFFFFF' align='center'>
+<label class = 'fileToggleCovContainer'>
+<input type='checkbox' id='checkbox_file_togglecov' onclick="checkdisplay('checkbox_file_togglecov', 'file_togglecov');
+openFileContent('button_file_togglecov');">
+<span class='fileToggleCovCheckmark'> </span> </label>
+</td>
+</tr>
+</table>
+</font>
+</div>
+<hr>
+<div class ='linesSection' style='padding-left:20px; padding-right:20px;'>
+<font face='arial' color=black style='font-size: 14px'>
+<div style='display:none' id='file_linecov'>
+<button class='fileCollapsible' id='button_file_linecov'> <font size='4' color=#009933> &#9776; </font>
+ Statement Coverage of File 1 : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv</button> 
+<div class='fileContent'>
+<br clear=all>
+<font size='2' face='arial' style='padding-left:6px'> Statement Coverage Summary for File : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv</font>
+<br clear=all>
+<table class='fileScoreTable'>
+<tr>
+<th class='fileScoreTable' bgcolor='#DEE8EE'> Total Statements </th>
+<th class='fileScoreTable' bgcolor='#DEE8EE'> Covered Statements </th>
+<th class='fileScoreTable' bgcolor='#DEE8EE'> Uncovered Statements </th>
+<th class='fileScoreTable' bgcolor='#DEE8EE'> Statement Coverage Score </th>
+</tr>
+<tr>
+<td class='fileScoreTable'>17</td>
+<td class='fileScoreTable' bgcolor='#FFFFC2'>15</td>
+<td class='fileScoreTable' bgcolor='#FFD2D2'>2</td>
+<td class='fileScoreTable' bgcolor='#98FF98'>88.2353</td>
+</tr>
+</table>
+<br clear=all>
+<div class='lineCoverageTable'>
+<table class='lineTable'>
+<tr>
+<th class='lineTable' style='background-color:#ccffff; line-height:0;' width='80px'> LineNumber </th>
+<th class='lineTable' style='background-color:#FFEB99; line-height:0;'> LineContent </th>
+<th class='lineTable' style='background-color:#80FFBF; line-height:1;' width='140px'> Execution Count </th>
+<th class='lineTable' style='background-color:#FFE6E6; line-height:1;' width='140px'> Num Of Statements </th>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>1</td>
+<td class='lineTable'> <pre class='codegrey'>// =============================================================================</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>2</td>
+<td class='lineTable'> <pre class='codegrey'>// tb_top.sv  -  testbench top for the AXI4 2x2 crossbar</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>3</td>
+<td class='lineTable'> <pre class='codegrey'>//   * clock (100 MHz) and reset interface</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>4</td>
+<td class='lineTable'> <pre class='codegrey'>//   * 2 master-port and 2 slave-port AXI interfaces</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>5</td>
+<td class='lineTable'> <pre class='codegrey'>//   * DUT (axi4_xbar) connected through the packed-array ports</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>6</td>
+<td class='lineTable'> <pre class='codegrey'>//   * creates the test chosen with +TESTNAME=&ltname&gt and runs it</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>7</td>
+<td class='lineTable'> <pre class='codegrey'>//   Plusargs:  +TESTNAME=axi_smoke_test   +DUMP (write dump.vcd)</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>8</td>
+<td class='lineTable'> <pre class='codegrey'>//</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>9</td>
+<td class='lineTable'> <pre class='codegrey'>//   This file `includes the whole testbench, so the compile command only</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>10</td>
+<td class='lineTable'> <pre class='codegrey'>//   needs:   axi4_xbar.sv  tb_top.sv   (+incdir to this folder)</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>11</td>
+<td class='lineTable'> <pre class='codegrey'>// =============================================================================</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>12</td>
+<td class='lineTable'> <pre class='codegrey'>`timescale 1ns / 1ps</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>13</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>14</td>
+<td class='lineTable'> <pre class='codegrey'>`include "axi_params_pkg.sv"</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>15</td>
+<td class='lineTable'> <pre class='codegrey'>`include "axi_if.sv"</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>16</td>
+<td class='lineTable'> <pre class='codegrey'>`include "axi_rst_if.sv"</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>17</td>
+<td class='lineTable'> <pre class='codegrey'>`include "axi_tb_pkg.sv"</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>18</td>
+<td class='lineTable'> <pre class='codegrey'>`include "axi_test_pkg.sv"</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>19</td>
+<td class='lineTable'> <pre class='codegrey'>`include "axi_xbar_wb_cov.sv"</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>20</td>
+<td class='lineTable'> <pre class='codegrey'>module tb_top;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>21</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>22</td>
+<td class='lineTable'> <pre class='codegrey'>  import axi_params_pkg::*;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>23</td>
+<td class='lineTable'> <pre class='codegrey'>  import axi_tb_pkg::*;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>24</td>
+<td class='lineTable'> <pre class='codegrey'>  import axi_test_pkg::*;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>25</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>26</td>
+<td class='lineTable'> <pre class='codegrey'>  // ---------------------------------------------------------------- clock / reset</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>27</td>
+<td class='lineTable'> <pre class='codegrey'>  logic aclk = 1'b0;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>28</td>
+<td class='lineTable'> <pre class='codegreen'>  always #5 aclk = ~aclk;</pre> </td>
+<td class='lineTable'>226705611</td>
+<td class='lineTable'>2</td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>29</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>30</td>
+<td class='lineTable'> <pre class='codegrey'>  axi_rst_if rst_if (aclk);</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>31</td>
+<td class='lineTable'> <pre class='codegrey'>  wire arst_n = rst_if.arst_n;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>32</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>33</td>
+<td class='lineTable'> <pre class='codegrey'>  // ---------------------------------------------------------------- interfaces</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>34</td>
+<td class='lineTable'> <pre class='codegrey'>  axi_if m_if [NUM_M] (.aclk(aclk), .arst_n(arst_n));</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>35</td>
+<td class='lineTable'> <pre class='codegrey'>  axi_if s_if [NUM_S] (.aclk(aclk), .arst_n(arst_n));</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>36</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>37</td>
+<td class='lineTable'> <pre class='codegrey'>  // ---------------------------------------------------------------- DUT-side vectors</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>38</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_M-1:0][AXI_IDW-1:0] m_awid,   m_arid,   m_bid,   m_rid;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>39</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_M-1:0][AXI_AW-1:0]  m_awaddr, m_araddr;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>40</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_M-1:0][7:0]         m_awlen,  m_arlen;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>41</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_M-1:0][AXI_SW-1:0]  m_wstrb;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>42</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_M-1:0][2:0]         m_awsize, m_arsize;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>43</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_M-1:0][1:0]         m_awburst, m_arburst, m_bresp, m_rresp;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>44</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_M-1:0][AXI_DW-1:0]  m_wdata,  m_rdata;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>45</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_M-1:0]              m_awvalid, m_awready, m_wlast, m_wvalid, m_wready;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>46</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_M-1:0]              m_bvalid,  m_bready,  m_arvalid, m_arready;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>47</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_M-1:0]              m_rlast,   m_rvalid,  m_rready;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>48</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>49</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_S-1:0][AXI_IDW-1:0] s_awid,   s_arid,   s_bid,   s_rid;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>50</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_S-1:0][AXI_AW-1:0]  s_awaddr, s_araddr;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>51</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_S-1:0][7:0]         s_awlen,  s_arlen;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>52</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_S-1:0][AXI_SW-1:0]  s_wstrb;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>53</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_S-1:0][2:0]         s_awsize, s_arsize;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>54</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_S-1:0][1:0]         s_awburst, s_arburst, s_bresp, s_rresp;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>55</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_S-1:0][AXI_DW-1:0]  s_wdata,  s_rdata;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>56</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_S-1:0]              s_awvalid, s_awready, s_wlast, s_wvalid, s_wready;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>57</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_S-1:0]              s_bvalid,  s_bready,  s_arvalid, s_arready;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>58</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_S-1:0]              s_rlast,   s_rvalid,  s_rready;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>59</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>60</td>
+<td class='lineTable'> <pre class='codegrey'>  // ---------------------------------------------------------------- DUT</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>61</td>
+<td class='lineTable'> <pre class='codegrey'>  axi4_xbar #(</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>62</td>
+<td class='lineTable'> <pre class='codegrey'>    .NUM_MASTERS (NUM_M),</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>63</td>
+<td class='lineTable'> <pre class='codegrey'>    .NUM_SLAVES  (NUM_S),</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>64</td>
+<td class='lineTable'> <pre class='codegrey'>    .DATA_WIDTH  (AXI_DW),</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>65</td>
+<td class='lineTable'> <pre class='codegrey'>    .ADDR_WIDTH  (AXI_AW),</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>66</td>
+<td class='lineTable'> <pre class='codegrey'>    .ID_WIDTH    (AXI_IDW)</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>67</td>
+<td class='lineTable'> <pre class='codegrey'>  ) dut (.*);</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>68</td>
+<td class='lineTable'> <pre class='codegrey'>  axi_xbar_wb_cov u_wb_cov (.aclk(aclk), .arst_n(arst_n));</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>69</td>
+<td class='lineTable'> <pre class='codegrey'>  // ---------------------------------------------------------------- master ports</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>70</td>
+<td class='lineTable'> <pre class='codegrey'>  // TB master drives requests -&gt DUT ;  DUT drives readies/responses -&gt TB</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>71</td>
+<td class='lineTable'> <pre class='codegrey'>  for (genvar i = 0; i &lt NUM_M; i++) begin : g_mport</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>72</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_awid[i]    = m_if[i].awid;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>73</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_awaddr[i]  = m_if[i].awaddr;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>74</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_awlen[i]   = m_if[i].awlen;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>75</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_awsize[i]  = m_if[i].awsize;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>76</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_awburst[i] = m_if[i].awburst;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>77</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_awvalid[i] = m_if[i].awvalid;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>78</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_if[i].awready = m_awready[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>79</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>80</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_wdata[i]   = m_if[i].wdata;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>81</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_wstrb[i]   = m_if[i].wstrb;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>82</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_wlast[i]   = m_if[i].wlast;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>83</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_wvalid[i]  = m_if[i].wvalid;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>84</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_if[i].wready  = m_wready[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>85</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>86</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_if[i].bid     = m_bid[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>87</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_if[i].bresp   = m_bresp[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>88</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_if[i].bvalid  = m_bvalid[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>89</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_bready[i]  = m_if[i].bready;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>90</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>91</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_arid[i]    = m_if[i].arid;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>92</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_araddr[i]  = m_if[i].araddr;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>93</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_arlen[i]   = m_if[i].arlen;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>94</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_arsize[i]  = m_if[i].arsize;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>95</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_arburst[i] = m_if[i].arburst;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>96</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_arvalid[i] = m_if[i].arvalid;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>97</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_if[i].arready = m_arready[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>98</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>99</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_if[i].rid     = m_rid[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>100</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_if[i].rdata   = m_rdata[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>101</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_if[i].rresp   = m_rresp[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>102</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_if[i].rlast   = m_rlast[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>103</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_if[i].rvalid  = m_rvalid[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>104</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_rready[i]  = m_if[i].rready;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>105</td>
+<td class='lineTable'> <pre class='codegrey'>  end</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>106</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>107</td>
+<td class='lineTable'> <pre class='codegrey'>  // ---------------------------------------------------------------- slave ports</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>108</td>
+<td class='lineTable'> <pre class='codegrey'>  // DUT drives requests -&gt TB slave ;  TB slave drives readies/responses -&gt DUT</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>109</td>
+<td class='lineTable'> <pre class='codegrey'>  for (genvar i = 0; i &lt NUM_S; i++) begin : g_sport</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>110</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].awid    = s_awid[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>111</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].awaddr  = s_awaddr[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>112</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].awlen   = s_awlen[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>113</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].awsize  = s_awsize[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>114</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].awburst = s_awburst[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>115</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].awvalid = s_awvalid[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>116</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_awready[i] = s_if[i].awready;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>117</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>118</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].wdata   = s_wdata[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>119</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].wstrb   = s_wstrb[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>120</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].wlast   = s_wlast[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>121</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].wvalid  = s_wvalid[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>122</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_wready[i]  = s_if[i].wready;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>123</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>124</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_bid[i]     = s_if[i].bid;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>125</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_bresp[i]   = s_if[i].bresp;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>126</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_bvalid[i]  = s_if[i].bvalid;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>127</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].bready  = s_bready[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>128</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>129</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].arid    = s_arid[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>130</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].araddr  = s_araddr[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>131</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].arlen   = s_arlen[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>132</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].arsize  = s_arsize[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>133</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].arburst = s_arburst[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>134</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].arvalid = s_arvalid[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>135</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_arready[i] = s_if[i].arready;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>136</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>137</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_rid[i]     = s_if[i].rid;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>138</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_rdata[i]   = s_if[i].rdata;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>139</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_rresp[i]   = s_if[i].rresp;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>140</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_rlast[i]   = s_if[i].rlast;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>141</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_rvalid[i]  = s_if[i].rvalid;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>142</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].rready  = s_rready[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>143</td>
+<td class='lineTable'> <pre class='codegrey'>  end</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>144</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>145</td>
+<td class='lineTable'> <pre class='codegrey'>  // ---------------------------------------------------------------- names for SVA messages</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>146</td>
+<td class='lineTable'> <pre class='codegrey'>  initial begin</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>147</td>
+<td class='lineTable'> <pre class='codegreen'>    m_if[0].if_name = "M0";</pre> </td>
+<td class='lineTable'>192547</td>
+<td class='lineTable'>1</td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>148</td>
+<td class='lineTable'> <pre class='codegreen'>    m_if[1].if_name = "M1";</pre> </td>
+<td class='lineTable'>192547</td>
+<td class='lineTable'>1</td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>149</td>
+<td class='lineTable'> <pre class='codegreen'>    s_if[0].if_name = "S0";</pre> </td>
+<td class='lineTable'>192547</td>
+<td class='lineTable'>1</td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>150</td>
+<td class='lineTable'> <pre class='codegreen'>    s_if[1].if_name = "S1";</pre> </td>
+<td class='lineTable'>192547</td>
+<td class='lineTable'>1</td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>151</td>
+<td class='lineTable'> <pre class='codegrey'>  end</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>152</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>153</td>
+<td class='lineTable'> <pre class='codegrey'>  // ---------------------------------------------------------------- waves</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>154</td>
+<td class='lineTable'> <pre class='codegrey'>  initial begin</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>155</td>
+<td class='lineTable'> <pre class='codegreen'>    if ($test$plusargs("DUMP")) begin</pre> </td>
+<td class='lineTable'>48205</td>
+<td class='lineTable'>1</td>
+</tr>
+<tr class='lineTableHoverRed'>
+<td class='lineTable'>156</td>
+<td class='lineTable'> <pre class='codered'>      $dumpfile("dump.vcd");</pre> </td>
+<td class='lineTable'> 0 </td>
+<td class='lineTable'>1</td>
+</tr>
+<tr class='lineTableHoverRed'>
+<td class='lineTable'>157</td>
+<td class='lineTable'> <pre class='codered'>      $dumpvars(0, tb_top);</pre> </td>
+<td class='lineTable'> 0 </td>
+<td class='lineTable'>1</td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>158</td>
+<td class='lineTable'> <pre class='codegrey'>    end</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>159</td>
+<td class='lineTable'> <pre class='codegrey'>  end</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>160</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>161</td>
+<td class='lineTable'> <pre class='codegrey'>  // ---------------------------------------------------------------- run the test</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>162</td>
+<td class='lineTable'> <pre class='codegrey'>  initial begin</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>163</td>
+<td class='lineTable'> <pre class='codegrey'>    axi_base_test test;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>164</td>
+<td class='lineTable'> <pre class='codegrey'>    string        tname;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>165</td>
+<td class='lineTable'> <pre class='codegreen'>    if (!$value$plusargs("TESTNAME=%s", tname)) tname = "axi_smoke_test";</pre> </td>
+<td class='lineTable'>48205</td>
+<td class='lineTable'>2</td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>166</td>
+<td class='lineTable'> <pre class='codegreen'>    test = axi_create_test(tname);</pre> </td>
+<td class='lineTable'>192547</td>
+<td class='lineTable'>1</td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>167</td>
+<td class='lineTable'> <pre class='codegreen'>    if (test == null) $fatal(1, "[TB] Unknown test '%s' (add it to axi_create_test)", tname);</pre> </td>
+<td class='lineTable'>48205</td>
+<td class='lineTable'>2</td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>168</td>
+<td class='lineTable'> <pre class='codegreen'>    test.set_vifs(m_if[0], m_if[1], s_if[0], s_if[1], rst_if);</pre> </td>
+<td class='lineTable'>192547</td>
+<td class='lineTable'>1</td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>169</td>
+<td class='lineTable'> <pre class='codegreen'>    test.run();</pre> </td>
+<td class='lineTable'>192547</td>
+<td class='lineTable'>1</td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>170</td>
+<td class='lineTable'> <pre class='codegreen'>    $finish;</pre> </td>
+<td class='lineTable'>192547</td>
+<td class='lineTable'>1</td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>171</td>
+<td class='lineTable'> <pre class='codegrey'>  end</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>172</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>173</td>
+<td class='lineTable'> <pre class='codegrey'>endmodule</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+</table>
+</div>
+<br clear=all>
+</div>
+<br clear=all>
+</div>
+</font>
+</div>
+<div class ='linesSection' style='padding-left:20px; padding-right:20px;'>
+<font face='arial' color=black style='font-size: 14px'>
+<div style='display:none' id='file_branchcov'>
+<button class='fileBranchCollapsible' id='button_file_branchcov'> <font size='4' color=#003399> &#8380; </font>
+ Branch Coverage of File 1 : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv</button> 
+<div class='fileBranchContent'>
+<br clear=all>
+<font size='2' face='arial' style='padding-left:6px'>
+Branch Coverage Summary for File : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv
+</font>
+<br clear=all>
+<table class='fileScoreTable'>
+<tr>
+<th class='fileScoreTable' bgcolor='#DEE8EE'> Total Branches </th>
+<th class='fileScoreTable' bgcolor='#DEE8EE'> Covered Branches </th>
+<th class='fileScoreTable' bgcolor='#DEE8EE'> Uncovered Branches </th>
+<th class='fileScoreTable' bgcolor='#DEE8EE'> Branch Coverage Score </th>
+</tr>
+<tr>
+<td class='fileScoreTable'>6</td>
+<td class='fileScoreTable'>3</td>
+<td class='fileScoreTable'>3</td>
+<td class='fileScoreTable' bgcolor='#FFFFC2'>50</td>
+</tr>
+</table>
+<br clear=all>
+<div class='branchCoverageTable'>
+<table class='lineTable'>
+<tr>
+<th class='lineTable' style='background-color:#FFDD99; line-height:0;' width='80px'> LineNumber </th>
+<th class='lineTable' style='background-color:#FFEB99; line-height:0;'> Branch </th>
+<th class='lineTable' style='background-color:#80FFBF; line-height:1;' width='120px'> Desicion Evaluated  </th>
+<th class='lineTable' style='background-color:#FFE6E6; line-height:1;' width='140px'> TRUE/FALSE Branch Execution Count[s]  </th>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>1</td>
+<td class='lineTable'> <pre class='codegrey'>// =============================================================================</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>2</td>
+<td class='lineTable'> <pre class='codegrey'>// tb_top.sv  -  testbench top for the AXI4 2x2 crossbar</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>3</td>
+<td class='lineTable'> <pre class='codegrey'>//   * clock (100 MHz) and reset interface</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>4</td>
+<td class='lineTable'> <pre class='codegrey'>//   * 2 master-port and 2 slave-port AXI interfaces</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>5</td>
+<td class='lineTable'> <pre class='codegrey'>//   * DUT (axi4_xbar) connected through the packed-array ports</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>6</td>
+<td class='lineTable'> <pre class='codegrey'>//   * creates the test chosen with +TESTNAME=&ltname&gt and runs it</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>7</td>
+<td class='lineTable'> <pre class='codegrey'>//   Plusargs:  +TESTNAME=axi_smoke_test   +DUMP (write dump.vcd)</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>8</td>
+<td class='lineTable'> <pre class='codegrey'>//</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>9</td>
+<td class='lineTable'> <pre class='codegrey'>//   This file `includes the whole testbench, so the compile command only</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>10</td>
+<td class='lineTable'> <pre class='codegrey'>//   needs:   axi4_xbar.sv  tb_top.sv   (+incdir to this folder)</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>11</td>
+<td class='lineTable'> <pre class='codegrey'>// =============================================================================</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>12</td>
+<td class='lineTable'> <pre class='codegrey'>`timescale 1ns / 1ps</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>13</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>14</td>
+<td class='lineTable'> <pre class='codegrey'>`include "axi_params_pkg.sv"</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>15</td>
+<td class='lineTable'> <pre class='codegrey'>`include "axi_if.sv"</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>16</td>
+<td class='lineTable'> <pre class='codegrey'>`include "axi_rst_if.sv"</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>17</td>
+<td class='lineTable'> <pre class='codegrey'>`include "axi_tb_pkg.sv"</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>18</td>
+<td class='lineTable'> <pre class='codegrey'>`include "axi_test_pkg.sv"</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>19</td>
+<td class='lineTable'> <pre class='codegrey'>`include "axi_xbar_wb_cov.sv"</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>20</td>
+<td class='lineTable'> <pre class='codegrey'>module tb_top;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>21</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>22</td>
+<td class='lineTable'> <pre class='codegrey'>  import axi_params_pkg::*;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>23</td>
+<td class='lineTable'> <pre class='codegrey'>  import axi_tb_pkg::*;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>24</td>
+<td class='lineTable'> <pre class='codegrey'>  import axi_test_pkg::*;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>25</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>26</td>
+<td class='lineTable'> <pre class='codegrey'>  // ---------------------------------------------------------------- clock / reset</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>27</td>
+<td class='lineTable'> <pre class='codegrey'>  logic aclk = 1'b0;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>28</td>
+<td class='lineTable'> <pre class='codegrey'>  always #5 aclk = ~aclk;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>29</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>30</td>
+<td class='lineTable'> <pre class='codegrey'>  axi_rst_if rst_if (aclk);</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>31</td>
+<td class='lineTable'> <pre class='codegrey'>  wire arst_n = rst_if.arst_n;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>32</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>33</td>
+<td class='lineTable'> <pre class='codegrey'>  // ---------------------------------------------------------------- interfaces</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>34</td>
+<td class='lineTable'> <pre class='codegrey'>  axi_if m_if [NUM_M] (.aclk(aclk), .arst_n(arst_n));</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>35</td>
+<td class='lineTable'> <pre class='codegrey'>  axi_if s_if [NUM_S] (.aclk(aclk), .arst_n(arst_n));</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>36</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>37</td>
+<td class='lineTable'> <pre class='codegrey'>  // ---------------------------------------------------------------- DUT-side vectors</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>38</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_M-1:0][AXI_IDW-1:0] m_awid,   m_arid,   m_bid,   m_rid;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>39</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_M-1:0][AXI_AW-1:0]  m_awaddr, m_araddr;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>40</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_M-1:0][7:0]         m_awlen,  m_arlen;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>41</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_M-1:0][AXI_SW-1:0]  m_wstrb;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>42</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_M-1:0][2:0]         m_awsize, m_arsize;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>43</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_M-1:0][1:0]         m_awburst, m_arburst, m_bresp, m_rresp;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>44</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_M-1:0][AXI_DW-1:0]  m_wdata,  m_rdata;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>45</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_M-1:0]              m_awvalid, m_awready, m_wlast, m_wvalid, m_wready;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>46</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_M-1:0]              m_bvalid,  m_bready,  m_arvalid, m_arready;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>47</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_M-1:0]              m_rlast,   m_rvalid,  m_rready;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>48</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>49</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_S-1:0][AXI_IDW-1:0] s_awid,   s_arid,   s_bid,   s_rid;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>50</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_S-1:0][AXI_AW-1:0]  s_awaddr, s_araddr;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>51</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_S-1:0][7:0]         s_awlen,  s_arlen;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>52</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_S-1:0][AXI_SW-1:0]  s_wstrb;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>53</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_S-1:0][2:0]         s_awsize, s_arsize;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>54</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_S-1:0][1:0]         s_awburst, s_arburst, s_bresp, s_rresp;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>55</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_S-1:0][AXI_DW-1:0]  s_wdata,  s_rdata;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>56</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_S-1:0]              s_awvalid, s_awready, s_wlast, s_wvalid, s_wready;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>57</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_S-1:0]              s_bvalid,  s_bready,  s_arvalid, s_arready;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>58</td>
+<td class='lineTable'> <pre class='codegrey'>  logic [NUM_S-1:0]              s_rlast,   s_rvalid,  s_rready;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>59</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>60</td>
+<td class='lineTable'> <pre class='codegrey'>  // ---------------------------------------------------------------- DUT</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>61</td>
+<td class='lineTable'> <pre class='codegrey'>  axi4_xbar #(</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>62</td>
+<td class='lineTable'> <pre class='codegrey'>    .NUM_MASTERS (NUM_M),</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>63</td>
+<td class='lineTable'> <pre class='codegrey'>    .NUM_SLAVES  (NUM_S),</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>64</td>
+<td class='lineTable'> <pre class='codegrey'>    .DATA_WIDTH  (AXI_DW),</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>65</td>
+<td class='lineTable'> <pre class='codegrey'>    .ADDR_WIDTH  (AXI_AW),</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>66</td>
+<td class='lineTable'> <pre class='codegrey'>    .ID_WIDTH    (AXI_IDW)</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>67</td>
+<td class='lineTable'> <pre class='codegrey'>  ) dut (.*);</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>68</td>
+<td class='lineTable'> <pre class='codegrey'>  axi_xbar_wb_cov u_wb_cov (.aclk(aclk), .arst_n(arst_n));</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>69</td>
+<td class='lineTable'> <pre class='codegrey'>  // ---------------------------------------------------------------- master ports</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>70</td>
+<td class='lineTable'> <pre class='codegrey'>  // TB master drives requests -&gt DUT ;  DUT drives readies/responses -&gt TB</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>71</td>
+<td class='lineTable'> <pre class='codegrey'>  for (genvar i = 0; i &lt NUM_M; i++) begin : g_mport</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>72</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_awid[i]    = m_if[i].awid;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>73</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_awaddr[i]  = m_if[i].awaddr;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>74</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_awlen[i]   = m_if[i].awlen;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>75</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_awsize[i]  = m_if[i].awsize;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>76</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_awburst[i] = m_if[i].awburst;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>77</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_awvalid[i] = m_if[i].awvalid;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>78</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_if[i].awready = m_awready[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>79</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>80</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_wdata[i]   = m_if[i].wdata;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>81</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_wstrb[i]   = m_if[i].wstrb;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>82</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_wlast[i]   = m_if[i].wlast;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>83</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_wvalid[i]  = m_if[i].wvalid;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>84</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_if[i].wready  = m_wready[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>85</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>86</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_if[i].bid     = m_bid[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>87</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_if[i].bresp   = m_bresp[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>88</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_if[i].bvalid  = m_bvalid[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>89</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_bready[i]  = m_if[i].bready;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>90</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>91</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_arid[i]    = m_if[i].arid;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>92</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_araddr[i]  = m_if[i].araddr;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>93</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_arlen[i]   = m_if[i].arlen;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>94</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_arsize[i]  = m_if[i].arsize;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>95</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_arburst[i] = m_if[i].arburst;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>96</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_arvalid[i] = m_if[i].arvalid;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>97</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_if[i].arready = m_arready[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>98</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>99</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_if[i].rid     = m_rid[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>100</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_if[i].rdata   = m_rdata[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>101</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_if[i].rresp   = m_rresp[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>102</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_if[i].rlast   = m_rlast[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>103</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_if[i].rvalid  = m_rvalid[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>104</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_rready[i]  = m_if[i].rready;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>105</td>
+<td class='lineTable'> <pre class='codegrey'>  end</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>106</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>107</td>
+<td class='lineTable'> <pre class='codegrey'>  // ---------------------------------------------------------------- slave ports</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>108</td>
+<td class='lineTable'> <pre class='codegrey'>  // DUT drives requests -&gt TB slave ;  TB slave drives readies/responses -&gt DUT</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>109</td>
+<td class='lineTable'> <pre class='codegrey'>  for (genvar i = 0; i &lt NUM_S; i++) begin : g_sport</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>110</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].awid    = s_awid[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>111</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].awaddr  = s_awaddr[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>112</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].awlen   = s_awlen[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>113</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].awsize  = s_awsize[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>114</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].awburst = s_awburst[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>115</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].awvalid = s_awvalid[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>116</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_awready[i] = s_if[i].awready;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>117</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>118</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].wdata   = s_wdata[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>119</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].wstrb   = s_wstrb[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>120</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].wlast   = s_wlast[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>121</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].wvalid  = s_wvalid[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>122</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_wready[i]  = s_if[i].wready;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>123</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>124</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_bid[i]     = s_if[i].bid;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>125</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_bresp[i]   = s_if[i].bresp;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>126</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_bvalid[i]  = s_if[i].bvalid;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>127</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].bready  = s_bready[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>128</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>129</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].arid    = s_arid[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>130</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].araddr  = s_araddr[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>131</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].arlen   = s_arlen[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>132</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].arsize  = s_arsize[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>133</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].arburst = s_arburst[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>134</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].arvalid = s_arvalid[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>135</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_arready[i] = s_if[i].arready;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>136</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>137</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_rid[i]     = s_if[i].rid;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>138</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_rdata[i]   = s_if[i].rdata;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>139</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_rresp[i]   = s_if[i].rresp;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>140</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_rlast[i]   = s_if[i].rlast;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>141</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_rvalid[i]  = s_if[i].rvalid;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>142</td>
+<td class='lineTable'> <pre class='codegrey'>    assign s_if[i].rready  = s_rready[i];</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>143</td>
+<td class='lineTable'> <pre class='codegrey'>  end</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>144</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>145</td>
+<td class='lineTable'> <pre class='codegrey'>  // ---------------------------------------------------------------- names for SVA messages</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>146</td>
+<td class='lineTable'> <pre class='codegrey'>  initial begin</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>147</td>
+<td class='lineTable'> <pre class='codegrey'>    m_if[0].if_name = "M0";</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>148</td>
+<td class='lineTable'> <pre class='codegrey'>    m_if[1].if_name = "M1";</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>149</td>
+<td class='lineTable'> <pre class='codegrey'>    s_if[0].if_name = "S0";</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>150</td>
+<td class='lineTable'> <pre class='codegrey'>    s_if[1].if_name = "S1";</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>151</td>
+<td class='lineTable'> <pre class='codegrey'>  end</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>152</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>153</td>
+<td class='lineTable'> <pre class='codegrey'>  // ---------------------------------------------------------------- waves</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>154</td>
+<td class='lineTable'> <pre class='codegrey'>  initial begin</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverRed'>
+<td class='lineTable'>155</td>
+<td class='lineTable'> <pre class='codered'>    if ($test$plusargs("DUMP")) begin</pre>
+ <font face='arial' color=orange style='font-size: 12px'><b> Branch 1</b></font></td>
+<td class='lineTable'>48205</td>
+<td class='lineTable'>0T 48205F </td>
+</tr>
+<tr class='lineTableHoverRed'>
+<td class='lineTable'> </td>
+<td class='lineTable' align ='left'> <pre class='codered'> MISSING ELSE </pre> <font face='arial' color=orange style='font-size: 12px'><b> Branch 2</b></font></td>
+<td class='lineTable'> </td>
+<td class='lineTable'> 48205</td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>156</td>
+<td class='lineTable'> <pre class='codegrey'>      $dumpfile("dump.vcd");</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>157</td>
+<td class='lineTable'> <pre class='codegrey'>      $dumpvars(0, tb_top);</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>158</td>
+<td class='lineTable'> <pre class='codegrey'>    end</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>159</td>
+<td class='lineTable'> <pre class='codegrey'>  end</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>160</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>161</td>
+<td class='lineTable'> <pre class='codegrey'>  // ---------------------------------------------------------------- run the test</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>162</td>
+<td class='lineTable'> <pre class='codegrey'>  initial begin</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>163</td>
+<td class='lineTable'> <pre class='codegrey'>    axi_base_test test;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>164</td>
+<td class='lineTable'> <pre class='codegrey'>    string        tname;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverRed'>
+<td class='lineTable'>165</td>
+<td class='lineTable'> <pre class='codered'>    if (!$value$plusargs("TESTNAME=%s", tname)) tname = "axi_smoke_test";</pre>
+ <font face='arial' color=orange style='font-size: 12px'><b> Branch 3</b></font></td>
+<td class='lineTable'>48205</td>
+<td class='lineTable'>0T 48205F </td>
+</tr>
+<tr class='lineTableHoverRed'>
+<td class='lineTable'> </td>
+<td class='lineTable' align ='left'> <pre class='codered'> MISSING ELSE </pre> <font face='arial' color=orange style='font-size: 12px'><b> Branch 4</b></font></td>
+<td class='lineTable'> </td>
+<td class='lineTable'> 48205</td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>166</td>
+<td class='lineTable'> <pre class='codegrey'>    test = axi_create_test(tname);</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverRed'>
+<td class='lineTable'>167</td>
+<td class='lineTable'> <pre class='codered'>    if (test == null) $fatal(1, "[TB] Unknown test '%s' (add it to axi_create_test)", tname);</pre>
+ <font face='arial' color=orange style='font-size: 12px'><b> Branch 5</b></font></td>
+<td class='lineTable'>48205</td>
+<td class='lineTable'>0T 48205F </td>
+</tr>
+<tr class='lineTableHoverRed'>
+<td class='lineTable'> </td>
+<td class='lineTable' align ='left'> <pre class='codered'> MISSING ELSE </pre> <font face='arial' color=orange style='font-size: 12px'><b> Branch 6</b></font></td>
+<td class='lineTable'> </td>
+<td class='lineTable'> 48205</td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>168</td>
+<td class='lineTable'> <pre class='codegrey'>    test.set_vifs(m_if[0], m_if[1], s_if[0], s_if[1], rst_if);</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>169</td>
+<td class='lineTable'> <pre class='codegrey'>    test.run();</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>170</td>
+<td class='lineTable'> <pre class='codegrey'>    $finish;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>171</td>
+<td class='lineTable'> <pre class='codegrey'>  end</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>172</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>173</td>
+<td class='lineTable'> <pre class='codegrey'>endmodule</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+</table>
+</div>
+<br clear=all>
+</div>
+<br clear=all>
+</div>
+</font>
+</div>
+<div class ='linesSection' style='padding-left:20px; padding-right:20px;'>
+<font face='arial' color=black style='font-size: 14px'>
+<div style='display:none' id='file_condcov'>
+<button class='fileCondCollapsible' id='button_file_condcov'> <font size='4' color=#b38f00> &#169; </font>
+ Condition Coverage of File 1 : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv</button> 
+<div class='fileCondContent'>
+<br clear=all>
+<font size='2' face='arial' style='padding-left:6px'>
+Condition Coverage Summary for File : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv
+</font>
+<br clear=all>
+<table class='fileScoreTable'>
+<tr>
+<th class='fileScoreTable' bgcolor='#DEE8EE'> Total Conditions </th>
+<th class='fileScoreTable' bgcolor='#DEE8EE'> Covered Conditions </th>
+<th class='fileScoreTable' bgcolor='#DEE8EE'> Uncovered Conditions </th>
+<th class='fileScoreTable' bgcolor='#DEE8EE'> Condition Coverage Score </th>
+</tr>
+<tr>
+<td class='fileScoreTable'>2</td>
+<td class='fileScoreTable'>1</td>
+<td class='fileScoreTable'>1</td>
+<td class='fileScoreTable' bgcolor='#FFFFC2'>50</td>
+</tr>
+</table>
+<br clear=all>
+<div class='condCoverageTable'>
+<table class='lineTable'>
+<tr>
+<th class='lineTable' style='background-color:#FFDD99; line-height:0;' width='80px'> LineNumber </th>
+<th class='lineTable' style='background-color:#FFEB99; line-height:0;'> Condition Result </th>
+<th class='lineTable' style='background-color:#80FFBF; line-height:1;' width='120px'> Evaluation Count </th>
+</tr>
+<tr class='lineTableHoverRed'>
+<td class='lineTable'>165</td>
+<td class='lineTable'> <pre class='codered'>(!$value$plusargs("TESTNAME=%s",tname))__TRUE</pre> </td>
+<td class='lineTable'>0 </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'> </td>
+<td class='lineTable'> <pre class='codegreen'>(!$value$plusargs("TESTNAME=%s",tname))__FALSE</pre> </td>
+<td class='lineTable'>48205 </td>
+</tr>
+</table>
+</div>
+<br clear=all>
+</div>
+<br clear=all>
+</div>
+</font>
+</div>
+<div class ='linesSection' style='padding-left:20px; padding-right:20px;'>
+<font face='arial' color=black style='font-size: 14px'>
+<div style='display:none' id='file_togglecov'>
+<button class='fileToggleCollapsible' id='button_file_togglecov'> <font size='4' color=#9999bb> &#8376; </font>
+ Toggle Coverage of File 1 : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv</button> 
+<div class='fileToggleContent'>
+<br clear=all>
+<font size='2' face='arial' style='padding-left:6px'>
+Toggle Coverage Summary for File : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv
+</font>
+<br clear=all>
+<table class='fileScoreTable'>
+<tr>
+<th class='fileScoreTable' bgcolor='#DEE8EE'> Total Toggles Variables </th>
+<th class='fileScoreTable' bgcolor='#DEE8EE'> Covered Variables </th>
+<th class='fileScoreTable' bgcolor='#DEE8EE'> Uncovered Variables </th>
+<th class='fileScoreTable' bgcolor='#DEE8EE'> Score </th>
+</tr>
+<tr>
+<td class='fileScoreTable'>60</td>
+<td class='fileScoreTable'>53</td>
+<td class='fileScoreTable'>7</td>
+<td class='fileScoreTable' bgcolor='#98FF98'>88.33</td>
+</tr>
+</table>
+<br clear=all>
+<table class='fileScoreTable'>
+<tr>
+<th class='fileScoreTable' bgcolor='#DEE8EE'> </th>
+<th class='fileScoreTable' bgcolor='#DEE8EE'> Total </th>
+<th class='fileScoreTable' bgcolor='#DEE8EE'> Covered </th>
+<th class='fileScoreTable' bgcolor='#DEE8EE'> Toggle Coverage Score </th>
+</tr>
+<tr>
+<td class='fileScoreTable'> <font size='2'> Total Bits </font> </td>
+<td class='fileScoreTable'> <font size='2'>2068</font> </td>
+<td class='fileScoreTable'> <font size='2'>2040</font> </td>
+<td class='fileScoreTable' bgcolor='#98FF98'> <font size='2'>98.64</td>
+</tr>
+<tr>
+<td class='fileScoreTable'> <font size='2'> Bits 0->1 </font> </td>
+<td class='fileScoreTable'> <font size='2'>1034</font> </td>
+<td class='fileScoreTable'> <font size='2'>1020 </font> </td>
+<td class='fileScoreTable' bgcolor='#98FF98'> <font size='2'>98.64</font> </td>
+</tr>
+<tr>
+<td class='fileScoreTable'> <font size='2'> Bits 1->0 </font> </td>
+<td class='fileScoreTable'> <font size='2'>1034</font> </td>
+<td class='fileScoreTable'> <font size='2'>1020</font> </td>
+<td class='fileScoreTable' bgcolor='#98FF98'> <font size='2'>98.64</font> </td>
+</tr>
+</table>
+<br clear=all>
+<div class='toggleCoverageTable'>
+<table class='lineTable' id='sortable1'>
+<tr>
+<th class='lineTable' style='background-color:#FFDD99; line-height:1;' width='80px' onclick='sortTable(1,0)'> LineNumber <button class='sortbutton1'> &#8645; </button></th>
+<th class='lineTable' style='background-color:#FFDD99; line-height:1;' width='80px' onclick='sortTable(1,1)'> Variable Type <button class='sortbutton1'> &#8645; </button></th>
+<th class='lineTable' style='background-color:#FFEB99; line-height:0;' onclick='sortTable(1,2)'> Variable <button class='sortbutton1'> &#8645; </button></th>
+<th class='lineTable' style='background-color:#80FFBF; line-height:1;' width='120px'> Toggle 0->1 </th>
+<th class='lineTable' style='background-color:#80FFBF; line-height:1;' width='120px'> Toggle 1->0 </th>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>31</td>
+<td class='lineTable'>wire</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of arst_n</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>27</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of aclk</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>38</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of m_awid</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>38</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of m_arid</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>38</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of m_bid</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>38</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of m_rid</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>39</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of m_awaddr</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>39</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of m_araddr</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>40</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of m_awlen</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>40</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of m_arlen</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>41</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of m_wstrb</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>42</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'>m_awsize [0] [0:1]</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable' style='color:white;opacity:0'>42</td>
+<td class='lineTable' style='color:white;opacity:0'>logic</td>
+<td class='lineTable'> <pre class='codegreen'>m_awsize [1] [0:1]</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverRed'>
+<td class='lineTable' style='color:white;opacity:0'>42</td>
+<td class='lineTable' style='color:white;opacity:0'>logic</td>
+<td class='lineTable'> <pre class='codered'> All Other bits of m_awsize</pre> </td>
+<td class='lineTable'> <pre class='codered'> 0 </pre> </td>
+<td class='lineTable'> <pre class='codered'> 0 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>42</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'>m_arsize [0] [0:1]</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable' style='color:white;opacity:0'>42</td>
+<td class='lineTable' style='color:white;opacity:0'>logic</td>
+<td class='lineTable'> <pre class='codegreen'>m_arsize [1] [0:1]</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverRed'>
+<td class='lineTable' style='color:white;opacity:0'>42</td>
+<td class='lineTable' style='color:white;opacity:0'>logic</td>
+<td class='lineTable'> <pre class='codered'> All Other bits of m_arsize</pre> </td>
+<td class='lineTable'> <pre class='codered'> 0 </pre> </td>
+<td class='lineTable'> <pre class='codered'> 0 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>43</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of m_awburst</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>43</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of m_arburst</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>43</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of m_bresp</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>43</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of m_rresp</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>44</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of m_wdata</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>44</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of m_rdata</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>45</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of m_awvalid</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>45</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of m_awready</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>45</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of m_wlast</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>45</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of m_wvalid</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>45</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of m_wready</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>46</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of m_bvalid</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>46</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of m_bready</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>46</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of m_arvalid</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>46</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of m_arready</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>47</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of m_rlast</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>47</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of m_rvalid</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>47</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of m_rready</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>49</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of s_awid</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>49</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of s_arid</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>49</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of s_bid</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>49</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of s_rid</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>50</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of s_awaddr</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>50</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'>s_araddr [0] [0:29]</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable' style='color:white;opacity:0'>50</td>
+<td class='lineTable' style='color:white;opacity:0'>logic</td>
+<td class='lineTable'> <pre class='codegreen'>s_araddr [1] [0:31]</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverRed'>
+<td class='lineTable' style='color:white;opacity:0'>50</td>
+<td class='lineTable' style='color:white;opacity:0'>logic</td>
+<td class='lineTable'> <pre class='codered'> All Other bits of s_araddr</pre> </td>
+<td class='lineTable'> <pre class='codered'> 0 </pre> </td>
+<td class='lineTable'> <pre class='codered'> 0 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>51</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of s_awlen</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>51</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of s_arlen</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>52</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of s_wstrb</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>53</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'>s_awsize [0] [0:1]</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable' style='color:white;opacity:0'>53</td>
+<td class='lineTable' style='color:white;opacity:0'>logic</td>
+<td class='lineTable'> <pre class='codegreen'>s_awsize [1] [0:1]</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverRed'>
+<td class='lineTable' style='color:white;opacity:0'>53</td>
+<td class='lineTable' style='color:white;opacity:0'>logic</td>
+<td class='lineTable'> <pre class='codered'> All Other bits of s_awsize</pre> </td>
+<td class='lineTable'> <pre class='codered'> 0 </pre> </td>
+<td class='lineTable'> <pre class='codered'> 0 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>53</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'>s_arsize [0] [0:1]</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable' style='color:white;opacity:0'>53</td>
+<td class='lineTable' style='color:white;opacity:0'>logic</td>
+<td class='lineTable'> <pre class='codegreen'>s_arsize [1] [0:1]</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverRed'>
+<td class='lineTable' style='color:white;opacity:0'>53</td>
+<td class='lineTable' style='color:white;opacity:0'>logic</td>
+<td class='lineTable'> <pre class='codered'> All Other bits of s_arsize</pre> </td>
+<td class='lineTable'> <pre class='codered'> 0 </pre> </td>
+<td class='lineTable'> <pre class='codered'> 0 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>54</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of s_awburst</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>54</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of s_arburst</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>54</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'>s_bresp [0] [1]</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable' style='color:white;opacity:0'>54</td>
+<td class='lineTable' style='color:white;opacity:0'>logic</td>
+<td class='lineTable'> <pre class='codegreen'>s_bresp [1] [1]</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverRed'>
+<td class='lineTable' style='color:white;opacity:0'>54</td>
+<td class='lineTable' style='color:white;opacity:0'>logic</td>
+<td class='lineTable'> <pre class='codered'> All Other bits of s_bresp</pre> </td>
+<td class='lineTable'> <pre class='codered'> 0 </pre> </td>
+<td class='lineTable'> <pre class='codered'> 0 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>54</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'>s_rresp [0] [1]</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable' style='color:white;opacity:0'>54</td>
+<td class='lineTable' style='color:white;opacity:0'>logic</td>
+<td class='lineTable'> <pre class='codegreen'>s_rresp [1] [1]</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverRed'>
+<td class='lineTable' style='color:white;opacity:0'>54</td>
+<td class='lineTable' style='color:white;opacity:0'>logic</td>
+<td class='lineTable'> <pre class='codered'> All Other bits of s_rresp</pre> </td>
+<td class='lineTable'> <pre class='codered'> 0 </pre> </td>
+<td class='lineTable'> <pre class='codered'> 0 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>55</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of s_wdata</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>55</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of s_rdata</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>56</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of s_awvalid</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>56</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of s_awready</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>56</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of s_wlast</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>56</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of s_wvalid</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>56</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of s_wready</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>57</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of s_bvalid</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>57</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of s_bready</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>57</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of s_arvalid</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>57</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of s_arready</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>58</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of s_rlast</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>58</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of s_rvalid</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>58</td>
+<td class='lineTable'>logic</td>
+<td class='lineTable'> <pre class='codegreen'> All bits of s_rready</pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+<td class='lineTable'> <pre class='codegreen'> 1 </pre> </td>
+</tr>
+</table>
+</div>
+<br clear=all>
+</div>
+<br clear=all>
+</div>
+</font>
+</div>
+</div>
+</div>
+
+<script type='text/javascript' src='jsCodeCov/fileCollapse.js'></script>
+<script type='text/javascript' src='jsCodeCov/checkdisplay.js'></script>
+<script> function openFileContent(id) {document.getElementById(id).click();} </script>
+<script> sortTable(1,0) </script>
+</body>
+</html>

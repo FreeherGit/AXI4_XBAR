@@ -1,0 +1,102 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Nov  9 19:01:58 2026
+# Process ID         : 3709199
+# Current directory  : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim
+# Command line       : xsim -log /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_arb_rounds_test_4.log -mode tcl -source {xsim.dir/tb_snap/xsim_script.tcl}
+# Log file           : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_arb_rounds_test_4.log
+# Journal file       : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/xsim.jou
+# Running On         : vlsi-vivado
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
+# CPU Frequency      : 4000.552 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 41875 MB
+# Swap memory        : 27648 MB
+# Total Virtual      : 69524 MB
+# Available Virtual  : 41590 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_snap/xsim_script.tcl
+# xsim {tb_snap} -testplusarg TESTNAME=axi_arb_rounds_test -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_arb_rounds_test_4 -autoloadwcfg -runall -sv_seed 4
+Time resolution is 1 ps
+run -all
+==================================================================
+ TEST : axi_arb_rounds_test
+==================================================================
+
+------------------------------------------------------------------
+ PART A : M0 + M1 to the same target in the same clock, 4 rounds each
+------------------------------------------------------------------
+[205000] PASS : round 0: M0 + M1 WRITE -> S0 same clock : 2 txns, responses == model (OKAY 2, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[285000] PASS : round 1: M0 + M1 WRITE -> S0 same clock : 2 txns, responses == model (OKAY 2, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[365000] PASS : round 2: M0 + M1 WRITE -> S0 same clock : 2 txns, responses == model (OKAY 2, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[445000] PASS : round 3: M0 + M1 WRITE -> S0 same clock : 2 txns, responses == model (OKAY 2, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[525000] PASS : round 0: M0 + M1 WRITE -> S1 same clock : 2 txns, responses == model (OKAY 2, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[605000] PASS : round 1: M0 + M1 WRITE -> S1 same clock : 2 txns, responses == model (OKAY 2, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[685000] PASS : round 2: M0 + M1 WRITE -> S1 same clock : 2 txns, responses == model (OKAY 2, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[765000] PASS : round 3: M0 + M1 WRITE -> S1 same clock : 2 txns, responses == model (OKAY 2, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[845000] PASS : round 0: M0 + M1 WRITE -> UNMAPPED same clock : 2 txns, responses == model (OKAY 0, SLVERR 0, DECERR 2), IDs echoed, 0 wrong
+[925000] PASS : round 1: M0 + M1 WRITE -> UNMAPPED same clock : 2 txns, responses == model (OKAY 0, SLVERR 0, DECERR 2), IDs echoed, 0 wrong
+[1005000] PASS : round 2: M0 + M1 WRITE -> UNMAPPED same clock : 2 txns, responses == model (OKAY 0, SLVERR 0, DECERR 2), IDs echoed, 0 wrong
+[1085000] PASS : round 3: M0 + M1 WRITE -> UNMAPPED same clock : 2 txns, responses == model (OKAY 0, SLVERR 0, DECERR 2), IDs echoed, 0 wrong
+[1155000] PASS : round 0: M0 + M1 READ -> S0 same clock : 2 txns, responses == model (OKAY 2, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[1235000] PASS : round 1: M0 + M1 READ -> S0 same clock : 2 txns, responses == model (OKAY 2, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[1315000] PASS : round 2: M0 + M1 READ -> S0 same clock : 2 txns, responses == model (OKAY 2, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[1395000] PASS : round 3: M0 + M1 READ -> S0 same clock : 2 txns, responses == model (OKAY 2, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[1475000] PASS : round 0: M0 + M1 READ -> S1 same clock : 2 txns, responses == model (OKAY 2, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[1555000] PASS : round 1: M0 + M1 READ -> S1 same clock : 2 txns, responses == model (OKAY 2, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[1635000] PASS : round 2: M0 + M1 READ -> S1 same clock : 2 txns, responses == model (OKAY 2, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[1715000] PASS : round 3: M0 + M1 READ -> S1 same clock : 2 txns, responses == model (OKAY 2, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[1785000] PASS : round 0: M0 + M1 READ -> UNMAPPED same clock : 2 txns, responses == model (OKAY 0, SLVERR 0, DECERR 2), IDs echoed, 0 wrong
+[1855000] PASS : round 1: M0 + M1 READ -> UNMAPPED same clock : 2 txns, responses == model (OKAY 0, SLVERR 0, DECERR 2), IDs echoed, 0 wrong
+[1925000] PASS : round 2: M0 + M1 READ -> UNMAPPED same clock : 2 txns, responses == model (OKAY 0, SLVERR 0, DECERR 2), IDs echoed, 0 wrong
+[1995000] PASS : round 3: M0 + M1 READ -> UNMAPPED same clock : 2 txns, responses == model (OKAY 0, SLVERR 0, DECERR 2), IDs echoed, 0 wrong
+
+------------------------------------------------------------------
+ PART B : the same while S0 and S1 hold AWREADY / ARREADY low 70 % of the time
+------------------------------------------------------------------
+[2125000] PASS : locked round 0: M0 + M1 WRITE -> S0 : 2 txns, responses == model (OKAY 2, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[2305000] PASS : locked round 1: M0 + M1 WRITE -> S0 : 2 txns, responses == model (OKAY 2, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[2465000] PASS : locked round 0: M0 + M1 WRITE -> S1 : 2 txns, responses == model (OKAY 2, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[2625000] PASS : locked round 1: M0 + M1 WRITE -> S1 : 2 txns, responses == model (OKAY 2, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[2715000] PASS : locked round 0: M0 + M1 READ -> S0 : 2 txns, responses == model (OKAY 2, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[2855000] PASS : locked round 1: M0 + M1 READ -> S0 : 2 txns, responses == model (OKAY 2, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[2955000] PASS : locked round 0: M0 + M1 READ -> S1 : 2 txns, responses == model (OKAY 2, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[3135000] PASS : locked round 1: M0 + M1 READ -> S1 : 2 txns, responses == model (OKAY 2, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+
+------------------------------------------------------------------
+ SCOREBOARD SUMMARY
+   M0 transactions seen      : 32
+   M1 transactions seen      : 32
+   S0 transactions seen      : 24
+   S1 transactions seen      : 24
+   writes routed + matched   : 24
+   reads  routed + matched   : 24
+   DECERR writes / reads     : 8 / 8
+   SLVERR responses          : 0
+   read bytes checked (ref)  : 384
+   ERRORS                    : 0
+------------------------------------------------------------------
+ FUNCTIONAL COVERAGE of this test (black-box, from the pins)
+   transaction :  44.37 %
+   cycle       :  62.50 %
+   per-port    :  48.00 %
+   bins hit    : 80 of 198   (full table: +COV_DETAIL, all tests merged: make cov_merge)
+------------------------------------------------------------------
+ TEST CHECKS : 32 passed, 0 failed
+ WHAT THIS TEST PROVED:
+   1. when both masters ask for the same target in the same clock, both are served
+   2. the grant stays stable while the target is not ready, and every response returns to its own master
+==================================================================
+ TEST axi_arb_rounds_test : PASSED
+==================================================================
+ WHITE-BOX COVERAGE of this test (inside the RTL): 22 of 129 bins hit, 13.73 %   (+COV_DETAIL for the table)
+$finish called at time : 3285 ns : File "/home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv" Line 170
+exit
+INFO: xsimkernel Simulation Memory Usage: 290924 KB (Peak: 339484 KB), Simulation CPU Usage: 1260 ms
+INFO: [Common 17-206] Exiting xsim at Mon Nov  9 19:02:01 2026...

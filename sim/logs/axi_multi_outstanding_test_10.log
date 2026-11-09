@@ -1,0 +1,106 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Nov  9 19:11:19 2026
+# Process ID         : 3739139
+# Current directory  : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim
+# Command line       : xsim -log /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_multi_outstanding_test_10.log -mode tcl -source {xsim.dir/tb_snap/xsim_script.tcl}
+# Log file           : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_multi_outstanding_test_10.log
+# Journal file       : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/xsim.jou
+# Running On         : vlsi-vivado
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
+# CPU Frequency      : 3999.991 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 41875 MB
+# Swap memory        : 27648 MB
+# Total Virtual      : 69524 MB
+# Available Virtual  : 45482 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_snap/xsim_script.tcl
+# xsim {tb_snap} -testplusarg TESTNAME=axi_multi_outstanding_test -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_multi_outstanding_test_10 -autoloadwcfg -runall -sv_seed 10
+Time resolution is 1 ps
+run -all
+==================================================================
+ TEST : axi_multi_outstanding_test
+==================================================================
+
+------------------------------------------------------------------
+ SETUP : write known data into S0 and S1 (no latency)
+------------------------------------------------------------------
+
+------------------------------------------------------------------
+ STEP 1 : M0 reads S0 (latency 40) and S1 (latency 20), DIFFERENT IDs
+------------------------------------------------------------------
+[855000]            read S0 (slow) ID 2 : accepted @365000, finished @855000, resp=OKAY
+[855000]            read S1 (fast) ID 3 : accepted @375000, finished @655000, resp=OKAY
+[855000] PASS : both reads were in flight at the same time
+[855000] PASS : S1 answered first: different IDs may finish out of order
+[855000] PASS : STEP 1 S0 read data : 8 beats read back == data written
+[855000] PASS : STEP 1 S1 read data : 8 beats read back == data written
+
+------------------------------------------------------------------
+ STEP 2 : M0 writes S0 (latency 40) and S1 (latency 20), DIFFERENT IDs
+------------------------------------------------------------------
+[1325000]           write S0 (slow) ID 4 : accepted @875000, finished @1325000, resp=OKAY
+[1325000]           write S1 (fast) ID 5 : accepted @885000, finished @1165000, resp=OKAY
+[1325000] PASS : both writes were in flight at the same time
+[1325000] PASS : the B from S1 came back first
+[1455000] PASS : STEP 2 W data landed in S0 : 4 beats read back == data written
+[1455000] PASS : STEP 2 W data landed in S1 : 4 beats read back == data written
+
+------------------------------------------------------------------
+ STEP 3 : M0 reads S0 (latency 40) and S1 (latency 0) with the SAME ID 6
+------------------------------------------------------------------
+[1975000]            read S0 (ID 6) ID 6 : accepted @1475000, finished @1915000, resp=OKAY
+[1975000]            read S1 (ID 6) ID 6 : accepted @1925000, finished @1975000, resp=OKAY
+[1975000] PASS : the second ID-6 read was held until the first one finished
+[1975000] PASS : ID-6 answers reached M0 in the order they were sent
+
+------------------------------------------------------------------
+ STEP 4 : M0 (ID 1) and M1 (ID 9) write S0 at the same time (latency 40)
+------------------------------------------------------------------
+[2855000]               M0 write S0 ID 1 : accepted @2005000, finished @2855000, resp=OKAY
+[2855000]               M1 write S0 ID 9 : accepted @1995000, finished @2445000, resp=OKAY
+[2855000] PASS : both masters' writes were in flight at S0 at the same time
+[2975000] PASS : STEP 4 M0 got its own data back : 4 beats read back == data written
+[2975000] PASS : STEP 4 M1 got its own data back : 4 beats read back == data written
+
+------------------------------------------------------------------
+ SCOREBOARD SUMMARY
+   M0 transactions seen      : 12
+   M1 transactions seen      : 2
+   S0 transactions seen      : 9
+   S1 transactions seen      : 5
+   writes routed + matched   : 6
+   reads  routed + matched   : 8
+   DECERR writes / reads     : 0 / 0
+   SLVERR responses          : 0
+   read bytes checked (ref)  : 320
+   ERRORS                    : 0
+------------------------------------------------------------------
+ FUNCTIONAL COVERAGE of this test (black-box, from the pins)
+   transaction :  41.28 %
+   cycle       :  16.67 %
+   per-port    :  16.67 %
+   bins hit    : 54 of 198   (full table: +COV_DETAIL, all tests merged: make cov_merge)
+------------------------------------------------------------------
+ TEST CHECKS : 13 passed, 0 failed
+ WHAT THIS TEST PROVED:
+   1. a master can have transactions in flight at S0 and S1 at the same time (reads and writes)
+   2. different-ID answers may come back out of order, so a slow slave does not block a fast one
+   3. same-ID requests to different slaves are held back and finish in order
+   4. two masters can use one slave at the same time with different IDs
+   5. W data reaches the slave of its AW and answers reach the right master (data checked)
+==================================================================
+ TEST axi_multi_outstanding_test : PASSED
+==================================================================
+ WHITE-BOX COVERAGE of this test (inside the RTL): 6 of 129 bins hit, 5.88 %   (+COV_DETAIL for the table)
+$finish called at time : 3125 ns : File "/home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv" Line 170
+exit
+INFO: xsimkernel Simulation Memory Usage: 290924 KB (Peak: 339484 KB), Simulation CPU Usage: 1240 ms
+INFO: [Common 17-206] Exiting xsim at Mon Nov  9 19:11:23 2026...

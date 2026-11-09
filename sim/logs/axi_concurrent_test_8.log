@@ -1,0 +1,84 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Nov  9 19:03:07 2026
+# Process ID         : 3712956
+# Current directory  : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim
+# Command line       : xsim -log /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_concurrent_test_8.log -mode tcl -source {xsim.dir/tb_snap/xsim_script.tcl}
+# Log file           : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_concurrent_test_8.log
+# Journal file       : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/xsim.jou
+# Running On         : vlsi-vivado
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
+# CPU Frequency      : 4000.021 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 41875 MB
+# Swap memory        : 27648 MB
+# Total Virtual      : 69524 MB
+# Available Virtual  : 41725 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_snap/xsim_script.tcl
+# xsim {tb_snap} -testplusarg TESTNAME=axi_concurrent_test -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_concurrent_test_8 -autoloadwcfg -runall -sv_seed 8
+Time resolution is 1 ps
+run -all
+==================================================================
+ TEST : axi_concurrent_test
+==================================================================
+
+------------------------------------------------------------------
+ STEP 1 : reference - one 64-beat write alone (M0 -> S0)
+------------------------------------------------------------------
+[785000]      one 64-beat write took 670000
+
+------------------------------------------------------------------
+ STEP 2 : M0 -> S0  ||  M1 -> S1
+------------------------------------------------------------------
+[1465000]      M0->S0 || M1->S1 : two 64-beat writes together took 680000 (one alone took 670000)
+[1465000] PASS : M0->S0 || M1->S1: 680000 < 1.5 x 670000, the two paths ran in parallel
+[2135000] PASS : M0->S0 || M1->S1 : M0 read back : 64 beats read back == data written
+[2135000] PASS : M0->S0 || M1->S1 : M1 read back : 64 beats read back == data written
+
+------------------------------------------------------------------
+ STEP 3 : M0 -> S1  ||  M1 -> S0  (crossed)
+------------------------------------------------------------------
+[2805000]      M0->S1 || M1->S0 : two 64-beat writes together took 670000 (one alone took 670000)
+[2805000] PASS : M0->S1 || M1->S0: 670000 < 1.5 x 670000, the two paths ran in parallel
+[3475000] PASS : M0->S1 || M1->S0 : M0 read back : 64 beats read back == data written
+[3475000] PASS : M0->S1 || M1->S0 : M1 read back : 64 beats read back == data written
+
+------------------------------------------------------------------
+ SCOREBOARD SUMMARY
+   M0 transactions seen      : 5
+   M1 transactions seen      : 4
+   S0 transactions seen      : 5
+   S1 transactions seen      : 4
+   writes routed + matched   : 5
+   reads  routed + matched   : 4
+   DECERR writes / reads     : 0 / 0
+   SLVERR responses          : 0
+   read bytes checked (ref)  : 2048
+   ERRORS                    : 0
+------------------------------------------------------------------
+ FUNCTIONAL COVERAGE of this test (black-box, from the pins)
+   transaction :  40.14 %
+   cycle       :  25.00 %
+   per-port    :  13.33 %
+   bins hit    : 53 of 198   (full table: +COV_DETAIL, all tests merged: make cov_merge)
+------------------------------------------------------------------
+ TEST CHECKS : 6 passed, 0 failed
+ WHAT THIS TEST PROVED:
+   1. M0->S0 and M1->S1 run at the same time (not one after the other)
+   2. crossed traffic M0->S1 and M1->S0 also runs at the same time
+   3. parallel traffic keeps its data correct
+==================================================================
+ TEST axi_concurrent_test : PASSED
+==================================================================
+ WHITE-BOX COVERAGE of this test (inside the RTL): 2 of 129 bins hit, 2.94 %   (+COV_DETAIL for the table)
+$finish called at time : 3625 ns : File "/home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv" Line 170
+exit
+INFO: xsimkernel Simulation Memory Usage: 295024 KB (Peak: 339484 KB), Simulation CPU Usage: 1260 ms
+INFO: [Common 17-206] Exiting xsim at Mon Nov  9 19:03:11 2026...

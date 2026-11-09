@@ -1,0 +1,110 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Nov  9 18:55:36 2026
+# Process ID         : 3687286
+# Current directory  : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim
+# Command line       : xsim -log /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_decerr_test_8.log -mode tcl -source {xsim.dir/tb_snap/xsim_script.tcl}
+# Log file           : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_decerr_test_8.log
+# Journal file       : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/xsim.jou
+# Running On         : vlsi-vivado
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
+# CPU Frequency      : 3999.960 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 41875 MB
+# Swap memory        : 27648 MB
+# Total Virtual      : 69524 MB
+# Available Virtual  : 41685 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_snap/xsim_script.tcl
+# xsim {tb_snap} -testplusarg TESTNAME=axi_decerr_test -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_decerr_test_8 -autoloadwcfg -runall -sv_seed 8
+Time resolution is 1 ps
+run -all
+==================================================================
+ TEST : axi_decerr_test
+==================================================================
+
+------------------------------------------------------------------
+ STEP 1 : unmapped write + read, 1 / 16 / 256 beats, both masters
+------------------------------------------------------------------
+[185000] PASS : M0 20000000 1 beats : write answered DECERR
+[185000] PASS : M0 20000000 1 beats : every read beat answered DECERR
+[185000] PASS : M0 20000000 1 beats : BID : got 0x1 == expected 0x1
+[185000] PASS : M0 20000000 1 beats : RID : got 0x2 == expected 0x2
+[185000] PASS : M0 20000000 1 beats : R beats received : got 1 == expected 1
+[555000] PASS : M0 80000000 16 beats : write answered DECERR
+[555000] PASS : M0 80000000 16 beats : every read beat answered DECERR
+[555000] PASS : M0 80000000 16 beats : BID : got 0x1 == expected 0x1
+[555000] PASS : M0 80000000 16 beats : RID : got 0x2 == expected 0x2
+[555000] PASS : M0 80000000 16 beats : R beats received : got 16 == expected 16
+[5725000] PASS : M0 f0000000 256 beats : write answered DECERR
+[5725000] PASS : M0 f0000000 256 beats : every read beat answered DECERR
+[5725000] PASS : M0 f0000000 256 beats : BID : got 0x1 == expected 0x1
+[5725000] PASS : M0 f0000000 256 beats : RID : got 0x2 == expected 0x2
+[5725000] PASS : M0 f0000000 256 beats : R beats received : got 256 == expected 256
+[5795000] PASS : M1 20000000 1 beats : write answered DECERR
+[5795000] PASS : M1 20000000 1 beats : every read beat answered DECERR
+[5795000] PASS : M1 20000000 1 beats : BID : got 0x9 == expected 0x9
+[5795000] PASS : M1 20000000 1 beats : RID : got 0xa == expected 0xa
+[5795000] PASS : M1 20000000 1 beats : R beats received : got 1 == expected 1
+[6165000] PASS : M1 80000000 16 beats : write answered DECERR
+[6165000] PASS : M1 80000000 16 beats : every read beat answered DECERR
+[6165000] PASS : M1 80000000 16 beats : BID : got 0x9 == expected 0x9
+[6165000] PASS : M1 80000000 16 beats : RID : got 0xa == expected 0xa
+[6165000] PASS : M1 80000000 16 beats : R beats received : got 16 == expected 16
+[11335000] PASS : M1 f0000000 256 beats : write answered DECERR
+[11335000] PASS : M1 f0000000 256 beats : every read beat answered DECERR
+[11335000] PASS : M1 f0000000 256 beats : BID : got 0x9 == expected 0x9
+[11335000] PASS : M1 f0000000 256 beats : RID : got 0xa == expected 0xa
+[11335000] PASS : M1 f0000000 256 beats : R beats received : got 256 == expected 256
+
+------------------------------------------------------------------
+ STEP 2 : 4 DECERR transactions in flight on M0, M1 uses S0 normally
+------------------------------------------------------------------
+[11555000] PASS : M1->S0 while M0 has DECERR traffic : 8 beats read back == data written
+[11555000] PASS : M0 outstanding unmapped WRITE 0 : DECERR
+[11555000] PASS : M0 outstanding unmapped WRITE 0 : response ID : got 0x0 == expected 0x0
+[11555000] PASS : M0 outstanding unmapped READ 1 : DECERR
+[11555000] PASS : M0 outstanding unmapped READ 1 : response ID : got 0x1 == expected 0x1
+[11555000] PASS : M0 outstanding unmapped WRITE 2 : DECERR
+[11555000] PASS : M0 outstanding unmapped WRITE 2 : response ID : got 0x2 == expected 0x2
+[11555000] PASS : M0 outstanding unmapped READ 3 : DECERR
+[11555000] PASS : M0 outstanding unmapped READ 3 : response ID : got 0x3 == expected 0x3
+
+------------------------------------------------------------------
+ SCOREBOARD SUMMARY
+   M0 transactions seen      : 10
+   M1 transactions seen      : 8
+   S0 transactions seen      : 2
+   S1 transactions seen      : 0
+   writes routed + matched   : 1
+   reads  routed + matched   : 1
+   DECERR writes / reads     : 8 / 8
+   SLVERR responses          : 0
+   read bytes checked (ref)  : 64
+   ERRORS                    : 0
+------------------------------------------------------------------
+ FUNCTIONAL COVERAGE of this test (black-box, from the pins)
+   transaction :  46.88 %
+   cycle       :   0.00 %
+   per-port    :  11.67 %
+   bins hit    : 55 of 198   (full table: +COV_DETAIL, all tests merged: make cov_merge)
+------------------------------------------------------------------
+ TEST CHECKS : 39 passed, 0 failed
+ WHAT THIS TEST PROVED:
+   1. unmapped writes get BRESP=DECERR (1, 16 and 256 beats)
+   2. unmapped reads get len+1 beats, all RRESP=DECERR, with the right RID
+   3. DECERR traffic on one master does not disturb the other master
+==================================================================
+ TEST axi_decerr_test : PASSED
+==================================================================
+ WHITE-BOX COVERAGE of this test (inside the RTL): 2 of 129 bins hit, 2.94 %   (+COV_DETAIL for the table)
+$finish called at time : 11705 ns : File "/home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv" Line 170
+exit
+INFO: xsimkernel Simulation Memory Usage: 290924 KB (Peak: 339484 KB), Simulation CPU Usage: 1300 ms
+INFO: [Common 17-206] Exiting xsim at Mon Nov  9 18:55:40 2026...

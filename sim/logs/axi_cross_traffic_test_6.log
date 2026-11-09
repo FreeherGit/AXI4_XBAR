@@ -1,0 +1,89 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Nov  9 19:03:47 2026
+# Process ID         : 3715371
+# Current directory  : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim
+# Command line       : xsim -log /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_cross_traffic_test_6.log -mode tcl -source {xsim.dir/tb_snap/xsim_script.tcl}
+# Log file           : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_cross_traffic_test_6.log
+# Journal file       : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/xsim.jou
+# Running On         : vlsi-vivado
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
+# CPU Frequency      : 4001.255 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 41875 MB
+# Swap memory        : 27648 MB
+# Total Virtual      : 69524 MB
+# Available Virtual  : 41710 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_snap/xsim_script.tcl
+# xsim {tb_snap} -testplusarg TESTNAME=axi_cross_traffic_test -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_cross_traffic_test_6 -autoloadwcfg -runall -sv_seed 6
+Time resolution is 1 ps
+run -all
+==================================================================
+ TEST : axi_cross_traffic_test
+==================================================================
+
+------------------------------------------------------------------
+ PART A : M0 and M1 on DIFFERENT slaves in the same clock
+------------------------------------------------------------------
+[325000] PASS : M0->S0 || M1->S1, 4 writes each : 8 txns, responses == model (OKAY 8, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[515000] PASS : M0->S0 || M1->S1, 4 reads each : 8 txns, responses == model (OKAY 8, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[725000] PASS : M0->S1 || M1->S0, 4 writes each : 8 txns, responses == model (OKAY 8, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[915000] PASS : M0->S1 || M1->S0, 4 reads each : 8 txns, responses == model (OKAY 8, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+
+------------------------------------------------------------------
+ PART B : M0 and M1 on the SAME target, different IDs, slave latency 15
+------------------------------------------------------------------
+[1935000] PASS : M0 + M1 -> S0, 3 writes each : 6 txns, responses == model (OKAY 6, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[2995000] PASS : M0 + M1 -> S0, 3 reads each : 6 txns, responses == model (OKAY 6, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[4015000] PASS : M0 + M1 -> S1, 3 writes each : 6 txns, responses == model (OKAY 6, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[5075000] PASS : M0 + M1 -> S1, 3 reads each : 6 txns, responses == model (OKAY 6, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[5235000] PASS : M0 + M1 -> UNMAPPED, 3 writes each : 6 txns, responses == model (OKAY 0, SLVERR 0, DECERR 6), IDs echoed, 0 wrong
+[5385000] PASS : M0 + M1 -> UNMAPPED, 3 reads each : 6 txns, responses == model (OKAY 0, SLVERR 0, DECERR 6), IDs echoed, 0 wrong
+
+------------------------------------------------------------------
+ PART C : one master sends to S0 and S1 in the same clock, both answer after 8 clocks
+------------------------------------------------------------------
+[5585000] PASS : M0 WRITE to S0 and S1 together : 2 txns, responses == model (OKAY 2, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[5775000] PASS : M0 READ to S0 and S1 together : 2 txns, responses == model (OKAY 2, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[5985000] PASS : M1 WRITE to S0 and S1 together : 2 txns, responses == model (OKAY 2, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[6175000] PASS : M1 READ to S0 and S1 together : 2 txns, responses == model (OKAY 2, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+
+------------------------------------------------------------------
+ SCOREBOARD SUMMARY
+   M0 transactions seen      : 38
+   M1 transactions seen      : 38
+   S0 transactions seen      : 32
+   S1 transactions seen      : 32
+   writes routed + matched   : 32
+   reads  routed + matched   : 32
+   DECERR writes / reads     : 6 / 6
+   SLVERR responses          : 0
+   read bytes checked (ref)  : 832
+   ERRORS                    : 0
+------------------------------------------------------------------
+ FUNCTIONAL COVERAGE of this test (black-box, from the pins)
+   transaction :  50.32 %
+   cycle       :  50.00 %
+   per-port    :  26.67 %
+   bins hit    : 83 of 198   (full table: +COV_DETAIL, all tests merged: make cov_merge)
+------------------------------------------------------------------
+ TEST CHECKS : 14 passed, 0 failed
+ WHAT THIS TEST PROVED:
+   1. both masters work in parallel on different slaves
+   2. both masters can share one target when they use different IDs
+   3. one master gets responses from S0 and S1 at the same time without mixing them up
+==================================================================
+ TEST axi_cross_traffic_test : PASSED
+==================================================================
+ WHITE-BOX COVERAGE of this test (inside the RTL): 32 of 129 bins hit, 26.47 %   (+COV_DETAIL for the table)
+$finish called at time : 6325 ns : File "/home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv" Line 170
+exit
+INFO: xsimkernel Simulation Memory Usage: 290924 KB (Peak: 339484 KB), Simulation CPU Usage: 1280 ms
+INFO: [Common 17-206] Exiting xsim at Mon Nov  9 19:03:51 2026...

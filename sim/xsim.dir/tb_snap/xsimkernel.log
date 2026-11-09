@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_snap/xsimk -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_bad_id_test_10 -runall -sv_seed 10 -simmode gui -testplusarg TESTNAME=axi_bad_id_test -wdb tb_snap.wdb -simrunnum 0 -socket 55957
+Design successfully loaded
+Design Loading Memory Usage: 199952 KB (Peak: 199960 KB)
+Design Loading CPU Usage: 1200 ms
+Simulation completed
+Simulation Memory Usage: 290924 KB (Peak: 339484 KB)
+Simulation CPU Usage: 1240 ms

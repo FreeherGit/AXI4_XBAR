@@ -1,0 +1,142 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Nov  9 19:06:51 2026
+# Process ID         : 3725329
+# Current directory  : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim
+# Command line       : xsim -log /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_w_order_fill_test_2.log -mode tcl -source {xsim.dir/tb_snap/xsim_script.tcl}
+# Log file           : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_w_order_fill_test_2.log
+# Journal file       : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/xsim.jou
+# Running On         : vlsi-vivado
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
+# CPU Frequency      : 3999.504 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 41875 MB
+# Swap memory        : 27648 MB
+# Total Virtual      : 69524 MB
+# Available Virtual  : 45354 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_snap/xsim_script.tcl
+# xsim {tb_snap} -testplusarg TESTNAME=axi_w_order_fill_test -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_w_order_fill_test_2 -autoloadwcfg -runall -sv_seed 2
+Time resolution is 1 ps
+run -all
+==================================================================
+ TEST : axi_w_order_fill_test
+==================================================================
+
+------------------------------------------------------------------
+ PART A : WREADY = 0, 10 writes, FIFO depth 8
+------------------------------------------------------------------
+[525000] PASS : M0 : AWs accepted while WREADY LOW : got 8 == expected 8
+[525000] PASS : M0 : AW requests waiting while FIFO full : got 2 == expected 2
+[745000] PASS : M0 : 10 writes to S0 after WREADY release : 10 txns, responses == model (OKAY 10, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[745000] PASS : M0 write 0 : BID : got 0x0 == expected 0x0
+[745000] PASS : M0 write 1 : BID : got 0x1 == expected 0x1
+[745000] PASS : M0 write 2 : BID : got 0x2 == expected 0x2
+[745000] PASS : M0 write 3 : BID : got 0x3 == expected 0x3
+[745000] PASS : M0 write 4 : BID : got 0x4 == expected 0x4
+[745000] PASS : M0 write 5 : BID : got 0x5 == expected 0x5
+[745000] PASS : M0 write 6 : BID : got 0x6 == expected 0x6
+[745000] PASS : M0 write 7 : BID : got 0x7 == expected 0x7
+[745000] PASS : M0 write 8 : BID : got 0x0 == expected 0x0
+[745000] PASS : M0 write 9 : BID : got 0x1 == expected 0x1
+[745000] PASS : M0 : total AW requests accepted after release : got 10 == expected 10
+[1155000] PASS : M1 : AWs accepted while WREADY LOW : got 8 == expected 8
+[1155000] PASS : M1 : AW requests waiting while FIFO full : got 2 == expected 2
+[1385000] PASS : M1 : 10 writes to S1 after WREADY release : 10 txns, responses == model (OKAY 10, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[1385000] PASS : M1 write 0 : BID : got 0x8 == expected 0x8
+[1385000] PASS : M1 write 1 : BID : got 0x9 == expected 0x9
+[1385000] PASS : M1 write 2 : BID : got 0xa == expected 0xa
+[1385000] PASS : M1 write 3 : BID : got 0xb == expected 0xb
+[1385000] PASS : M1 write 4 : BID : got 0xc == expected 0xc
+[1385000] PASS : M1 write 5 : BID : got 0xd == expected 0xd
+[1385000] PASS : M1 write 6 : BID : got 0xe == expected 0xe
+[1385000] PASS : M1 write 7 : BID : got 0xf == expected 0xf
+[1385000] PASS : M1 write 8 : BID : got 0x8 == expected 0x8
+[1385000] PASS : M1 write 9 : BID : got 0x9 == expected 0x9
+[1385000] PASS : M1 : total AW requests accepted after release : got 10 == expected 10
+
+------------------------------------------------------------------
+ PART B : DECERR target - M1 W data waits behind M0's sequence
+------------------------------------------------------------------
+[1795000] PASS : PART B : M0 S0 blocking write still pending : got 0 == expected 0
+[1795000] PASS : PART B : M1 DECERR writes completed before release : got 0 == expected 0
+[1915000] PASS : M0 : 1 S0 write + 4 UNMAPPED writes : 5 txns, responses == model (OKAY 1, SLVERR 0, DECERR 4), IDs echoed, 0 wrong
+[2015000] PASS : M1 : 5 UNMAPPED writes after M0's older sequence : 5 txns, responses == model (OKAY 0, SLVERR 0, DECERR 5), IDs echoed, 0 wrong
+[2015000] PASS : PART B : M0 transaction 0 BID : got 0x1 == expected 0x1
+[2015000] PASS : PART B : M0 transaction 1 BID : got 0x2 == expected 0x2
+[2015000] PASS : PART B : M0 transaction 2 BID : got 0x3 == expected 0x3
+[2015000] PASS : PART B : M0 transaction 3 BID : got 0x4 == expected 0x4
+[2015000] PASS : PART B : M0 transaction 4 BID : got 0x5 == expected 0x5
+[2015000] PASS : PART B : M1 transaction 0 BID : got 0x9 == expected 0x9
+[2015000] PASS : PART B : M1 transaction 1 BID : got 0xa == expected 0xa
+[2015000] PASS : PART B : M1 transaction 2 BID : got 0xb == expected 0xb
+[2015000] PASS : PART B : M1 transaction 3 BID : got 0xc == expected 0xc
+[2015000] PASS : PART B : M1 transaction 4 BID : got 0xd == expected 0xd
+
+------------------------------------------------------------------
+ PART C : Cross-master W-data ordering at mapped S1
+------------------------------------------------------------------
+[2325000] PASS : PART C : M0 S0 blocking write still pending : got 0 == expected 0
+[2325000] PASS : PART C : M0 S1 write 0 still pending : got 0 == expected 0
+[2325000] PASS : PART C : M0 S1 write 1 still pending : got 0 == expected 0
+[2325000] PASS : PART C : M0 S1 write 2 still pending : got 0 == expected 0
+[2325000] PASS : PART C : M0 S1 write 3 still pending : got 0 == expected 0
+[2325000] PASS : PART C : M1 S1 write 0 still pending : got 0 == expected 0
+[2325000] PASS : PART C : M1 S1 write 1 still pending : got 0 == expected 0
+[2325000] PASS : PART C : M1 S1 write 2 still pending : got 0 == expected 0
+[2325000] PASS : PART C : M1 S1 write 3 still pending : got 0 == expected 0
+[2325000] PASS : PART C : M1 S1 write 4 still pending : got 0 == expected 0
+[2445000] PASS : PART C : M0 S0 blocker + 4 S1 writes : 5 txns, responses == model (OKAY 5, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[2545000] PASS : PART C : M1 5 S1 writes after M0's S1 writes : 5 txns, responses == model (OKAY 5, SLVERR 0, DECERR 0), IDs echoed, 0 wrong
+[2595000] PASS : PART C : M0 S1 write 0 data read-back : 2 beats read back == data written
+[2635000] PASS : PART C : M0 S1 write 1 data read-back : 2 beats read back == data written
+[2675000] PASS : PART C : M0 S1 write 2 data read-back : 2 beats read back == data written
+[2715000] PASS : PART C : M0 S1 write 3 data read-back : 2 beats read back == data written
+[2755000] PASS : PART C : M1 S1 write 0 data read-back : 2 beats read back == data written
+[2795000] PASS : PART C : M1 S1 write 1 data read-back : 2 beats read back == data written
+[2835000] PASS : PART C : M1 S1 write 2 data read-back : 2 beats read back == data written
+[2875000] PASS : PART C : M1 S1 write 3 data read-back : 2 beats read back == data written
+[2915000] PASS : PART C : M1 S1 write 4 data read-back : 2 beats read back == data written
+
+------------------------------------------------------------------
+ SCOREBOARD SUMMARY
+   M0 transactions seen      : 24
+   M1 transactions seen      : 25
+   S0 transactions seen      : 12
+   S1 transactions seen      : 28
+   writes routed + matched   : 31
+   reads  routed + matched   : 9
+   DECERR writes / reads     : 9 / 0
+   SLVERR responses          : 0
+   read bytes checked (ref)  : 144
+   ERRORS                    : 0
+------------------------------------------------------------------
+ FUNCTIONAL COVERAGE of this test (black-box, from the pins)
+   transaction :  55.40 %
+   cycle       :  12.50 %
+   per-port    :  24.00 %
+   bins hit    : 77 of 198   (full table: +COV_DETAIL, all tests merged: make cov_merge)
+------------------------------------------------------------------
+ TEST CHECKS : 63 passed, 0 failed
+ WHAT THIS TEST PROVED:
+   1. W-order FIFO accepts exactly 8 AWs while WREADY is LOW
+   2. the 9th and 10th AW requests wait until FIFO space becomes available
+   3. after WREADY returns, all 10 write transactions complete
+   4. DECERR-target writes return their correct responses and IDs
+   5. older M0 write-data transactions are not bypassed by M1
+   6. M0 and M1 write data reaches the correct S1 addresses
+   7. W data remains associated with its corresponding AW transaction
+==================================================================
+ TEST axi_w_order_fill_test : PASSED
+==================================================================
+ WHITE-BOX COVERAGE of this test (inside the RTL): 19 of 129 bins hit, 23.67 %   (+COV_DETAIL for the table)
+$finish called at time : 3065 ns : File "/home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv" Line 170
+exit
+INFO: xsimkernel Simulation Memory Usage: 290924 KB (Peak: 339484 KB), Simulation CPU Usage: 1250 ms
+INFO: [Common 17-206] Exiting xsim at Mon Nov  9 19:06:54 2026...

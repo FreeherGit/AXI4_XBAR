@@ -1,0 +1,121 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Nov  9 18:58:58 2026
+# Process ID         : 3698639
+# Current directory  : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim
+# Command line       : xsim -log /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_outstanding_test_8.log -mode tcl -source {xsim.dir/tb_snap/xsim_script.tcl}
+# Log file           : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_outstanding_test_8.log
+# Journal file       : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/xsim.jou
+# Running On         : vlsi-vivado
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
+# CPU Frequency      : 4000.015 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 41875 MB
+# Swap memory        : 27648 MB
+# Total Virtual      : 69524 MB
+# Available Virtual  : 41638 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_snap/xsim_script.tcl
+# xsim {tb_snap} -testplusarg TESTNAME=axi_outstanding_test -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_outstanding_test_8 -autoloadwcfg -runall -sv_seed 8
+Time resolution is 1 ps
+run -all
+==================================================================
+ TEST : axi_outstanding_test
+==================================================================
+
+------------------------------------------------------------------
+ M0 -> S0 and M1 -> S1 in parallel, up to 8 outstanding each
+------------------------------------------------------------------
+[675000] PASS : M0 write 0 : BID : got 0x0 == expected 0x0
+[675000] PASS : M0 write 0 : BRESP : got OKAY == expected OKAY
+[675000] PASS : M0 write 1 : BID : got 0x1 == expected 0x1
+[675000] PASS : M0 write 1 : BRESP : got OKAY == expected OKAY
+[675000] PASS : M0 write 2 : BID : got 0x2 == expected 0x2
+[675000] PASS : M0 write 2 : BRESP : got OKAY == expected OKAY
+[675000] PASS : M0 write 3 : BID : got 0x3 == expected 0x3
+[675000] PASS : M0 write 3 : BRESP : got OKAY == expected OKAY
+[675000] PASS : M0 write 4 : BID : got 0x4 == expected 0x4
+[675000] PASS : M0 write 4 : BRESP : got OKAY == expected OKAY
+[675000] PASS : M0 write 5 : BID : got 0x5 == expected 0x5
+[675000] PASS : M0 write 5 : BRESP : got OKAY == expected OKAY
+[675000] PASS : M0 write 6 : BID : got 0x6 == expected 0x6
+[675000] PASS : M0 write 6 : BRESP : got OKAY == expected OKAY
+[675000] PASS : M0 write 7 : BID : got 0x7 == expected 0x7
+[675000] PASS : M0 write 7 : BRESP : got OKAY == expected OKAY
+[675000] PASS : M0 writes in flight at the same time : got 8 >= needed 4
+[795000] PASS : M1 write 0 : BID : got 0x8 == expected 0x8
+[795000] PASS : M1 write 0 : BRESP : got OKAY == expected OKAY
+[795000] PASS : M1 write 1 : BID : got 0x9 == expected 0x9
+[795000] PASS : M1 write 1 : BRESP : got OKAY == expected OKAY
+[795000] PASS : M1 write 2 : BID : got 0xa == expected 0xa
+[795000] PASS : M1 write 2 : BRESP : got OKAY == expected OKAY
+[795000] PASS : M1 write 3 : BID : got 0xb == expected 0xb
+[795000] PASS : M1 write 3 : BRESP : got OKAY == expected OKAY
+[795000] PASS : M1 write 4 : BID : got 0xc == expected 0xc
+[795000] PASS : M1 write 4 : BRESP : got OKAY == expected OKAY
+[795000] PASS : M1 write 5 : BID : got 0xd == expected 0xd
+[795000] PASS : M1 write 5 : BRESP : got OKAY == expected OKAY
+[795000] PASS : M1 write 6 : BID : got 0xe == expected 0xe
+[795000] PASS : M1 write 6 : BRESP : got OKAY == expected OKAY
+[795000] PASS : M1 write 7 : BID : got 0xf == expected 0xf
+[795000] PASS : M1 write 7 : BRESP : got OKAY == expected OKAY
+[795000] PASS : M1 writes in flight at the same time : got 8 >= needed 4
+[1475000] PASS : M0: 8 same-ID reads finished in the order they were sent
+[1475000] PASS : M0 same-ID read 0 returns its own write : 4 beats read back == data written
+[1475000] PASS : M0 same-ID read 1 returns its own write : 4 beats read back == data written
+[1475000] PASS : M0 same-ID read 2 returns its own write : 4 beats read back == data written
+[1475000] PASS : M0 same-ID read 3 returns its own write : 4 beats read back == data written
+[1475000] PASS : M0 same-ID read 4 returns its own write : 4 beats read back == data written
+[1475000] PASS : M0 same-ID read 5 returns its own write : 4 beats read back == data written
+[1475000] PASS : M0 same-ID read 6 returns its own write : 4 beats read back == data written
+[1475000] PASS : M0 same-ID read 7 returns its own write : 4 beats read back == data written
+[1475000] PASS : M0 reads in flight at the same time : got 7 >= needed 2
+[1765000] PASS : M1: 8 same-ID reads finished in the order they were sent
+[1765000] PASS : M1 same-ID read 0 returns its own write : 4 beats read back == data written
+[1765000] PASS : M1 same-ID read 1 returns its own write : 4 beats read back == data written
+[1765000] PASS : M1 same-ID read 2 returns its own write : 4 beats read back == data written
+[1765000] PASS : M1 same-ID read 3 returns its own write : 4 beats read back == data written
+[1765000] PASS : M1 same-ID read 4 returns its own write : 4 beats read back == data written
+[1765000] PASS : M1 same-ID read 5 returns its own write : 4 beats read back == data written
+[1765000] PASS : M1 same-ID read 6 returns its own write : 4 beats read back == data written
+[1765000] PASS : M1 same-ID read 7 returns its own write : 4 beats read back == data written
+[1765000] PASS : M1 reads in flight at the same time : got 8 >= needed 2
+
+------------------------------------------------------------------
+ SCOREBOARD SUMMARY
+   M0 transactions seen      : 16
+   M1 transactions seen      : 16
+   S0 transactions seen      : 16
+   S1 transactions seen      : 16
+   writes routed + matched   : 16
+   reads  routed + matched   : 16
+   DECERR writes / reads     : 0 / 0
+   SLVERR responses          : 0
+   read bytes checked (ref)  : 512
+   ERRORS                    : 0
+------------------------------------------------------------------
+ FUNCTIONAL COVERAGE of this test (black-box, from the pins)
+   transaction :  49.21 %
+   cycle       :  12.50 %
+   per-port    :   6.67 %
+   bins hit    : 61 of 198   (full table: +COV_DETAIL, all tests merged: make cov_merge)
+------------------------------------------------------------------
+ TEST CHECKS : 54 passed, 0 failed
+ WHAT THIS TEST PROVED:
+   1. each master can have several writes and several reads outstanding at once
+   2. every response goes back with the right ID (BID = AWID, RID = ARID)
+   3. reads with the same ID come back in the order they were sent
+==================================================================
+ TEST axi_outstanding_test : PASSED
+==================================================================
+ WHITE-BOX COVERAGE of this test (inside the RTL): 4 of 129 bins hit, 3.92 %   (+COV_DETAIL for the table)
+$finish called at time : 1915 ns : File "/home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv" Line 170
+exit
+INFO: xsimkernel Simulation Memory Usage: 290924 KB (Peak: 339484 KB), Simulation CPU Usage: 1230 ms
+INFO: [Common 17-206] Exiting xsim at Mon Nov  9 18:59:02 2026...

@@ -1,0 +1,100 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Nov  9 18:52:23 2026
+# Process ID         : 3676454
+# Current directory  : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim
+# Command line       : xsim -log /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_reset_test_9.log -mode tcl -source {xsim.dir/tb_snap/xsim_script.tcl}
+# Log file           : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_reset_test_9.log
+# Journal file       : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/xsim.jou
+# Running On         : vlsi-vivado
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
+# CPU Frequency      : 3999.807 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 41875 MB
+# Swap memory        : 27648 MB
+# Total Virtual      : 69524 MB
+# Available Virtual  : 41666 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_snap/xsim_script.tcl
+# xsim {tb_snap} -testplusarg TESTNAME=axi_reset_test -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_reset_test_9 -autoloadwcfg -runall -sv_seed 9
+Time resolution is 1 ps
+run -all
+==================================================================
+ TEST : axi_reset_test
+==================================================================
+
+------------------------------------------------------------------
+ Reset in the middle of random traffic
+------------------------------------------------------------------
+[115000] [GEN rand_m0] knobs: num_txns=40 only_kind=any only_region=any only_burst=any max_len=31 IDs=0..f no_unmapped=1 blocking=0
+[115000] [GEN rand_m0] ... (remaining 40 transactions not printed)
+[115000] [GEN rand_m1] knobs: num_txns=40 only_kind=any only_region=any only_burst=any max_len=31 IDs=0..f no_unmapped=1 blocking=0
+[115000] [GEN rand_m1] ... (remaining 40 transactions not printed)
+[1685000]      just before reset : M0 bvalid=0 rvalid=0 | M1 bvalid=0 rvalid=0 | S0 awvalid=0 wvalid=0 arvalid=0 | S1 awvalid=0 wvalid=1 arvalid=0 | 
+[1688000]      asserting arst_n = 0 (in the middle of a clock cycle)
+[1688000] [GEN rand_m0] summary: 40 txns | WRITE=21 READ=19 | S0=17 S1=23 UNMAPPED=0 | FIXED=14 INCR=14 WRAP=12 | knob violations=0 -> KNOBS RESPECTED
+[1688000] [GEN rand_m1] summary: 40 txns | WRITE=21 READ=19 | S0=24 S1=16 UNMAPPED=0 | FIXED=22 INCR=15 WRAP=3 | knob violations=0 -> KNOBS RESPECTED
+[1695000]      1 clock into reset : M0 bvalid=0 rvalid=0 | M1 bvalid=0 rvalid=0 | S0 awvalid=0 wvalid=0 arvalid=0 | S1 awvalid=0 wvalid=0 arvalid=0 | 
+[1695000] PASS : while arst_n = 0 every crossbar VALID is 0 (traffic in flight dropped)
+[1745000] PASS : VALIDs stay 0 for the whole reset pulse
+[1750000]      arst_n released
+[1750000]      transactions cut by the reset: M0 25, M1 31 (expected, they were in flight)
+[1845000] PASS : after reset release the crossbar is idle again (no VALID left from the old traffic)
+
+------------------------------------------------------------------
+ Every path after the reset
+------------------------------------------------------------------
+[1955000] PASS : M0->S0 write A (at the same time as read B) BRESP : got OKAY == expected OKAY
+[1955000] PASS : M0->S0 read B (at the same time as write A) RRESP : got OKAY == expected OKAY
+[2185000] PASS : M0->S0 write B then read B : 8 beats read back == data written
+[2285000] PASS : M0->S0 read A back : 8 beats read back == data written
+[2395000] PASS : M0->S1 write A (at the same time as read B) BRESP : got OKAY == expected OKAY
+[2395000] PASS : M0->S1 read B (at the same time as write A) RRESP : got OKAY == expected OKAY
+[2625000] PASS : M0->S1 write B then read B : 8 beats read back == data written
+[2725000] PASS : M0->S1 read A back : 8 beats read back == data written
+[2835000] PASS : M1->S0 write A (at the same time as read B) BRESP : got OKAY == expected OKAY
+[2835000] PASS : M1->S0 read B (at the same time as write A) RRESP : got OKAY == expected OKAY
+[3065000] PASS : M1->S0 write B then read B : 8 beats read back == data written
+[3165000] PASS : M1->S0 read A back : 8 beats read back == data written
+[3275000] PASS : M1->S1 write A (at the same time as read B) BRESP : got OKAY == expected OKAY
+[3275000] PASS : M1->S1 read B (at the same time as write A) RRESP : got OKAY == expected OKAY
+[3505000] PASS : M1->S1 write B then read B : 8 beats read back == data written
+[3605000] PASS : M1->S1 read A back : 8 beats read back == data written
+
+------------------------------------------------------------------
+ SCOREBOARD SUMMARY
+   M0 transactions seen      : 25
+   M1 transactions seen      : 19
+   S0 transactions seen      : 24
+   S1 transactions seen      : 20
+   writes routed + matched   : 17
+   reads  routed + matched   : 27
+   DECERR writes / reads     : 0 / 0
+   SLVERR responses          : 0
+   read bytes checked (ref)  : 1146
+   ERRORS                    : 0
+------------------------------------------------------------------
+ FUNCTIONAL COVERAGE of this test (black-box, from the pins)
+   transaction :  71.39 %
+   cycle       :  25.00 %
+   per-port    :  36.67 %
+   bins hit    : 111 of 198   (full table: +COV_DETAIL, all tests merged: make cov_merge)
+------------------------------------------------------------------
+ TEST CHECKS : 19 passed, 0 failed
+ WHAT THIS TEST PROVED:
+   1. an asynchronous reset in the middle of traffic clears every VALID immediately
+   2. the crossbar recovers and every master->slave path works after the reset
+==================================================================
+ TEST axi_reset_test : PASSED
+==================================================================
+ WHITE-BOX COVERAGE of this test (inside the RTL): 15 of 129 bins hit, 16.18 %   (+COV_DETAIL for the table)
+$finish called at time : 3755 ns : File "/home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv" Line 170
+exit
+INFO: xsimkernel Simulation Memory Usage: 290924 KB (Peak: 339484 KB), Simulation CPU Usage: 1430 ms
+INFO: [Common 17-206] Exiting xsim at Mon Nov  9 18:52:27 2026...

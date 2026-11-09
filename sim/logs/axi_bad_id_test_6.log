@@ -1,0 +1,92 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Nov  9 19:11:49 2026
+# Process ID         : 3740847
+# Current directory  : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim
+# Command line       : xsim -log /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_bad_id_test_6.log -mode tcl -source {xsim.dir/tb_snap/xsim_script.tcl}
+# Log file           : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_bad_id_test_6.log
+# Journal file       : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/xsim.jou
+# Running On         : vlsi-vivado
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
+# CPU Frequency      : 4000.048 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 41875 MB
+# Swap memory        : 27648 MB
+# Total Virtual      : 69524 MB
+# Available Virtual  : 45490 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_snap/xsim_script.tcl
+# xsim {tb_snap} -testplusarg TESTNAME=axi_bad_id_test -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_bad_id_test_6 -autoloadwcfg -runall -sv_seed 6
+Time resolution is 1 ps
+run -all
+==================================================================
+ TEST : axi_bad_id_test
+==================================================================
+
+------------------------------------------------------------------
+ STEP 1 : stray B and stray R from each slave (crossbar idle)
+------------------------------------------------------------------
+[185000] [S0.mon] expected stray B with BID=5 (error injection), not a transaction
+[365000] PASS : S0 stray B ID 5 : accepted by the crossbar (handshakes) : got 1 == expected 1
+[365000] PASS : S0 stray B ID 5 : clocks it was seen at a master : got 0 == expected 0
+[435000] [S0.mon] expected stray R with RID=f (error injection), not a transaction
+[615000] PASS : S0 stray R ID f : accepted by the crossbar (handshakes) : got 1 == expected 1
+[615000] PASS : S0 stray R ID f : clocks it was seen at a master : got 0 == expected 0
+[685000] [S1.mon] expected stray B with BID=5 (error injection), not a transaction
+[865000] PASS : S1 stray B ID 5 : accepted by the crossbar (handshakes) : got 1 == expected 1
+[865000] PASS : S1 stray B ID 5 : clocks it was seen at a master : got 0 == expected 0
+[935000] [S1.mon] expected stray R with RID=f (error injection), not a transaction
+[1115000] PASS : S1 stray R ID f : accepted by the crossbar (handshakes) : got 1 == expected 1
+[1115000] PASS : S1 stray R ID f : clocks it was seen at a master : got 0 == expected 0
+
+------------------------------------------------------------------
+ STEP 2 : every path still works after the stray responses
+------------------------------------------------------------------
+[1335000] PASS : M0->S0 INCR 8x8B addr=0e200000 (after the strays) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=1 RID=1 expected 1 | 8 beats read == written
+[1555000] PASS : M0->S1 INCR 8x8B addr=1e200000 (after the strays) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=1 RID=1 expected 1 | 8 beats read == written
+[1775000] PASS : M1->S0 INCR 8x8B addr=0e201000 (after the strays) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=9 RID=9 expected 9 | 8 beats read == written
+[1995000] PASS : M1->S1 INCR 8x8B addr=1e201000 (after the strays) : BRESP=OKAY RRESP=OKAY expected OKAY | BID=9 RID=9 expected 9 | 8 beats read == written
+[2045000] PASS : S0 stray B expected but not seen : got 0 == expected 0
+[2045000] PASS : S0 stray R expected but not seen : got 0 == expected 0
+[2045000] PASS : S1 stray B expected but not seen : got 0 == expected 0
+[2045000] PASS : S1 stray R expected but not seen : got 0 == expected 0
+[2045000] PASS : scoreboard errors during this test : got 0 == expected 0
+
+------------------------------------------------------------------
+ SCOREBOARD SUMMARY
+   M0 transactions seen      : 4
+   M1 transactions seen      : 4
+   S0 transactions seen      : 4
+   S1 transactions seen      : 4
+   writes routed + matched   : 4
+   reads  routed + matched   : 4
+   DECERR writes / reads     : 0 / 0
+   SLVERR responses          : 0
+   read bytes checked (ref)  : 256
+   ERRORS                    : 0
+------------------------------------------------------------------
+ FUNCTIONAL COVERAGE of this test (black-box, from the pins)
+   transaction :  37.53 %
+   cycle       :   0.00 %
+   per-port    :   6.67 %
+   bins hit    : 45 of 198   (full table: +COV_DETAIL, all tests merged: make cov_merge)
+------------------------------------------------------------------
+ TEST CHECKS : 17 passed, 0 failed
+ WHAT THIS TEST PROVED:
+   1. a B or R with an unknown ID is accepted by the crossbar (the slave never hangs)
+   2. such a stray response is never passed to M0 or M1
+   3. all master->slave paths work normally after stray responses
+==================================================================
+ TEST axi_bad_id_test : PASSED
+==================================================================
+ WHITE-BOX COVERAGE of this test (inside the RTL): 6 of 129 bins hit, 8.82 %   (+COV_DETAIL for the table)
+$finish called at time : 2195 ns : File "/home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv" Line 170
+exit
+INFO: xsimkernel Simulation Memory Usage: 290924 KB (Peak: 339484 KB), Simulation CPU Usage: 1230 ms
+INFO: [Common 17-206] Exiting xsim at Mon Nov  9 19:11:52 2026...

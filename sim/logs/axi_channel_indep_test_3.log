@@ -1,0 +1,107 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Nov  9 19:06:07 2026
+# Process ID         : 3722851
+# Current directory  : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim
+# Command line       : xsim -log /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_channel_indep_test_3.log -mode tcl -source {xsim.dir/tb_snap/xsim_script.tcl}
+# Log file           : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_channel_indep_test_3.log
+# Journal file       : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/xsim.jou
+# Running On         : vlsi-vivado
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
+# CPU Frequency      : 3999.995 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 41875 MB
+# Swap memory        : 27648 MB
+# Total Virtual      : 69524 MB
+# Available Virtual  : 45478 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_snap/xsim_script.tcl
+# xsim {tb_snap} -testplusarg TESTNAME=axi_channel_indep_test -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_channel_indep_test_3 -autoloadwcfg -runall -sv_seed 3
+Time resolution is 1 ps
+run -all
+==================================================================
+ TEST : axi_channel_indep_test
+==================================================================
+
+------------------------------------------------------------------
+ STEP A : M0 BREADY held LOW (B channel blocked)
+------------------------------------------------------------------
+[375000] PASS : A (B blocked) : stuck transaction finished (must still wait) : got 0 == expected 0
+[375000] PASS : A (B blocked) : other traffic finished : got 1 == expected 1
+[375000] PASS : A (B blocked) : other traffic response : got OKAY == expected OKAY
+[395000] PASS : A (B blocked) : stuck transaction after unblocking : got OKAY == expected OKAY
+
+------------------------------------------------------------------
+ STEP B : S1 ARREADY held LOW (AR channel blocked)
+------------------------------------------------------------------
+[665000] PASS : B (AR blocked) : stuck transaction finished (must still wait) : got 0 == expected 0
+[665000] PASS : B (AR blocked) : other traffic finished : got 1 == expected 1
+[665000] PASS : B (AR blocked) : other traffic response : got OKAY == expected OKAY
+[735000] PASS : B (AR blocked) : stuck transaction after unblocking : got OKAY == expected OKAY
+
+------------------------------------------------------------------
+ STEP C : S0 WREADY held LOW (W channel blocked)
+------------------------------------------------------------------
+[1095000] PASS : C (W blocked) : stuck transaction finished (must still wait) : got 0 == expected 0
+[1095000] PASS : C (W blocked) : other traffic finished : got 1 == expected 1
+[1095000] PASS : C (W blocked) : other traffic response : got OKAY == expected OKAY
+[1165000] PASS : C (W blocked) : stuck transaction after unblocking : got OKAY == expected OKAY
+
+------------------------------------------------------------------
+ STEP D : M1 RREADY held LOW (R channel blocked)
+------------------------------------------------------------------
+[1445000] PASS : D (R blocked) : stuck transaction finished (must still wait) : got 0 == expected 0
+[1445000] PASS : D (R blocked) : other traffic finished : got 1 == expected 1
+[1445000] PASS : D (R blocked) : other traffic response : got OKAY == expected OKAY
+[1495000] PASS : D (R blocked) : stuck transaction after unblocking : got OKAY == expected OKAY
+
+------------------------------------------------------------------
+ STEP E : S0 AWREADY held LOW (AW channel blocked)
+------------------------------------------------------------------
+[1855000] PASS : E (AW blocked) : stuck transaction finished (must still wait) : got 0 == expected 0
+[1855000] PASS : E (AW blocked) : other traffic finished : got 1 == expected 1
+[1855000] PASS : E (AW blocked) : other traffic response : got OKAY == expected OKAY
+[1925000] PASS : E (AW blocked) : stuck transaction after unblocking : got OKAY == expected OKAY
+
+------------------------------------------------------------------
+ SCOREBOARD SUMMARY
+   M0 transactions seen      : 5
+   M1 transactions seen      : 5
+   S0 transactions seen      : 7
+   S1 transactions seen      : 3
+   writes routed + matched   : 5
+   reads  routed + matched   : 5
+   DECERR writes / reads     : 0 / 0
+   SLVERR responses          : 0
+   read bytes checked (ref)  : 160
+   ERRORS                    : 0
+------------------------------------------------------------------
+ FUNCTIONAL COVERAGE of this test (black-box, from the pins)
+   transaction :  39.56 %
+   cycle       :  62.50 %
+   per-port    :  68.33 %
+   bins hit    : 67 of 198   (full table: +COV_DETAIL, all tests merged: make cov_merge)
+------------------------------------------------------------------
+ TEST CHECKS : 20 passed, 0 failed
+ WHAT THIS TEST PROVED:
+   1. a blocked B channel does not stop read transactions
+   2. a blocked AR channel does not stop write transactions
+   3. a blocked W channel on S0 does not stop another master reading S0
+   4. a blocked R channel on M1 does not stop M0 write traffic
+   5. a blocked AW channel on S0 does not stop another master reading S0
+   6. blocked transactions are not lost and finish after READY returns
+   7. all five AXI channels have been independently exercised
+==================================================================
+ TEST axi_channel_indep_test : PASSED
+==================================================================
+ WHITE-BOX COVERAGE of this test (inside the RTL): 6 of 129 bins hit, 6.86 %   (+COV_DETAIL for the table)
+$finish called at time : 2075 ns : File "/home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv" Line 170
+exit
+INFO: xsimkernel Simulation Memory Usage: 290924 KB (Peak: 339484 KB), Simulation CPU Usage: 1230 ms
+INFO: [Common 17-206] Exiting xsim at Mon Nov  9 19:06:10 2026...

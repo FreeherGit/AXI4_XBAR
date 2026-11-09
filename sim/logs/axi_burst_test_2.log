@@ -1,0 +1,107 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Nov  9 18:56:46 2026
+# Process ID         : 3691193
+# Current directory  : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim
+# Command line       : xsim -log /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_burst_test_2.log -mode tcl -source {xsim.dir/tb_snap/xsim_script.tcl}
+# Log file           : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/logs/axi_burst_test_2.log
+# Journal file       : /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim/xsim.jou
+# Running On         : vlsi-vivado
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
+# CPU Frequency      : 4000.019 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 41875 MB
+# Swap memory        : 27648 MB
+# Total Virtual      : 69524 MB
+# Available Virtual  : 41752 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_snap/xsim_script.tcl
+# xsim {tb_snap} -testplusarg TESTNAME=axi_burst_test -cov_db_dir /home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/sim -cov_db_name axi_burst_test_2 -autoloadwcfg -runall -sv_seed 2
+Time resolution is 1 ps
+run -all
+==================================================================
+ TEST : axi_burst_test
+==================================================================
+
+------------------------------------------------------------------
+ INCR : different lengths, 8-byte beats
+------------------------------------------------------------------
+[205000] PASS : case 0 INCR 1 beat (M0->S0) : 1 beats read back == data written
+[355000] PASS : case 1 INCR 4 beats (M1->S0) : 4 beats read back == data written
+[735000] PASS : case 2 INCR 16 beats (M0->S1) : 16 beats read back == data written
+[5915000] PASS : case 3 INCR 256 beats (M1->S1) : 256 beats read back == data written
+
+------------------------------------------------------------------
+ INCR : narrow beats (1, 2, 4 bytes)
+------------------------------------------------------------------
+[6135000] PASS : case 4 INCR 8 x 1 byte (M0->S0) : 8 beats read back == data written
+[6355000] PASS : case 5 INCR 8 x 2 bytes (M1->S0) : 8 beats read back == data written
+[6575000] PASS : case 6 INCR 8 x 4 bytes (M0->S1) : 8 beats read back == data written
+[11755000] PASS : case 7 INCR 256 x 1 byte (M1->S1) : 256 beats read back == data written
+
+------------------------------------------------------------------
+ INCR : unaligned start (first beat is partial)
+------------------------------------------------------------------
+[11975000] PASS : case 8 INCR unaligned 0x43 (M0->S0) : 8 beats read back == data written
+
+------------------------------------------------------------------
+ FIXED : all beats write the same address, last beat wins
+------------------------------------------------------------------
+[12115000] PASS : case 9 FIXED 4 beats (M1->S0) : 4 beats read back == data written
+[12495000] PASS : case 10 FIXED 16 beats x 4 bytes (M0->S1) : 16 beats read back == data written
+
+------------------------------------------------------------------
+ WRAP : start in the middle of the wrap block
+------------------------------------------------------------------
+[12595000] PASS : case 11 WRAP 2 beats (M1->S1) : 2 beats read back == data written
+[12735000] PASS : case 12 WRAP 4 beats (M0->S0) : 4 beats read back == data written
+[12955000] PASS : case 13 WRAP 8 beats (M1->S0) : 8 beats read back == data written
+[13335000] PASS : case 14 WRAP 16 beats (M0->S1) : 16 beats read back == data written
+[13475000] PASS : case 15 WRAP 4 x 4 bytes (M1->S1) : 4 beats read back == data written
+
+------------------------------------------------------------------
+ INCR with random write strobes
+------------------------------------------------------------------
+[13695000] PASS : case 16 INCR sparse strobes #1 (M0->S0) : 8 beats read back == data written
+[13915000] PASS : case 17 INCR sparse strobes #2 (M1->S0) : 8 beats read back == data written
+
+------------------------------------------------------------------
+ SCOREBOARD SUMMARY
+   M0 transactions seen      : 18
+   M1 transactions seen      : 18
+   S0 transactions seen      : 20
+   S1 transactions seen      : 16
+   writes routed + matched   : 18
+   reads  routed + matched   : 18
+   DECERR writes / reads     : 0 / 0
+   SLVERR responses          : 0
+   read bytes checked (ref)  : 3069
+   ERRORS                    : 0
+------------------------------------------------------------------
+ FUNCTIONAL COVERAGE of this test (black-box, from the pins)
+   transaction :  68.25 %
+   cycle       :  12.50 %
+   per-port    :  10.00 %
+   bins hit    : 100 of 198   (full table: +COV_DETAIL, all tests merged: make cov_merge)
+------------------------------------------------------------------
+ TEST CHECKS : 18 passed, 0 failed
+ WHAT THIS TEST PROVED:
+   1. 18 burst cases written and read back byte-for-byte
+   2. INCR bursts of 1, 4, 16 and 256 beats, narrow (1/2/4-byte) beats and an unaligned start
+   3. FIXED bursts: all beats go to one address, the last beat is what is stored
+   4. WRAP bursts of 2/4/8/16 beats wrap at the block boundary
+   5. write strobes pass through unchanged (only strobed bytes are written)
+==================================================================
+ TEST axi_burst_test : PASSED
+==================================================================
+ WHITE-BOX COVERAGE of this test (inside the RTL): 2 of 129 bins hit, 2.94 %   (+COV_DETAIL for the table)
+$finish called at time : 14065 ns : File "/home/fariha/Downloads/axi4_xbar_project_simple/axi4_xbar_project/tb/tb_top.sv" Line 170
+exit
+INFO: xsimkernel Simulation Memory Usage: 290924 KB (Peak: 339484 KB), Simulation CPU Usage: 1380 ms
+INFO: [Common 17-206] Exiting xsim at Mon Nov  9 18:56:50 2026...
